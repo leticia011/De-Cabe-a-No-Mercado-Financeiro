@@ -489,7 +489,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
   .faq-feature .qa a.par{grid-template-columns:1fr;padding-right:44px}.faq-feature .qa a.par>div{grid-column:1}
 }
 </style>
-<link rel="stylesheet" href="redesign.css?v=29">
+<link rel="stylesheet" href="redesign.css?v=30">
 </head>
 <body>
 
@@ -905,7 +905,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
 <script>
 (() => {
   const carousel = document.querySelector('.carrossel');
-  if (!carousel || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!carousel || matchMedia('(prefers-reduced-motion: reduce)').matches || matchMedia('(max-width: 760px)').matches) return;
   const slides = [...carousel.querySelectorAll('.slide')];
   let current = 0;
   let timer;

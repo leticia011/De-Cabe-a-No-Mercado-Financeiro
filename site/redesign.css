@@ -282,3 +282,27 @@ p{text-wrap:pretty}
  .slide .losangos{order:0}.slide .isca{font-size:14px;padding:16px 14px 16px 55px}.slide .isca:after{left:17px}.slide .ler{font-size:14px;margin-bottom:8px}
  .ensina-esq h2:after,.fora-section h2:after,.faq-feature h2.sec:after,.acervo h2.sec:after,.eco .strip-topo h3.strip:after{width:44px;height:4px;margin-top:15px}
 }
+
+/* experiência mobile dedicada */
+@media(max-width:760px){
+ html{scroll-padding-top:68px}
+ body{font-size:14px;line-height:1.6}
+ .bar-in{height:64px;gap:12px}.brand-mark{width:25px;height:25px}.mark{font-size:11px;white-space:nowrap}.bar nav{margin-left:auto}.bar nav .bar-cta{min-height:38px;padding:9px 12px;font-size:10px}
+ .hero,.hero-in{min-height:auto}.hero-in{padding-top:44px;padding-bottom:54px;gap:38px}.hero h1{font-size:clamp(39px,12vw,50px);line-height:1.03}.subtitulo{font-size:15px;margin-top:15px}.hero .sub{font-size:13px;line-height:1.7;margin-top:20px}.hero-actions{width:100%;max-width:none}.hero-primary,.hero .comprar{width:100%;min-height:46px;justify-content:space-between}.hero-proof{display:grid;grid-template-columns:1fr 1fr;gap:9px 16px}.capa-box{justify-content:center;padding:10px 0 0}.livro3d{width:190px;max-width:190px}
+ .lead-strip .captura{padding-top:24px;padding-bottom:26px;gap:17px}.lead-strip .captura h2{font-size:15px}.lead-strip .captura .campo{display:grid;grid-template-columns:1fr}.lead-strip .captura input,.lead-strip .captura button{width:100%}
+ .ensina.wrap{padding-top:58px;padding-bottom:58px}.ensina-in{gap:32px}.ensina-esq .rot{margin-bottom:13px}.ensina-esq p.lead{font-size:13px}.ensina-esq .acoes{max-width:none}.ensina-dir{min-width:0}.ensina-dir .pass-nav{width:100%;height:auto;margin-bottom:14px;padding-bottom:10px;gap:5px}.ensina-dir .pass-nav a{width:40px;height:40px;flex:0 0 40px}.carrossel{gap:16px}.slide{display:flex;flex-direction:column;min-height:0}.slide>div:first-child{order:1;padding:26px 20px 28px}.slide .num{margin-bottom:18px}.slide h3{font-size:29px}.slide .isca{font-size:13px}.slide .ler{font-size:13px}.slide .losangos{order:2;width:100%;height:280px;min-height:280px;padding:0;background:#e7e7e3}.slide .losangos:before{display:none}.slide .losangos span{width:100%;height:100%;min-height:280px;max-width:none;aspect-ratio:auto;clip-path:none;background-position:center}.setas{bottom:12px;right:12px}.seta{width:42px;height:42px}
+ .fora-section{padding-block:58px}.fora-section h2{font-size:38px}.fora-section .fora-sub{font-size:13px;margin-bottom:28px}.fora-cards{gap:12px}.fora-section .fora-card,.fora-section .fora-card:first-child,.fora-section .fora-card:nth-child(2){padding:23px 20px;min-height:0}.fora-section .fora-card:before,.fora-section .fora-card:nth-child(2):before{margin-bottom:20px}.fora-section .fora-card h3{font-size:23px}.fora-section .fora-card p{font-size:12px}
+ .author-feature{padding:46px 20px}.author-feature .bio-in{display:flex;flex-direction:column;height:auto}.author-feature .foto-box{order:0;width:100%;height:330px}.author-feature .foto-box img{object-position:52% 28%}.author-copy{order:1;padding:34px 22px 30px}.author-feature h2{font-size:36px;margin-bottom:18px}.author-feature p,.author-feature .author-books{font-size:12px}.author-stats{grid-template-columns:repeat(3,minmax(0,1fr));width:100%;margin:24px 0}.author-stat{min-width:0;padding:15px 10px}.author-stat strong{font-size:22px}.author-stat span{font-size:7px;overflow-wrap:anywhere}.author-feature .btn-preto{width:100%;justify-content:space-between}
+ .faq-feature{padding-block:58px}.faq-head{gap:15px;margin-bottom:30px}.faq-feature h2.sec{font-size:39px}.faq-feature .sub-sec{font-size:13px}.faq-feature .qa{gap:9px}.faq-feature .qa a.par{padding:20px 42px 20px 18px}.faq-feature .qa a.par:after{right:16px;top:18px}.faq-feature .qa .q{font-size:15px}.faq-feature .qa .a{font-size:12px}.faq-feature .ver-todas{min-height:48px}
+ .acervo-fundo{padding-block:58px}.acervo h2.sec{font-size:38px}.acervo>.sub-sec{font-size:13px;margin-bottom:28px}.trilha{gap:14px}.obra{padding:20px}.acervo .palco{height:300px;padding:26px}.acervo .mini3d,.acervo .mini3d.ilus{max-width:165px}.obra h3{font-size:23px}
+ .eco{padding-bottom:58px}.eco .eco-topo{padding-block:54px}.eco-topo{gap:28px}.composicao{min-height:0}.composicao img{width:100%;height:270px;object-fit:cover}.eco-txt h2{font-size:38px}.eco-txt p{font-size:13px}.eco .strip-topo{padding-top:54px;padding-bottom:25px}.eco .strip-topo h3.strip{font-size:34px}.eco .strip-topo .strip-nota{font-size:12px}.eco .curso{min-height:0}.eco .program-tags{padding:25px 22px 0}.eco .curso .nome{font-size:23px;margin:22px 22px 0}.eco .curso .program-desc{font-size:12px;margin:16px 22px 24px}.eco .curso dl{margin:0 22px 24px;gap:8px}.eco .curso:after{padding:17px 22px;font-size:14px}
+ footer{padding-top:52px}.footer-grid{gap:36px;padding-bottom:36px}.footer-brand{font-size:16px}.footer-about{font-size:12px}.social a{width:42px;height:42px}.footer-bottom{padding-top:20px}
+}
+
+@media(max-width:420px){
+ .mark span{max-width:150px;overflow:hidden;text-overflow:ellipsis}.bar nav .bar-cta{padding:8px 10px}
+ .hero-proof{grid-template-columns:1fr}.hero h1{font-size:40px}
+ .ensina-dir .pass-nav{scrollbar-width:none}.ensina-dir .pass-nav::-webkit-scrollbar{display:none}
+ .author-stats{grid-template-columns:1fr}.author-stat{min-height:76px;padding:14px}.author-stat span{font-size:8px}
+ .eco .curso dl{grid-template-columns:1fr 1fr}.eco .curso dl div:last-child{grid-column:1/-1}
+}
