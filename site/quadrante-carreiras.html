@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>As carreiras do mercado financeiro por perfil — José Roberto Securato Junior</title>
+<meta name="description" content="O mapa de José Securato Jr. que posiciona 18 carreiras do mercado financeiro em dois eixos: comercial ou analítico, mais exclusivo ou mais oportunidades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"As carreiras do mercado financeiro, por perfil",
+  "author":{"@type":"Person","name":"José Roberto Securato Junior"},
+  "publisher":{"@type":"Organization","name":"Bankers Academy"},
+  "inLanguage":"pt-BR",
+  "isBasedOn":{"@type":"Book","name":"De cabeça no mercado financeiro: 6 passos para se tornar um Banker","isbn":"978-65-89449-75-1"},
+  "about":["Carreiras no mercado financeiro","Perfil profissional","Investment Banking"]
+}
+</script>
+
+<style>
+:root{
+  --preto:#000; --grafite:#3D3D3D; --cinza:#DBDBDB; --cinza-cl:#F4F4F4;
+  --branco:#FFF; --lima:#c4ef78; --lima-esc:#7FAD2E;
+  --fonte:"Poppins",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--branco);color:var(--preto);font-family:var(--fonte);font-size:17px;line-height:1.7}
+.wrap{max-width:1080px;margin:0 auto;padding:56px 34px 80px}
+.lo{display:inline-block;width:7px;height:7px;background:var(--lima);transform:rotate(45deg);flex:0 0 auto}
+.lo.dark{background:var(--preto)}
+
+.rot{display:flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--lima-esc);font-weight:600;margin:0 0 16px}
+h1{font-weight:300;font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.2;letter-spacing:-.025em;margin:0 0 18px;max-width:22ch}
+h1 b{font-weight:600}
+.lead{color:var(--grafite);max-width:62ch;margin:0 0 12px;font-size:1.02rem}
+.lead b{color:var(--preto);font-weight:500}
+
+/* ---------- quadrante ---------- */
+.mapa-scroll{overflow-x:auto;margin:44px 0 0;padding-bottom:8px}
+.mapa{position:relative;min-width:680px;aspect-ratio:1/.86;border:1px solid var(--cinza);background:
+  linear-gradient(180deg,var(--cinza-cl) 0%,var(--branco) 55%)}
+/* eixos */
+.eixo-v,.eixo-h{position:absolute;background:var(--preto)}
+.eixo-v{left:50%;top:9%;bottom:9%;width:1.5px;transform:translateX(-50%)}
+.eixo-h{top:50%;left:4%;right:4%;height:1.5px;transform:translateY(-50%)}
+.ponta{position:absolute;width:0;height:0}
+.ponta.cima{left:50%;top:9%;transform:translate(-50%,-100%);border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:8px solid var(--preto)}
+.ponta.baixo{left:50%;bottom:9%;transform:translate(-50%,100%);border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--preto)}
+.ponta.esq{top:50%;left:4%;transform:translate(-100%,-50%);border-top:5px solid transparent;border-bottom:5px solid transparent;border-right:8px solid var(--preto)}
+.ponta.dir{top:50%;right:4%;transform:translate(100%,-50%);border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid var(--preto)}
+/* rótulos dos eixos */
+.eixo-rot{position:absolute;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--lima-esc);white-space:nowrap}
+.eixo-rot.cima{left:50%;top:1.5%;transform:translateX(-50%)}
+.eixo-rot.baixo{left:50%;bottom:1.5%;transform:translateX(-50%)}
+.eixo-rot.esq{left:1.5%;top:50%;transform:translateY(-50%)}
+.eixo-rot.dir{right:1.5%;top:50%;transform:translateY(-50%)}
+/* carreiras */
+.c{position:absolute;transform:translate(-50%,-50%);text-align:center;font-size:12.5px;line-height:1.28;
+  letter-spacing:.02em;color:var(--grafite);white-space:nowrap;text-transform:uppercase}
+.c.br{white-space:normal;width:96px}
+.c.destaque{color:var(--preto);font-weight:600;font-size:13px}
+.c.destaque::before{content:"";display:block;width:6px;height:6px;background:var(--lima);
+  transform:rotate(45deg);margin:0 auto 5px}
+
+.fonte{display:flex;align-items:center;gap:9px;margin:18px 0 0;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9A9A9A}
+
+/* ---------- leitura ---------- */
+.leitura{margin:56px 0 0;border-top:1px solid var(--cinza);padding-top:44px}
+.leitura h2{font-weight:300;font-size:1.5rem;margin:0 0 26px;letter-spacing:-.015em;display:flex;align-items:center;gap:12px}
+.quads{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--cinza);border:1px solid var(--cinza)}
+.quad{background:var(--branco);padding:24px}
+.quad h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--lima-esc);font-weight:600;margin:0 0 10px}
+.quad p{margin:0;font-size:.94rem;color:var(--grafite);line-height:1.62}
+.quad p b{color:var(--preto);font-weight:500}
+
+.nota{margin:44px 0 0;border:1px solid var(--cinza);background:var(--cinza-cl);padding:22px 24px}
+.nota p{margin:0;font-size:.92rem;color:var(--grafite)}
+.nota p+p{margin-top:10px}
+.nota b{color:var(--preto);font-weight:500}
+
+@media (max-width:640px){
+  .wrap{padding:40px 20px 60px}
+  .quads{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="rot"><span class="lo"></span> Passo 2 · Opções de carreira</p>
+  <h1>Por que há uma variedade enorme de carreiras, <b>para diferentes perfis</b></h1>
+  <p class="lead">O livro pergunta, no Passo 1, se você é mais <b>técnico/analítico</b>, <b>comercial</b> ou <b>empreendedor</b>. Este mapa é a resposta prática: onde cada carreira do mercado financeiro cai nesses eixos.</p>
+  <p class="lead">O eixo horizontal é o perfil — quanto mais à esquerda, mais comercial; quanto mais à direita, mais analítico. O vertical é o acesso: em cima, as carreiras mais exclusivas; embaixo, as que oferecem mais vagas.</p>
+
+  <div class="mapa-scroll">
+    <figure class="mapa" style="margin:0">
+      <div class="eixo-v"></div><div class="eixo-h"></div>
+      <span class="ponta cima"></span><span class="ponta baixo"></span>
+      <span class="ponta esq"></span><span class="ponta dir"></span>
+
+      <span class="eixo-rot cima">+ Exclusivo</span>
+      <span class="eixo-rot baixo">+ Oportunidades</span>
+      <span class="eixo-rot esq">+ Comercial</span>
+      <span class="eixo-rot dir">+ Analítico</span>
+
+      <span class="c" style="left:11%;top:27%">Sales</span>
+      <span class="c br" style="left:39%;top:26%">Private Equity</span>
+      <span class="c br destaque" style="left:62%;top:27%">Investment Banking</span>
+      <span class="c" style="left:85%;top:22%">Structuring</span>
+
+      <span class="c br" style="left:35%;top:36%">Corporate Banking</span>
+      <span class="c br" style="left:57%;top:41%">M&amp;A Boutique</span>
+      <span class="c br" style="left:74%;top:37%">Equity Research</span>
+      <span class="c br" style="left:90%;top:39%">Macro Research</span>
+
+      <span class="c br" style="left:27%;top:45%">Private Banking</span>
+      <span class="c br" style="left:68%;top:48%">Gestão de Ativos</span>
+      <span class="c" style="left:84%;top:45%">Traders</span>
+
+      <span class="c br" style="left:18%;top:61%">Relação com Investidor</span>
+      <span class="c br" style="left:39%;top:60%">Gestão de Patrimônio</span>
+      <span class="c br" style="left:85%;top:59%">Risco &amp; Crédito</span>
+
+      <span class="c" style="left:85%;top:72%">Tesouraria</span>
+      <span class="c br" style="left:63%;top:79%">Financial Planner</span>
+
+      <span class="c br" style="left:12%;top:82%">Agente Autônomo de Investimento</span>
+      <span class="c br" style="left:31%;top:82%">Gerente de Banco</span>
+    </figure>
+  </div>
+  <p class="fonte"><span class="lo dark"></span> José Roberto Securato Junior · Bankers Academy</p>
+
+  <div class="leitura">
+    <h2><span class="lo"></span> Como ler o mapa</h2>
+    <div class="quads">
+      <div class="quad">
+        <h3>Acima e à direita · exclusivo e analítico</h3>
+        <p><b>Investment Banking, Structuring, Equity Research, Macro Research.</b> São as carreiras mais disputadas do mercado, e exigem profundidade técnica. Poucas vagas, processo seletivo duro.</p>
+      </div>
+      <div class="quad">
+        <h3>Acima e à esquerda · exclusivo e comercial</h3>
+        <p><b>Sales, Private Equity, Corporate Banking, Private Banking.</b> Também exclusivas, mas a moeda aqui é relacionamento e leitura de gente, não só modelo.</p>
+      </div>
+      <div class="quad">
+        <h3>Abaixo e à direita · mais vagas, analítico</h3>
+        <p><b>Risco &amp; Crédito, Tesouraria, Financial Planner.</b> Mais posições abertas e entrada mais acessível, mantendo o trabalho técnico.</p>
+      </div>
+      <div class="quad">
+        <h3>Abaixo e à esquerda · mais vagas, comercial</h3>
+        <p><b>Gerente de Banco, Agente Autônomo de Investimento, Relação com Investidor, Gestão de Patrimônio.</b> É onde há mais oportunidades de entrada no mercado financeiro.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nota">
+    <p><b>Duas coisas a validar com o autor.</b></p>
+    <p>As posições das carreiras foram transcritas do gráfico original. Elas são aproximadas — quem move um nome de quadrante é o autor, não a Empresa Júnior.</p>
+    <p>Os quatro blocos de "Como ler o mapa" são interpretação. Precisam da voz do Securato, ou saem.</p>
+  </div>
+
+</div>
+</body>
+</html>
