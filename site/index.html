@@ -489,7 +489,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
   .faq-feature .qa a.par{grid-template-columns:1fr;padding-right:44px}.faq-feature .qa a.par>div{grid-column:1}
 }
 </style>
-<link rel="stylesheet" href="redesign.css?v=31">
+<link rel="stylesheet" href="redesign.css?v=33">
 </head>
 <body>
 
@@ -502,6 +502,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
     <a class="mark" href="#top" aria-label="Bankers Academy — início"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 44 44"><path d="M13 2 22 11 13 20 4 11Z"/><path d="m31 2 9 9-9 9-9-9Z"/><path d="m13 22 9 9-9 9-9-9Z"/><path d="m31 22 9 9-9 9-9-9Z"/></svg><span>Bankers Academy</span></a>
     <nav>
       <a href="#metodo">O livro</a>
+      <a href="autoconhecimento.html">Passo 1</a>
       <a href="#perguntas">Perguntas</a>
       <a href="#autor">O autor</a>
       <a href="#comprar">Onde comprar</a>
@@ -547,7 +548,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
   </form>
 </div>
 
-<div class="wrap ensina book-page" id="metodo" data-page="Capítulo 01 · O método">
+<div class="wrap ensina book-page" id="metodo">
   <div class="ensina-in">
     <div class="ensina-esq">
       <p class="rot">/ De cabeça no mercado financeiro</p>
@@ -571,7 +572,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
             <h3>Autoconhecimento</h3>
             <p>Descobrir se essa carreira é para você. O livro traz o modelo do autor para perfis profissionais: técnico, comercial e empreendedor.</p>
             <span class="isca"><span class="lo"></span> Trabalhar no Mercado Financeiro é melhor do que outras opções?</span>
-            <a class="ler" href="#perguntas">Ler sobre este passo <span class="lo"></span></a>
+            <a class="ler" href="autoconhecimento.html">Ler sobre este passo <span class="lo"></span></a>
           
             <div class="setas">
               <span class="seta off" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -904,16 +905,25 @@ footer{padding-top:58px}.footer-grid{gap:34px}
 <script>
 (() => {
   const carousel = document.querySelector('.carrossel');
-  if (!carousel || matchMedia('(prefers-reduced-motion: reduce)').matches || matchMedia('(max-width: 760px)').matches) return;
+  if (!carousel) return;
   const slides = [...carousel.querySelectorAll('.slide')];
-  let current = 0;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hashIndex = slides.findIndex(slide => `#${slide.id}` === location.hash);
+  let current = hashIndex >= 0 ? hashIndex : 0;
   let timer;
+  const goTo = index => {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === current));
+    document.querySelectorAll('.pass-nav a').forEach(link => {
+      link.classList.toggle('aqui', link.getAttribute('href') === `#${slides[current].id}`);
+    });
+  };
   const start = () => {
     clearInterval(timer);
+    if (reducedMotion || matchMedia('(max-width: 760px)').matches) return;
     timer = setInterval(() => {
       if (document.hidden) return;
-      current = (current + 1) % slides.length;
-      carousel.scrollTo({left: slides[current].offsetLeft, behavior: 'smooth'});
+      goTo(current + 1);
     }, 6000);
   };
   const pause = () => clearInterval(timer);
@@ -922,10 +932,19 @@ footer{padding-top:58px}.footer-grid{gap:34px}
   carousel.addEventListener('focusin', pause);
   carousel.addEventListener('focusout', start);
   carousel.addEventListener('touchstart', pause, {passive:true});
-  carousel.addEventListener('scrollend', () => {
-    current = slides.reduce((best, slide, index) =>
-      Math.abs(slide.offsetLeft - carousel.scrollLeft) < Math.abs(slides[best].offsetLeft - carousel.scrollLeft) ? index : best, 0);
+  document.querySelectorAll('a[href^="#passo-"]').forEach(link => {
+    link.addEventListener('click', event => {
+      const target = document.querySelector(link.getAttribute('href'));
+      const index = slides.indexOf(target);
+      if (index < 0) return;
+      event.preventDefault();
+      pause();
+      goTo(index);
+      history.replaceState(null, '', link.getAttribute('href'));
+      timer = window.setTimeout(start, 7000);
+    });
   });
+  goTo(current);
   start();
 })();
 </script>
