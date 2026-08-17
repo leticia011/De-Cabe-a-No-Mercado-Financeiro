@@ -270,6 +270,7 @@ p{text-wrap:pretty}
 .fora-section .fora-card,.faq-feature .qa a.par,.obra,.eco .curso{box-shadow:0 18px 45px rgba(28,36,18,.07)}
 .fora-section .fora-card:hover,.faq-feature .qa a.par:hover,.eco .curso:hover{box-shadow:0 24px 55px rgba(28,36,18,.14)}
 .pass-nav a:hover,.pass-nav a.aqui{box-shadow:0 7px 18px rgba(196,239,120,.22)}
+.ensina-dir .slide>div:first-child{position:relative;z-index:5}.ensina-dir .slide .losangos{position:relative;z-index:1}.ensina-dir .slide .ler{position:relative;z-index:6;pointer-events:auto;display:inline-flex;min-height:38px;align-items:center}
 @media(min-width:901px){
  .author-feature{background:
   radial-gradient(circle at 88% 20%,rgba(196,239,120,.25),transparent 25%),
@@ -339,3 +340,8 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
  .ensina-dir .slide>div:first-child{padding:clamp(34px,3vw,52px)}
  .ensina-dir .slide .losangos,.ensina-dir .slide .losangos span{min-height:470px;height:470px}
 }
+
+/* formulários preparados para futura integração com RD Station */
+.lead-strip .captura .captura-campos{min-width:0}.lead-strip .captura .campo{display:flex;align-items:stretch;background:transparent}.lead-strip .captura .captura-primeiro-passo{max-width:610px}.lead-strip .captura .captura-segundo-passo[hidden]{display:none}.lead-strip .captura .captura-segundo-passo>p{margin:0 0 7px;color:#40551f;font-size:10px;font-weight:500}.lead-strip .captura input{width:100%;min-width:0;height:50px!important;border:0!important;background:#fff!important;padding:0 17px!important;color:#000;font-size:12px}.lead-strip .captura input+input{border-left:1px solid #deded9!important}.lead-strip .captura input::placeholder{color:#777!important}.lead-strip .captura input:focus{position:relative;z-index:1;outline:2px solid #000;outline-offset:-2px}.lead-strip .captura button{height:50px!important;border:0!important;min-width:126px;padding-inline:20px!important}.lead-strip .captura .form-status{color:#40551f;font-size:10px;margin:6px 0 0;min-height:1em}
+.waitlist-form{width:100%;margin-top:22px;padding-top:20px;border-top:1px solid #d4d4cf}.waitlist-title{margin:0 0 14px!important;color:#000!important;font-size:13px!important;font-weight:600}.waitlist-form label{display:block;margin-bottom:9px}.waitlist-form label span{display:block;margin-bottom:4px;color:#666;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}.waitlist-form input{width:100%;height:42px;border:1px solid #d4d4ce;background:#fff;padding:0 12px;color:#000;font:400 12px var(--font)}.waitlist-form input:focus{outline:2px solid var(--lime);outline-offset:1px}.waitlist-form button{width:100%;min-height:44px;margin-top:4px;border:0;background:#000;color:#fff;font:600 12px var(--font);cursor:pointer}.waitlist-form button:hover{background:#252525}.waitlist-form .form-status{min-height:1em;margin:7px 0 0!important;color:#65734d!important;font-size:10px!important;line-height:1.4}
+@media(max-width:680px){.lead-strip .captura .campo{flex-direction:column}.lead-strip .captura input+input{border-left:0!important;border-top:1px solid #deded9!important}.lead-strip .captura button{width:100%}}

@@ -63,6 +63,9 @@ img{max-width:100%;display:block}
 .bar nav{display:flex;gap:24px;font-size:12.5px}
 .bar nav a{color:#B0B0B0;text-decoration:none}
 .bar nav a:hover{color:var(--lima)}
+.mobile-label{display:none}
+.menu-toggle{display:none;border:1px solid #3a3a3a;background:transparent;color:var(--branco);width:40px;height:38px;font:500 20px/1 var(--fonte);cursor:pointer}.menu-toggle:hover,.menu-toggle:focus-visible{border-color:var(--lima);color:var(--lima);outline:none}
+.bar-buy{border:1px solid #686868;padding:8px 13px;color:var(--branco)!important}.bar-buy:hover{border-color:var(--lima);color:var(--lima)!important}
 
 .hero{background:var(--preto);color:var(--branco);position:relative}
 .hero::before{content:"";position:absolute;inset:0;overflow:hidden;clip-path:inset(0);
@@ -142,7 +145,8 @@ h1{font-weight:300;font-size:clamp(2rem,4.2vw,3.05rem);line-height:1.12;letter-s
   border-top:1px solid var(--cinza);padding-top:13px}
 .slide .isca .lo{margin-top:6px;background:var(--preto)}
 .slide .ler{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:.85rem;font-weight:500;
-  color:var(--preto);text-decoration:none;border-bottom:2px solid var(--lima);padding-bottom:2px}
+  color:var(--preto);text-decoration:none;border-bottom:2px solid var(--lima);padding:6px 2px 4px;
+  position:relative;z-index:10;pointer-events:auto;touch-action:manipulation;cursor:pointer}
 
 /* fotos em losango — o elemento gráfico da marca */
 .losangos{position:relative;padding:0}
@@ -254,6 +258,27 @@ h2.sec{font-weight:300;font-size:1.75rem;letter-spacing:-.015em;margin:0 0 12px;
 .capa-ilus .t3{font-size:11.5px;font-weight:400;line-height:1.15!important}
 .capa-ilus .aut{margin:0;font-size:5.4px;letter-spacing:.1em;text-transform:uppercase;color:#9A9A9A;line-height:1.5}
 .capa-ilus .ed{margin:3px 0 0;font-size:5px;letter-spacing:.12em;text-transform:uppercase;color:var(--lima);opacity:.65}
+
+/* opiniões — prova social editorial antes da decisão de compra */
+.opinioes{background:#f8f7f3;padding:clamp(70px,8vw,112px) 0;border-top:1px solid #deddd8}
+.opinioes-cabeca{display:grid;grid-template-columns:minmax(250px,.72fr) minmax(360px,1.28fr);gap:clamp(42px,8vw,120px);align-items:end;margin-bottom:48px}
+.opinioes-kicker{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--lima-esc);font-weight:600;margin:0 0 12px}
+.opinioes h2{font-weight:300;font-size:clamp(2.2rem,4.2vw,4.7rem);line-height:1.04;letter-spacing:-.04em;margin:0}
+.opinioes-intro{max-width:55ch;color:#565652;font-size:.97rem;margin:0 0 7px;line-height:1.75}
+.opinioes-grade{display:grid;grid-template-columns:minmax(0,760px);gap:18px}
+.opiniao{background:var(--branco);border:1px solid #e2e1dc;padding:clamp(30px,4vw,52px);display:flex;flex-direction:column;min-height:320px}
+.opiniao-estrelas{color:#769b32;letter-spacing:.16em;font-size:11px;font-weight:600;text-transform:uppercase;margin:0 0 26px}
+.opiniao blockquote{font-size:clamp(1.25rem,2vw,1.7rem);line-height:1.48;letter-spacing:-.02em;margin:0 0 34px;color:var(--preto);flex:1}
+.opiniao-pessoa{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:center;border-top:1px solid #e7e6e1;padding-top:20px}
+.opiniao-avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--preto);color:var(--lima);font-size:12px;font-weight:600;letter-spacing:.08em}
+.opiniao-avatar-foto{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:center 24%;display:block;filter:saturate(.9)}
+.opiniao-pessoa strong{display:block;font-size:.86rem;font-weight:600}
+.opiniao-pessoa span{display:block;color:#777;font-size:.73rem;line-height:1.45;margin-top:2px}
+.opiniao-verificada{display:inline-flex!important;align-items:center;gap:6px;color:#805b16!important;font-weight:600;margin-top:5px!important}.opiniao-verificada::before{content:"✓";display:grid;place-items:center;width:15px;height:15px;border-radius:50%;background:#e9b949;color:#000;font-size:9px}
+.opinioes-acao{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:30px;padding-top:25px;border-top:1px solid #d9d8d3}
+.opinioes-acao p{margin:0;color:#5f5f5a;font-size:.9rem}
+.opinioes-acao a{display:inline-flex;align-items:center;gap:10px;background:var(--preto);color:var(--branco);padding:14px 24px;text-decoration:none;font-size:.86rem;font-weight:500;white-space:nowrap}
+.opinioes-acao a:hover{background:var(--grafite)}
 .selo-ilus{display:flex;align-items:center;gap:7px;margin-top:10px;font-size:9.5px;letter-spacing:.1em;
   text-transform:uppercase;color:#B0B0B0;justify-content:center}
 .selo-ilus .lo{width:5px;height:5px;background:var(--cinza)}
@@ -397,7 +422,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
 @media (max-width:560px){
   :root{--gutter:20px;--section-space:54px}
   .wrap,.hero-in,.bar-in{padding-left:20px;padding-right:20px}
-  .announcement-in{padding-left:20px;padding-right:20px}.bar nav a:not(.bar-cta){display:none}.bar nav{display:flex}
+.announcement-in{padding-left:20px;padding-right:20px}.bar-in{padding-left:20px;padding-right:20px}.mark span{display:none}.bar nav{display:flex;gap:8px;position:relative}.menu-toggle{display:grid;place-items:center}.bar nav a{display:none}.bar nav .mobile-keep{display:inline-flex;align-items:center;padding:9px 11px}.desktop-label{display:none}.mobile-label{display:inline}.bar nav.is-open{position:absolute;left:0;right:0;top:100%;padding:12px 20px 18px;background:#000;border-top:1px solid #292929;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 14px 25px rgba(0,0,0,.25)}.bar nav.is-open .menu-toggle{grid-column:1}.bar nav.is-open a{display:flex;min-height:42px;align-items:center;padding:9px 11px;border:1px solid #292929}.bar nav.is-open .bar-buy,.bar nav.is-open .bar-cta{justify-content:center}.bar nav.is-open .bar-cta{grid-column:2}.bar nav.is-open .desktop-link{grid-column:1/-1}
   .captura .campo{flex-direction:column}
   .lead-strip .captura{padding-left:20px;padding-right:20px}
   .hero-proof{gap:12px}
@@ -480,6 +505,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
   .fora-section .fora{grid-template-columns:1fr}.fora-section .fora-cards{grid-column:1;grid-row:auto;margin-top:40px}
   .author-feature .bio-in{grid-template-columns:1fr}.author-feature .foto-box{order:-1;min-height:520px;max-width:none}
   .faq-head{grid-template-columns:1fr;gap:22px}.faq-feature .qa a.par{grid-template-columns:48px 1fr}.faq-feature .qa a.par>div{grid-column:2}
+  .opinioes-grade{grid-template-columns:minmax(0,760px)}
 }
 @media (max-width:700px){
   .hero-in,.ensina-in{grid-template-columns:1fr}
@@ -487,6 +513,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
   .fora-section .fora-card,.fora-section .fora-card:nth-child(2){grid-template-columns:42px 1fr;column-gap:10px}
   .author-feature .foto-box{min-height:390px}.author-stats{grid-template-columns:1fr}
   .faq-feature .qa a.par{grid-template-columns:1fr;padding-right:44px}.faq-feature .qa a.par>div{grid-column:1}
+  .opinioes-cabeca,.opinioes-grade{grid-template-columns:1fr}.opinioes-cabeca{gap:24px}.opiniao{min-height:0}.opinioes-acao{align-items:flex-start;flex-direction:column}
 }
 </style>
 <link rel="stylesheet" href="redesign.css?v=33">
@@ -500,13 +527,14 @@ footer{padding-top:58px}.footer-grid{gap:34px}
 <header class="bar">
   <div class="bar-in">
     <a class="mark" href="#top" aria-label="Bankers Academy — início"><svg class="brand-mark" aria-hidden="true" viewBox="0 0 44 44"><path d="M13 2 22 11 13 20 4 11Z"/><path d="m31 2 9 9-9 9-9-9Z"/><path d="m13 22 9 9-9 9-9-9Z"/><path d="m31 22 9 9-9 9-9-9Z"/></svg><span>Bankers Academy</span></a>
-    <nav>
-      <a href="#metodo">O livro</a>
-      <a href="autoconhecimento.html">Passo 1</a>
-      <a href="#perguntas">Perguntas</a>
-      <a href="#autor">O autor</a>
-      <a href="#comprar">Onde comprar</a>
-      <a class="bar-cta" href="https://bankers-academy-ztu1.vercel.app/">Ver cursos</a>
+    <nav id="main-nav" aria-label="Navegação principal">
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-nav" aria-expanded="false">☰</button>
+      <a class="desktop-link" href="#top">O livro</a>
+      <a class="desktop-link" href="#metodo">Os 6 passos</a>
+      <a class="desktop-link" href="perguntas-frequentes.html">Perguntas &amp; respostas</a>
+      <a class="desktop-link" href="#autor">Sobre o autor</a>
+      <a class="bar-buy mobile-keep" href="#comprar"><span class="desktop-label">Comprar o livro</span><span class="mobile-label">Comprar</span></a>
+      <a class="bar-cta mobile-keep" href="https://bankers-academy-ztu1.vercel.app/"><span class="desktop-label">Começar minha formação</span><span class="mobile-label">Cursos</span></a>
     </nav>
   </div>
 </header>
@@ -536,14 +564,25 @@ footer{padding-top:58px}.footer-grid{gap:34px}
 </section>
 
 <div class="lead-strip">
-  <form class="captura" action="#" method="post">
+  <form class="captura" id="form-capitulo-1" data-rd-form="capitulo-1" novalidate>
     <div class="captura-copy">
       <span class="lo"></span>
       <div><p class="rot">Leia antes de comprar</p><h2>Baixe gratuitamente o capítulo 1 do livro.</h2><p class="nota">Você recebe por e-mail. Sem spam.</p></div>
     </div>
-    <div class="campo">
-      <input type="email" name="email" autocomplete="email" required placeholder="Seu melhor e-mail" aria-label="Seu e-mail">
-      <button type="submit">Quero ler</button>
+    <div class="captura-campos">
+      <div class="campo captura-primeiro-passo">
+        <input type="email" name="email" autocomplete="email" placeholder="Seu melhor e-mail" aria-label="Seu melhor e-mail">
+        <button type="button" data-capture-continue>Continuar</button>
+      </div>
+      <div class="captura-segundo-passo" hidden>
+        <p>Ótimo. Só falta completar seus dados:</p>
+        <div class="campo">
+          <input type="text" name="name" autocomplete="name" placeholder="Seu nome" aria-label="Seu nome">
+          <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Seu telefone" aria-label="Seu telefone">
+          <button type="button" data-static-submit>Quero ler</button>
+        </div>
+      </div>
+      <p class="form-status" role="status" aria-live="polite"></p>
     </div>
   </form>
 </div>
@@ -556,7 +595,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
       <p class="lead">O método tem seis passos, na ordem em que o autor os apresenta. Cada um responde a uma pergunta que trava quem quer entrar no mercado financeiro.</p>
       <div class="acoes">
         <a class="bt cheio" href="#comprar"><span class="lo"></span> Onde comprar</a>
-        <a class="bt vazio" href="#perguntas"><span class="lo"></span> Ver perguntas &amp; respostas</a>
+        <a class="bt vazio" href="perguntas-frequentes.html"><span class="lo"></span> Ver perguntas &amp; respostas</a>
       </div>
     </div>
 
@@ -572,7 +611,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
             <h3>Autoconhecimento</h3>
             <p>Descobrir se essa carreira é para você. O livro traz o modelo do autor para perfis profissionais: técnico, comercial e empreendedor.</p>
             <span class="isca"><span class="lo"></span> Trabalhar no Mercado Financeiro é melhor do que outras opções?</span>
-            <a class="ler" href="autoconhecimento.html">Ler sobre este passo <span class="lo"></span></a>
+            <a class="ler" href="/autoconhecimento.html" aria-label="Ler o Passo 1 — Autoconhecimento">Ler sobre este passo <span class="lo"></span></a>
           
             <div class="setas">
               <span class="seta off" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -590,7 +629,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
             <h3>Opções de carreira</h3>
             <p>Conhecer o que existe: as carreiras no mercado financeiro e dentro das empresas, e a diferença entre Sell Side e Buy Side.</p>
             <span class="isca"><span class="lo"></span> Eu não gosto de vender, devo me concentrar no Buy Side?</span>
-            <a class="ler" href="quadrante-carreiras.html">Ler sobre este passo <span class="lo"></span></a>
+            <a class="ler" href="/quadrante-carreiras.html" aria-label="Ler o Passo 2 — Opções de carreira">Ler sobre este passo <span class="lo"></span></a>
           
             <div class="setas">
               <a class="seta" href="#passo-1" aria-label="Passo anterior"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -608,7 +647,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
             <h3>A carreira certa para você</h3>
             <p>Escolher a que se alinha a você. Vocação, curiosidade intelectual, fit e o que significa, na prática, ser bom.</p>
             <span class="isca"><span class="lo"></span> Não sei o que eu quero, como eu começo?</span>
-            <a class="ler" href="quadrante-carreiras.html">Ler sobre este passo <span class="lo"></span></a>
+            <a class="ler" href="/carreira-certa.html" aria-label="Ler o Passo 3 — A carreira certa para você">Ler sobre este passo <span class="lo"></span></a>
           
             <div class="setas">
               <a class="seta" href="#passo-2" aria-label="Passo anterior"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -626,7 +665,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
             <h3>Formação e certificações</h3>
             <p>Suprir as lacunas de conhecimento. Graduação, línguas, programação, ética — e o que as certificações realmente valem.</p>
             <span class="isca"><span class="lo"></span> Vale a pena um MBA no Brasil para migrar para IB?</span>
-            <a class="ler" href="#perguntas">Ler sobre este passo <span class="lo"></span></a>
+            <a class="ler" href="/formacao-certificacoes.html" aria-label="Ler o Passo 4 — Formação e certificações">Ler sobre este passo <span class="lo"></span></a>
           
             <div class="setas">
               <a class="seta" href="#passo-3" aria-label="Passo anterior"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -644,7 +683,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
             <h3>O seu Equity Story</h3>
             <p>O conceito que o autor traz de Fusões &amp; Aquisições para responder à pergunta que decide tudo: por que eu deveria contratar você?</p>
             <span class="isca"><span class="lo"></span> Não sei o meu Equity Story, o que fazer?</span>
-            <a class="ler" href="equity-story.html">Ler sobre este passo <span class="lo"></span></a>
+            <a class="ler" href="/equity-story.html" aria-label="Ler o Passo 5 — O seu Equity Story">Ler sobre este passo <span class="lo"></span></a>
           
             <div class="setas">
               <a class="seta" href="#passo-4" aria-label="Passo anterior"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -662,7 +701,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
             <h3>CV e LinkedIn</h3>
             <p>Levar essa narrativa ao mercado. Como o Equity Story se traduz em currículo, LinkedIn e pegada digital.</p>
             <span class="isca"><span class="lo"></span> Devo levar meu CV impresso na entrevista?</span>
-            <a class="ler" href="#perguntas">Ler sobre este passo <span class="lo"></span></a>
+            <a class="ler" href="/cv-linkedin.html" aria-label="Ler o Passo 6 — CV e LinkedIn">Ler sobre este passo <span class="lo"></span></a>
           
             <div class="setas">
               <a class="seta" href="#passo-5" aria-label="Passo anterior"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -725,39 +764,33 @@ footer{padding-top:58px}.footer-grid{gap:34px}
  </div>
 </section>
 
-<section class="faq-feature book-page" id="perguntas" data-page="Capítulo 03 · Perguntas">
- <div class="wrap perg">
-  <div class="faq-head">
-   <div><p class="faq-kicker">Respostas sem rodeios</p><h2 class="sec">Perguntas &amp;<br>Respostas</h2></div>
-   <p class="sub-sec">É o nome que o autor deu às seções que fecham cada capítulo do livro: as perguntas que os alunos fazem a ele. Algumas contrariam o conselho comum de carreira.</p>
-  </div>
+<section class="opinioes" aria-labelledby="opinioes-titulo">
+  <div class="wrap">
+    <header class="opinioes-cabeca">
+      <div>
+        <p class="opinioes-kicker">Uma recomendação real</p>
+        <h2 id="opinioes-titulo">Uma rota mais clara para a carreira.</h2>
+      </div>
+      <p class="opinioes-intro">Uma recomendação pública, assinada por um profissional com trajetória reconhecida no mercado financeiro.</p>
+    </header>
 
-  <div class="qa">
-    <a class="par" href="#metodo">
-      <p class="q"><span class="lo"></span> Como saber se o mercado financeiro é para mim?</p>
-      <div>
-        <p class="a">O primeiro indicador é o seu nível de interesse no assunto. Quanto você gosta de estudar finanças, ler jornais e livros, ouvir podcasts sobre o tema — e se imaginar trabalhando de 8 a 10 horas por dia com isso. Se terminar esse exercício com um sorriso no rosto, boas chances de que finanças seja para você.</p>
-        <p class="fonte">Capítulo 2 · Afinal, quem é você?</p>
-      </div>
-    </a>
-    <a class="par" href="#metodo">
-      <p class="q"><span class="lo"></span> Por que CFA não é um diferencial para Investment Banking?</p>
-      <div>
-        <p class="a">O conteúdo das provas vai muito além de Corporate Finance, que é a matéria mais importante para um banker. E o formato da prova exige um tipo de conhecimento muito diferente do dia a dia: o teórico não tem paralelo com o prático.</p>
-        <p class="fonte">Capítulo 10 · Devo investir em certificações?</p>
-      </div>
-    </a>
-    <a class="par" href="processo-seletivo-v2.html">
-      <p class="q"><span class="lo"></span> Enviar um Relatório de Análise (Sample) ajuda em um processo seletivo?</p>
-      <div>
-        <p class="a seca">Mande se quiser, mas ninguém vai ler.</p>
-        <p class="fonte">Capítulo 7 · Processo seletivo</p>
-      </div>
-    </a>
-  </div>
+    <div class="opinioes-grade">
+      <article class="opiniao">
+        <p class="opiniao-estrelas">Opinião sobre o livro</p>
+        <blockquote>“Uma obra essencial para quem quer entender e prosperar no mercado financeiro.”</blockquote>
+        <div class="opiniao-pessoa">
+          <img class="opiniao-avatar-foto" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=750,fit=crop/m6L2bKgvOWCQl9VG/imagem-do-whatsapp-de-2025-10-04-a-s-23.53.45_4f007bb8-mk34JPOVZ3cjWGWM.jpg" alt="Daniel Martins" loading="lazy" referrerpolicy="no-referrer">
+          <div><strong>Daniel Martins</strong><span>Managing Partner da Spalla Capital · ex-Deutsche Bank</span></div>
+        </div>
+      </article>
 
-  <a class="ver-todas" href="#metodo"><span class="lo"></span> Voltar aos seis passos</a>
- </div>
+    </div>
+
+    <div class="opinioes-acao">
+      <p>Descubra os seis passos e desenhe uma jornada profissional que faça sentido para você.</p>
+      <a href="#comprar"><span class="lo"></span> Quero ler o livro</a>
+    </div>
+  </div>
 </section>
 
 <div class="acervo-fundo book-page" id="comprar" data-page="Capítulo 04 · O acervo">
@@ -810,6 +843,14 @@ footer{padding-top:58px}.footer-grid{gap:34px}
         <p class="sub">A continuação</p>
         <p class="ficha">Em breve neste site</p>
         <p class="desc">Como construir a carreira depois de entrar: evoluir, ganhar estabilidade e liderar no mercado financeiro.</p>
+        <form class="waitlist-form" id="form-lista-proximo-livro" data-rd-form="lista-proximo-livro" novalidate>
+          <p class="waitlist-title">Entre na lista de espera</p>
+          <label><span>Nome</span><input type="text" name="name" autocomplete="name" placeholder="Seu nome"></label>
+          <label><span>E-mail</span><input type="email" name="email" autocomplete="email" placeholder="seu@email.com"></label>
+          <label><span>Telefone</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999"></label>
+          <button type="button" data-static-submit>Quero ser avisado</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </article>
     </div>
   </div>
@@ -887,7 +928,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
       </div>
       <div>
         <h2>O livro</h2>
-        <ul><li><a href="#metodo">Os 6 passos</a></li><li><a href="#perguntas">Perguntas &amp; respostas</a></li><li><a href="#comprar">Onde comprar</a></li><li><a href="#autor">Securato Jr.</a></li></ul>
+        <ul><li><a href="#metodo">Os 6 passos</a></li><li><a href="perguntas-frequentes.html">Perguntas &amp; respostas</a></li><li><a href="#comprar">Onde comprar</a></li><li><a href="#autor">Securato Jr.</a></li></ul>
       </div>
       <div>
         <h2>Formação</h2>
@@ -904,6 +945,24 @@ footer{padding-top:58px}.footer-grid{gap:34px}
 
 <script>
 (() => {
+  const nav = document.querySelector('#main-nav');
+  const toggle = nav?.querySelector('.menu-toggle');
+  if (!nav || !toggle) return;
+  const closeMenu = () => {
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menu');
+  };
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  addEventListener('resize', () => { if (innerWidth > 560) closeMenu(); });
+})();
+
+(() => {
   const carousel = document.querySelector('.carrossel');
   if (!carousel) return;
   const slides = [...carousel.querySelectorAll('.slide')];
@@ -914,6 +973,11 @@ footer{padding-top:58px}.footer-grid{gap:34px}
   const goTo = index => {
     current = (index + slides.length) % slides.length;
     slides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === current));
+    const target = slides[current];
+    carousel.scrollTo({
+      left: target.offsetLeft - carousel.offsetLeft,
+      behavior: reducedMotion ? 'auto' : 'smooth'
+    });
     document.querySelectorAll('.pass-nav a').forEach(link => {
       link.classList.toggle('aqui', link.getAttribute('href') === `#${slides[current].id}`);
     });
@@ -947,6 +1011,38 @@ footer{padding-top:58px}.footer-grid{gap:34px}
   goTo(current);
   start();
 })();
+
+document.querySelectorAll('[data-rd-form]').forEach(form => {
+  form.querySelector('[data-static-submit]')?.addEventListener('click', () => {
+    const status = form.querySelector('.form-status');
+    if (status) status.textContent = 'Formulário em preparação. O cadastro será liberado em breve.';
+  });
+});
+
+document.querySelectorAll('.captura[data-rd-form]').forEach(form => {
+  const email = form.querySelector('input[type="email"]');
+  const firstStep = form.querySelector('.captura-primeiro-passo');
+  const secondStep = form.querySelector('.captura-segundo-passo');
+  const continueButton = form.querySelector('[data-capture-continue]');
+  const status = form.querySelector('.form-status');
+  if (!email || !firstStep || !secondStep || !continueButton) return;
+  const reveal = () => {
+    if (!email.checkValidity() || !email.value.trim()) {
+      if (status) status.textContent = 'Digite um e-mail válido para continuar.';
+      email.focus();
+      return;
+    }
+    firstStep.hidden = true;
+    secondStep.hidden = false;
+    if (status) status.textContent = '';
+    secondStep.querySelector('input')?.focus();
+  };
+  continueButton.addEventListener('click', reveal);
+  email.addEventListener('keydown', event => {
+    if (event.key === 'Enter') { event.preventDefault(); reveal(); }
+  });
+});
+
 </script>
 
 </body>
