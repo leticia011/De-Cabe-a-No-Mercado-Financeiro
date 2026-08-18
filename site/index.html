@@ -834,7 +834,7 @@ footer{padding-top:58px}.footer-grid{gap:34px}
           </article>
         </div>
       </div>
-    </div>
+    </div>
     <div class="opinioes-acao">
       <p>Descubra os seis passos e desenhe uma jornada profissional que faça sentido para você.</p>
       <a href="#comprar"><span class="lo"></span> Quero ler o livro</a>
@@ -1037,34 +1037,47 @@ footer{padding-top:58px}.footer-grid{gap:34px}
       link.classList.toggle('aqui', link.getAttribute('href') === `#${slides[current].id}`);
     });
   };
+  const INTERVALO = 6000;
+  // só gira enquanto a seção está na tela: quem chega rolando vê o passo 01
+  // primeiro, em vez de cair num passo do meio que já passou sozinho
+  let naTela = false;
+  const pause = () => { clearInterval(timer); timer = undefined; };
   const start = () => {
-    clearInterval(timer);
-    if (reducedMotion || matchMedia('(max-width: 760px)').matches) return;
+    pause();
+    if (reducedMotion || !naTela) return;
     timer = setInterval(() => {
       if (document.hidden) return;
       goTo(current + 1);
-    }, 5200);
+    }, INTERVALO);
   };
-  const pause = () => clearInterval(timer);
-  const controles = () => [...document.querySelectorAll('.setas, .pass-nav')];
-  controles().forEach(el => { el.addEventListener('mouseenter', pause); el.addEventListener('mouseleave', start); });
+  const retomar = espera => { pause(); timer = window.setTimeout(start, espera); };
+
+  new IntersectionObserver(([entrada]) => {
+    naTela = entrada.isIntersecting;
+    if (naTela) start(); else pause();
+  }, { threshold: 0.25 }).observe(carousel);
+
+  // o mouse em cima do slide pausa — ninguém deve ter o texto trocado no meio da leitura
+  carousel.addEventListener('mouseenter', pause);
+  carousel.addEventListener('mouseleave', start);
+  document.querySelector('.pass-nav')?.addEventListener('mouseenter', pause);
+  document.querySelector('.pass-nav')?.addEventListener('mouseleave', start);
   carousel.addEventListener('focusin', pause);
   carousel.addEventListener('focusout', start);
-  carousel.addEventListener('touchstart', pause, {passive:true});
+  carousel.addEventListener('touchstart', () => retomar(9000), {passive:true});
+  addEventListener('visibilitychange', () => { if (!document.hidden) start(); });
   document.querySelectorAll('a[href^="#passo-"]').forEach(link => {
     link.addEventListener('click', event => {
       const target = document.querySelector(link.getAttribute('href'));
       const index = slides.indexOf(target);
       if (index < 0) return;
       event.preventDefault();
-      pause();
       goTo(index);
       history.replaceState(null, '', link.getAttribute('href'));
-      timer = window.setTimeout(start, 7000);
+      retomar(9000);
     });
   });
   goTo(current);
-  start();
 })();
 
 </script>
