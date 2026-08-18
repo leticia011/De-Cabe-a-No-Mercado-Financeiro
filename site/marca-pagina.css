@@ -1,0 +1,57 @@
+/* Marca-página: coluna lateral do autor, compartilhada por todos os capítulos. */
+.marca-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,330px);gap:clamp(40px,5vw,88px);align-items:start}
+.marca-host.wrap,.wrap.marca-host{width:min(1360px,calc(100% - 68px));max-width:1360px}
+.marca-col{min-width:0}
+
+.marca-pagina{position:sticky;top:96px;padding:28px;background:#0b0c0b;color:#fff;box-shadow:0 20px 50px rgba(0,0,0,.14);font:400 14px/1.7 Poppins,system-ui,sans-serif}
+.marca-pagina .retrato{width:112px;aspect-ratio:1;margin:0 0 26px;background-size:cover;background-position:center 25%;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.marca-pagina .nome{margin:0 0 14px;color:#c4ef78;font-size:15px;font-weight:600;line-height:1.35}
+.marca-pagina p{margin:0 0 14px;color:#afb3aa;font-size:13.5px;line-height:1.7}
+.marca-pagina p b{color:#fff;font-weight:600}
+.marca-pagina .liga{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:0}
+.marca-pagina .liga a{color:#fff;font-size:12px;text-decoration:none;border-bottom:1px solid #4a4d47;padding-bottom:2px}
+.marca-pagina .liga a:hover{border-bottom-color:#c4ef78;color:#c4ef78}
+
+.marca-pagina .marca-sec{margin-top:26px;padding-top:24px;border-top:1px solid #30322e}
+.marca-pagina .marca-sec .r{margin:0 0 12px;color:#92968e;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}
+.marca-pagina .marca-sec .ficha-l{margin:0;color:#7f847b;font-size:12px}
+
+.marca-pagina .marca-cap{margin-top:24px;padding:22px 20px;border:1px solid #353832;background:#151715}
+.marca-pagina .marca-cap h3{margin:0 0 6px;color:#fff;font-size:16px;font-weight:500;line-height:1.3}
+.marca-pagina .marca-cap .fine{margin:12px 0 0;color:#7f847b;font-size:11px}
+
+@media(max-width:1080px){
+ .marca-layout{grid-template-columns:1fr;gap:52px}
+ .marca-host.wrap,.wrap.marca-host{width:min(1080px,calc(100% - 68px));max-width:1080px}
+ .marca-pagina{position:static;display:grid;grid-template-columns:112px 1fr;gap:0 26px}
+ .marca-pagina>*:not(.retrato){grid-column:2}
+ .marca-pagina .retrato{grid-column:1;grid-row:1/6;margin-bottom:0}
+ .marca-pagina .marca-sec,.marca-pagina .marca-cap{grid-column:1/-1}
+}
+@media(max-width:700px){
+ .marca-host.wrap,.wrap.marca-host{width:calc(100% - 40px)}
+ .marca-pagina{display:block;padding:24px 20px}
+ .marca-pagina .retrato{width:100px;margin-bottom:22px}
+}
+
+.marca-pagina .marca-cap .brinde{margin:0 0 14px;padding-top:10px;border-top:1px solid #2b2e29;color:#c4ef78;font-size:12px;line-height:1.5}
+.marca-pagina .marca-cap .brinde b{color:#c4ef78;font-weight:600}
+
+/* ---------- alinhamento do início ---------- */
+/*
+  O marca-página deve começar na mesma linha do primeiro texto. Como cada
+  capítulo abre com um elemento diferente (parágrafo de transição, seção com
+  padding próprio), o respiro inicial fica no container e o primeiro filho da
+  coluna de texto entra sem margem/padding no topo.
+*/
+.marca-layout>.marca-col>*:first-child{margin-top:0!important}
+/* o último bloco não acumula o próprio respiro com o do container */
+.marca-layout>.marca-col>*:last-child{margin-bottom:0!important;padding-bottom:0!important}
+.marca-layout>.marca-col>section:first-child,
+.marca-layout>.marca-col>p:first-child{padding-top:0!important}
+/* mesmo eixo em todos os capítulos: leitura, faixa de curso e perguntas */
+.marca-host{width:min(1205px,calc(100% - 68px));max-width:1205px;margin-inline:auto;padding-top:clamp(44px,4.6vw,70px);padding-bottom:clamp(52px,5.4vw,88px)}
+/* o respiro do fim é o do container; o <main> não soma o dele por cima */
+main:has(>.marca-host){padding-bottom:0}
+/* 24px abaixo do cabeçalho fixo, para não encostar nele */
+.marca-pagina{top:120px}

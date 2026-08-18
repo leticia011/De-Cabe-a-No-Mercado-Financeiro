@@ -1,0 +1,91 @@
+/*
+  Seção do autor — a parte viva.
+
+  Em repouso a seção é sóbria: foto dessaturada, números parados. Ela reage
+  em dois momentos — quando entra na tela (os números contam) e quando o
+  cursor passa por ela (a foto ganha cor, as células abrem o detalhe).
+*/
+
+/* ---------- foto ---------- */
+.author-feature .foto-box{position:relative}
+.author-feature .foto-box img{
+  filter:brightness(.94) contrast(1.02);
+  transform:scale(1.01);
+  transition:filter .9s cubic-bezier(.16,1,.3,1),transform 1.6s cubic-bezier(.16,1,.3,1);
+}
+.author-feature:hover .foto-box img,
+.author-feature:focus-within .foto-box img{filter:brightness(1.02) contrast(1);transform:scale(1.06)}
+
+/* legenda que sobe da base da foto */
+.author-feature .foto-legenda{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;margin:0;
+  padding:58px 30px 24px;
+  font-family:Poppins,system-ui,sans-serif;
+  font-size:11px!important;letter-spacing:.13em;text-transform:uppercase;font-weight:600;color:#fff!important;
+  background:linear-gradient(0deg,rgba(0,0,0,.8),rgba(0,0,0,0));
+  opacity:0;transform:translateY(14px);
+  transition:opacity .5s ease,transform .5s cubic-bezier(.16,1,.3,1);
+  pointer-events:none;
+}
+.author-feature:hover .foto-legenda,
+.author-feature:focus-within .foto-legenda{opacity:1;transform:translateY(0)}
+
+/* ---------- números ---------- */
+/* a célula reserva de antemão a altura do detalhe: no hover nada empurra o layout */
+.author-stat{position:relative;overflow:hidden;transition:background .35s ease;min-height:134px;justify-content:flex-start;padding-top:20px}
+.author-stat::before{
+  content:"";position:absolute;top:0;left:0;height:2px;width:100%;
+  background:var(--lime,#c4ef78);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .45s cubic-bezier(.16,1,.3,1);
+}
+.author-stat:hover{background:#191c15}
+.author-stat:hover::before{transform:scaleX(1)}
+.author-stat strong{font-variant-numeric:tabular-nums}
+.author-stat em{
+  display:block;font-style:normal;font-size:11px;line-height:1.5;color:#ccd0c6;
+  text-transform:none;letter-spacing:0;
+  max-height:0;margin-top:0;opacity:0;overflow:hidden;
+  transition:max-height .4s cubic-bezier(.16,1,.3,1),margin-top .4s ease,opacity .3s ease;
+}
+.author-stat:hover em{max-height:50px;margin-top:9px;opacity:1}
+
+/* enquanto os números ainda não entraram na tela, ficam discretos */
+.author-stats[data-contou="nao"] strong{opacity:.35}
+.author-stats strong{transition:opacity .5s ease,transform .35s cubic-bezier(.16,1,.3,1)}
+
+/* ---------- botão ---------- */
+.author-feature .btn-preto{position:relative;overflow:hidden;transition:background .3s ease,color .3s ease,padding-right .3s ease}
+.author-feature .btn-preto:after{
+  display:inline-block;
+  transition:transform .35s cubic-bezier(.16,1,.3,1);
+}
+.author-feature .btn-preto:hover:after{transform:translateX(7px)}
+
+@media(hover:none){
+  .author-feature .foto-box img{filter:none;transform:none}
+  .author-feature .foto-legenda{opacity:1;transform:none}
+  .author-stat em{display:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .author-feature .foto-box img,.author-feature .foto-legenda,
+  .author-stat::before,.author-stat span,.author-stat em,
+  .author-stat strong,.author-feature .btn-preto:after{transition:none}
+}
+
+/* ---------- foto sangrando até a borda da tela ---------- */
+/*
+  A margem negativa puxa a foto para fora do grid até encostar na borda
+  esquerda da janela. A distância exata varia por breakpoint, então quem
+  mede é o JS (--sangria); o CSS só a consome.
+*/
+.author-feature .foto-box{margin-left:calc(-1 * var(--sangria,0px))}
+.author-feature .bio-in{height:auto!important;min-height:min(78vh,720px)}
+.author-feature .foto-box{height:auto!important;min-height:100%}
+
+@media(max-width:900px){
+  .author-feature{--sangria:0px}
+  .author-feature .bio-in{height:auto!important}
+  .author-feature .foto-box{height:clamp(330px,52vh,460px)!important;margin-left:0}
+}

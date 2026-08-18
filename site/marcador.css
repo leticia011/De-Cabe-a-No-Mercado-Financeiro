@@ -1,0 +1,33 @@
+/*
+  Marcador de leitura: barra fixa no rodapé do capítulo e o módulo da
+  coluna lateral que passa a mostrar a formação depois de 60% da leitura.
+  Usado em todos os capítulos (ver marcador.js).
+*/
+
+/* ---------- barra de leitura ---------- */
+.marcador{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#0b0d08;color:#fff;transform:translateY(100%);transition:transform .28s ease;font-family:Poppins,system-ui,sans-serif}
+.marcador.aparece{transform:translateY(0)}
+.marcador-barra{height:3px;background:#22261d}
+.marcador-progresso{height:100%;width:0;background:#c4ef78;transition:width .12s linear}
+.marcador-in{width:min(1320px,calc(100% - 68px));margin:0 auto;min-height:60px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:11px 0}
+.marcador-txt{margin:0;font-size:13px;color:#b9bdb4}
+.marcador-txt b{color:#fff;font-weight:500}
+.marcador-cta{display:inline-flex;align-items:center;gap:9px;min-height:40px;padding:0 20px;background:#c4ef78;color:#0b0d08;text-decoration:none;font-size:12.5px;font-weight:600;white-space:nowrap}
+.marcador-cta:hover{background:#fff}
+.marcador-fechar{background:0;border:0;color:#6f766a;font-size:20px;line-height:1;cursor:pointer;padding:4px 8px}
+.marcador-fechar:hover{color:#fff}
+
+/* ---------- módulo lateral que vira formação depois de 60% ---------- */
+.marca-cap.marca-cap-formacao{background:#101505;color:#fff;border-color:#101505}
+.marca-cap-formacao .r{color:#c4ef78}
+.marca-cap-formacao h3{color:#fff;margin:6px 0 8px}
+.marca-cap-formacao p{color:#b9bdb4}
+.marca-cap-formacao p b{color:#fff}
+.marca-cap-cta{display:inline-flex;align-items:center;margin-top:12px;color:#c4ef78;font-size:13px;font-weight:600;text-decoration:none;border-bottom:1.5px solid rgba(196,239,120,.4);padding-bottom:2px}
+.marca-cap-cta:hover{border-bottom-color:#c4ef78}
+
+@media(max-width:900px){
+  .marcador-txt{display:none}
+  .marcador-in{justify-content:space-between}
+  .marcador-cta{flex:1;justify-content:center;font-size:12px}
+}

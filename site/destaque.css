@@ -1,0 +1,29 @@
+/* Frase de destaque — mesmo tratamento editorial do capítulo 1. */
+.puxa-cap{margin:44px 0;padding:6px 0 6px 28px;background:transparent;border:0;border-left:5px solid #c4ef78;box-shadow:none}
+.puxa-cap p{margin:0!important;color:#080908!important;font:300 clamp(21px,2.4vw,29px)/1.45 Poppins,system-ui,sans-serif!important;letter-spacing:-.02em}
+.puxa-cap p b{font-weight:500}
+.puxa-cap cite{display:block;margin-top:14px;color:#66734e;font-size:11px;font-style:normal;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+/* Variante 2: filete verde à esquerda, frase grande à direita, sem cartão. */
+.puxa-linha{margin:44px 0;padding:6px 0 6px 28px;border-left:5px solid #c4ef78;background:transparent;box-shadow:none}
+.puxa-linha p{margin:0!important;color:#080908!important;font:300 clamp(20px,2.35vw,28px)/1.36 Poppins,system-ui,sans-serif!important;letter-spacing:-.03em}
+.puxa-linha p b{font-weight:500}
+.puxa-linha cite{display:block;margin-top:12px;color:#66734e;font-size:11px;font-style:normal;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+
+@media(max-width:700px){
+ .puxa-cap{margin:32px 0;padding:4px 0 4px 18px;border-left-width:4px}
+ .puxa-linha{margin:32px 0;padding-left:18px;border-left-width:4px}
+}
+
+/* ---------- citação literal do livro ---------- */
+/*
+  O único formato de destaque diferente da barra: fundo claro e crédito com
+  capítulo e página. Reservado a falas textuais do autor — nunca para a
+  frase-síntese do site, que é papel da barra.
+*/
+.cit{margin:40px 0;padding:26px 30px;background:#f1f1ec;border-left:5px solid #c4ef78}
+.cit blockquote{margin:0 0 14px;font:300 clamp(19px,2.1vw,25px)/1.42 Poppins,system-ui,sans-serif;
+  letter-spacing:-.025em;color:#080908}
+.cit cite{display:flex;align-items:center;gap:9px;font-style:normal;font-size:11px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:#5b7a2a}
+.cit cite .lo{width:8px;height:8px;background:currentColor;transform:rotate(45deg);flex:0 0 auto}
+@media(max-width:720px){.cit{padding:20px 20px}}

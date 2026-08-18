@@ -107,3 +107,20 @@
     }
   }
 })();
+
+/*
+  Grupos de perguntas (capítulo 7): o clique no título mostra ou esconde
+  as perguntas daquele grupo. Ao fechar, as respostas abertas se fecham junto.
+*/
+(() => {
+  document.querySelectorAll('.faq-grupo-cab').forEach(cabecalho => {
+    const lista = document.getElementById(cabecalho.getAttribute('aria-controls'));
+    if (!lista) return;
+    cabecalho.addEventListener('click', () => {
+      const aberto = cabecalho.getAttribute('aria-expanded') === 'true';
+      cabecalho.setAttribute('aria-expanded', String(!aberto));
+      lista.hidden = aberto;
+      if (aberto) lista.querySelectorAll('details[open]').forEach(d => { d.open = false; });
+    });
+  });
+})();

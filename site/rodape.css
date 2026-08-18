@@ -1,0 +1,26 @@
+/* Rodapé global — mesmo visual em todas as páginas do site. */
+.rodape-global{background:#080a07;color:#a2a79b;padding:66px 0 30px;font-size:.85rem;border-top:1px solid #1c2019;font-family:Poppins,system-ui,sans-serif}
+.rodape-global a{color:#a2a79b;text-decoration:none}
+.rodape-global a:hover{color:#c4ef78}
+.rodape-global .wrap{width:100%;max-width:1320px;margin:0 auto;padding-inline:clamp(22px,4vw,58px)}
+.rodape-global .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:42px;padding-bottom:46px}
+.rodape-global .footer-brand{display:flex;align-items:center;gap:11px;color:#fff;font-size:17px;font-weight:500;text-decoration:none;letter-spacing:-.01em}
+.rodape-global .footer-mark{width:26px;height:26px;fill:#c4ef78;flex:0 0 auto}
+.rodape-global .footer-about{max-width:290px;margin:18px 0 0;font-size:12px;line-height:1.75}
+.rodape-global .footer-contacts{display:flex;flex-direction:column;gap:5px;margin-top:20px}
+.rodape-global .footer-contacts a{color:#d6d9d1;width:max-content;font-size:11px}
+.rodape-global .social{display:flex;gap:8px;margin-top:20px}
+.rodape-global .social a{width:34px;height:34px;border:1px solid #2b3028;display:grid;place-items:center;color:#d6d9d1}
+.rodape-global .social a:hover{border-color:#c4ef78;color:#c4ef78}
+.rodape-global .social svg{width:16px;height:16px}
+.rodape-global .footer-grid h2{color:#fff;letter-spacing:.15em;text-transform:uppercase;margin:4px 0 18px;font-size:9px;font-weight:600}
+.rodape-global .footer-grid ul{list-style:none;padding:0;margin:0}
+.rodape-global .footer-grid li{margin-bottom:9px;font-size:12px}
+.rodape-global .footer-bottom{color:#71766c;border-top:1px solid #1c2019;display:flex;justify-content:space-between;gap:16px;padding-top:24px;font-size:10px}
+@media(max-width:1024px){.rodape-global .footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
+@media(max-width:640px){
+  .rodape-global{padding-top:52px}
+  .rodape-global .footer-grid{grid-template-columns:1fr;gap:34px;padding-bottom:36px}
+  .rodape-global .social a{width:42px;height:42px}
+  .rodape-global .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px}
+}

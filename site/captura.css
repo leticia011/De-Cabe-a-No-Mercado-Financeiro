@@ -1,0 +1,11 @@
+/* Captura de e-mail em duas etapas (e-mail -> nome + telefone), pronta para o RD Station. */
+.captura-2etapas{display:block}
+.captura-2etapas .campo{display:grid;gap:8px}
+.captura-2etapas input{width:100%;min-height:46px;padding:0 13px;border:1px solid #3a3d38;background:#0b0c0b;color:#fff;font:400 13px/1 Poppins,system-ui,sans-serif}
+.captura-2etapas input::placeholder{color:#7f847b}
+.captura-2etapas input:focus-visible{outline:none;border-color:#c4ef78}
+.captura-2etapas button{width:100%;min-height:46px;border:0;background:#c4ef78;color:#050605;font:600 13px/1 Poppins,system-ui,sans-serif;cursor:pointer}
+.captura-2etapas button:hover{background:#fff}
+.captura-2etapas .captura-etapa-2 p{margin:0 0 10px;color:#c4ef78;font-size:12px}
+.captura-2etapas .form-status{margin:10px 0 0;color:#c4ef78;font-size:11.5px;line-height:1.5;min-height:1px}
+.captura-2etapas .form-status:empty{margin:0}
