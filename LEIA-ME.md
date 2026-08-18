@@ -115,3 +115,46 @@ Nada aqui é chute. Fontes conferidas:
 **Use Git.** Hoje as versões são arquivos com nomes diferentes, o que vira caos
 quando mais de uma pessoa mexe. Git resolve: um arquivo, histórico completo,
 volta para qualquer ponto, duas pessoas trabalham sem se atropelar.
+
+---
+
+## Integração com o RD Station (CRM) — 18/08
+
+O site sempre disparou o evento `rd-lead` a cada formulário enviado, mas ninguém
+escutava. Agora escuta: **`site/rd-station.js`** (incluído nas 9 páginas) envia
+cada lead à API de conversões do RD e carrega o código de monitoramento.
+
+**Para ativar** — preencher duas constantes no topo de `site/rd-station.js`:
+
+| Constante | Onde pegar no painel RD |
+|---|---|
+| `RD_TRACKING_TOKEN` | Configurações → Código de monitoramento (o uuid do loader) |
+| `RD_API_KEY` | Configurações → Integrações → Chave de API pública |
+
+As duas são públicas por natureza. **Sem elas, o site se comporta exatamente
+como antes** (formulário agradece, nada é enviado) — testado.
+
+Cada formulário vira um evento de conversão nomeado no RD:
+`site-livro-capitulo-1`, `site-livro-lista-proximo-livro`,
+`site-livro-pergunta-leitor`, e os do marca-página das páginas de capítulo.
+A automação (entregar capítulo, sequência de e-mails) se configura no painel,
+por identificador.
+
+## GEO (otimização para mecanismos de resposta) — 18/08
+
+- `site/perguntas-frequentes.html` ganhou schema **FAQPage com as 40 perguntas
+  reais** (era a única página sem dado estruturado — e a mais valiosa).
+- `site/llms.txt`: resumo do site para agentes de IA.
+- `site/robots.txt`: liberação explícita de leitura.
+- A home já tinha WebSite/Person/Book/FAQPage — intocada.
+
+## Pendências novas (precisam do cliente)
+
+1. **Chaves do RD** (tabela acima).
+2. **Domínio canônico**: o código aponta para TRÊS lugares —
+   `de-cabe-a-no-mercado-financeiro.vercel.app` (6 canonicals),
+   `bankersacademy.com.br` (3 canonicals, com dois esquemas de caminho
+   diferentes) e `bankers-academy-ztu1.vercel.app` (36 links de CTA para um
+   preview que vai morrer). Decidir o endereço final; só então gerar
+   `sitemap.xml` e unificar canonicals — canonical inconsistente anula boa
+   parte do ganho de GEO.

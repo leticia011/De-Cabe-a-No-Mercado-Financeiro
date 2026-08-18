@@ -1,0 +1,27 @@
+# De cabeça no mercado financeiro
+
+> Site do livro "De cabeça no mercado financeiro — 6 passos para se tornar um
+> Banker", de José Roberto Securato Junior (Bankers Academy). Guia prático de
+> entrada no mercado financeiro brasileiro: autoconhecimento, escolha de
+> carreira, formação e certificações, currículo e LinkedIn, equity story e
+> processo seletivo.
+
+## Páginas principais
+
+- [Home](index.html): o livro, o autor e o capítulo 1 para download
+- [Perguntas e respostas](perguntas-frequentes.html): 40 perguntas reais de
+  leitores sobre carreira no mercado financeiro, respondidas pelo autor
+- [Autoconhecimento](autoconhecimento.html): passo 1 — perfil antes de carreira
+- [Quadrante de carreiras](quadrante-carreiras.html): mapa de 18 carreiras do
+  mercado financeiro organizadas por perfil
+- [A carreira certa](carreira-certa.html): passo 2 — como escolher a área
+- [Formação e certificações](formacao-certificacoes.html): passo 3 — CPA, CEA,
+  CFA, CGA e o que cada área exige
+- [CV e LinkedIn](cv-linkedin.html): passo 4 — currículo para o mercado financeiro
+- [Equity story](equity-story.html): passo 5 — a narrativa pessoal do candidato
+- [Processo seletivo](processo-seletivo-v2.html): passo 6 — como funcionam as
+  etapas de seleção de bancos e gestoras
+
+## Autor
+
+José Roberto Securato Junior — educador em finanças, Bankers Academy.
