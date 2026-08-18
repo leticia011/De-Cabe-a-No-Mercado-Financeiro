@@ -1,5 +1,2 @@
 User-agent: *
 Allow: /
-
-# GEO: o conteúdo pode ser lido e citado por mecanismos de resposta.
-# Resumo do site para agentes: /llms.txt
