@@ -27,6 +27,7 @@
 .bar.global-bar .bar-buy:hover{border-color:#c4ef78;color:#c4ef78!important}
 .bar.global-bar .bar-cta{padding:0 14px;background:#c4ef78;color:#050605!important;font-weight:600}
 .bar.global-bar .bar-cta:hover{background:#fff;color:#000!important}
+.bar.global-bar .bar-buy:active,.bar.global-bar .bar-cta:active{transform:scale(.97)}
 .global-mobile-label{display:none}
 @media(max-width:1250px){
  .announcement.global-announcement .announcement-in{justify-content:flex-start;padding:8px 20px;white-space:nowrap;overflow:hidden}.announcement.global-announcement a{display:none}
