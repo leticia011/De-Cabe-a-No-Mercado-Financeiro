@@ -35,7 +35,6 @@
       </a>
       <nav class="main-nav" aria-label="Navegação principal">
         <button class="global-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
-        <a class="global-desktop-link" href="${home('#top')}">O livro</a>
         <div class="nav-drop">
           <a class="global-desktop-link nav-drop-link" href="${home('#metodo')}" aria-expanded="false" aria-haspopup="true">Os 6 passos <span class="nav-drop-seta" aria-hidden="true">▾</span></a>
           <div class="nav-drop-menu">${CAPITULOS.map(capitulo => `
@@ -44,8 +43,8 @@
         </div>
         <a class="global-desktop-link" href="perguntas-frequentes.html">Perguntas &amp; respostas</a>
         <a class="global-desktop-link" href="${home('#autor')}">Sobre o autor</a>
-        <a class="bar-buy global-mobile-keep" href="${home('#comprar')}"><span class="global-desktop-label">Comprar o livro</span><span class="global-mobile-label">Comprar</span></a>
-        <a class="bar-cta global-mobile-keep" href="https://bankers-academy-ztu1.vercel.app/"><span class="global-desktop-label">Começar minha formação</span><span class="global-mobile-label">Cursos</span></a>
+        <a class="bar-buy global-mobile-keep" href="https://bankers-academy-ztu1.vercel.app/"><span class="global-desktop-label">Começar minha formação</span><span class="global-mobile-label">Cursos</span></a>
+        <a class="bar-cta global-mobile-keep" href="${home('#comprar')}"><span class="global-desktop-label">Comprar o livro</span><span class="global-mobile-label">Comprar</span></a>
       </nav>
     </div>`;
 

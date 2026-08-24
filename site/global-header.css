@@ -58,10 +58,6 @@
 
 /* daqui para baixo o menu vai encolhendo até virar hambúrguer em 760px */
 @media(max-width:1450px){
-  .bar.global-bar .main-nav{gap:26px}
-  .bar.global-bar .main-nav>a,.bar.global-bar .main-nav .nav-drop-link{font-size:14px}
-}
-@media(max-width:1450px){
   .bar.global-bar .bar-in{min-height:96px;gap:24px}
   .bar.global-bar .mark{font-size:17px}
   .bar.global-bar .main-nav{gap:20px}
