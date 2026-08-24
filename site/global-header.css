@@ -45,31 +45,31 @@
  .bar.global-bar .main-nav.is-open .global-desktop-link{grid-column:1/-1}.bar.global-bar .main-nav.is-open .bar-buy,.bar.global-bar .main-nav.is-open .bar-cta{display:flex!important;justify-content:center}
 }
 
-/* ---------- cabeçalho fixo e mais alto (referência: bankers-academy) ---------- */
+/* ---------- cabeçalho fixo, enxuto (dentro do teto de 80px recomendado p/ desktop) ---------- */
 .bar.global-bar{position:sticky!important;top:0!important;box-shadow:0 1px 0 rgba(255,255,255,.06),0 10px 30px rgba(0,0,0,.28)}
-.bar.global-bar .bar-in{min-height:96px;padding-block:18px;gap:30px}
-.bar.global-bar .brand-mark{width:34px;height:34px}
-.bar.global-bar .mark{white-space:nowrap;font-size:18px;font-weight:600;letter-spacing:-.01em;text-transform:none}
-.bar.global-bar .main-nav{gap:32px}
-.bar.global-bar .main-nav>a,.bar.global-bar .main-nav .nav-drop-link{display:inline-flex;align-items:center;min-height:48px;font-size:15px;font-weight:500;color:#c6c6c1;white-space:nowrap}
+.bar.global-bar .bar-in{min-height:72px;padding-block:14px;gap:26px}
+.bar.global-bar .brand-mark{width:29px;height:29px}
+.bar.global-bar .mark{white-space:nowrap;font-size:16px;font-weight:600;letter-spacing:-.01em;text-transform:none}
+.bar.global-bar .main-nav{gap:26px}
+.bar.global-bar .main-nav>a,.bar.global-bar .main-nav .nav-drop-link{display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500;color:#c6c6c1;white-space:nowrap}
 .bar.global-bar .main-nav a:hover{color:#c4ef78}
 .bar.global-bar .nav-drop-seta{font-size:11px}
 .bar.global-bar .bar-buy,.bar.global-bar .bar-cta{display:inline-flex;align-items:center;justify-content:center;
-  min-height:48px;padding:0 22px;font-size:14px;font-weight:600;line-height:1;white-space:nowrap}
+  min-height:42px;padding:0 20px;font-size:13.5px;font-weight:600;line-height:1;white-space:nowrap}
 
 /* daqui para baixo o menu vai encolhendo até virar hambúrguer em 760px */
 @media(max-width:1450px){
-  .bar.global-bar .bar-in{min-height:96px;gap:24px}
-  .bar.global-bar .mark{font-size:17px}
-  .bar.global-bar .main-nav{gap:20px}
-  .bar.global-bar .main-nav>a,.bar.global-bar .main-nav .nav-drop-link{font-size:14.5px}
+  .bar.global-bar .bar-in{min-height:68px;gap:20px}
+  .bar.global-bar .mark{font-size:15px}
+  .bar.global-bar .main-nav{gap:16px}
+  .bar.global-bar .main-nav>a,.bar.global-bar .main-nav .nav-drop-link{font-size:13.5px}
   .bar.global-bar .bar-buy{display:none}
-  .bar.global-bar .bar-cta{font-size:14px;padding:0 20px;min-height:48px}
+  .bar.global-bar .bar-cta{font-size:13.5px;padding:0 18px;min-height:42px}
 }
 
 @media(max-width:760px){
-  .bar.global-bar .bar-in{min-height:70px;padding-block:12px}
-  .bar.global-bar .brand-mark{width:30px;height:30px}
-  .bar.global-bar .mark{font-size:16px}
+  .bar.global-bar .bar-in{min-height:62px;padding-block:11px}
+  .bar.global-bar .brand-mark{width:26px;height:26px}
+  .bar.global-bar .mark{font-size:15px}
   .bar.global-bar .bar-buy{display:inline-flex}
 }
