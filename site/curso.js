@@ -4,7 +4,7 @@
   Troque as URLs em PROGRAMAS quando as páginas definitivas dos cursos existirem.
 */
 (() => {
-  const SITE = 'https://bankers-academy-ztu1.vercel.app';
+  const SITE = 'https://www.tabula.com.br/conteudista/bankers.academy';
   const PROGRAMAS = {
     masterclass: { tag: 'Masterclass gratuita', nome: 'Mercado Financeiro na Prática: Áreas, Funções e Carreiras', desc: 'Uma visão direta de como o mercado se organiza — quem faz o quê, em qual mesa e com qual rotina.', cta: 'Assistir à masterclass', href: SITE + '/#programas' },
     bootcamp: { tag: 'Turma presencial', nome: 'Investment Banking Boot Camp', desc: 'Modelagem, valuation e materiais de transação: o recorte técnico que Investment Banking cobra de quem entra.', cta: 'Ver o Boot Camp', href: SITE + '/#programas' },

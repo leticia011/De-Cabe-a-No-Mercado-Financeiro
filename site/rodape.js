@@ -35,11 +35,11 @@
       </div>
       <div>
         <h2>Formação</h2>
-        <ul><li><a href="https://bankers-academy-ztu1.vercel.app/#programas">Programas</a></li><li><a href="https://bankers-academy-ztu1.vercel.app/encontre-seu-programa">Encontre seu programa</a></li><li><a href="https://www.tabula.com.br/conteudista/bankers.academy">Cursos on-line</a></li><li><a href="${INICIO}#academy">Bankers Academy</a></li></ul>
+        <ul><li><a href="https://www.tabula.com.br/conteudista/bankers.academy">Programas</a></li><li><a href="https://www.tabula.com.br/conteudista/bankers.academy">Encontre seu programa</a></li><li><a href="https://www.tabula.com.br/conteudista/bankers.academy">Cursos on-line</a></li><li><a href="${INICIO}#academy">Bankers Academy</a></li></ul>
       </div>
       <div>
         <h2>Institucional</h2>
-        <ul><li><a href="https://bankers-academy-ztu1.vercel.app/quem-somos">Quem somos</a></li><li><a href="https://www.linkedin.com/in/josesecurato/">Securato Jr.</a></li><li><a href="mailto:admin@bankersacademy.com.br">Contato</a></li><li><a href="mailto:admin@bankersacademy.com.br">admin@bankersacademy.com.br</a></li></ul>
+        <ul><li><a href="https://www.tabula.com.br/conteudista/bankers.academy">Quem somos</a></li><li><a href="https://www.linkedin.com/in/josesecurato/">Securato Jr.</a></li><li><a href="mailto:admin@bankersacademy.com.br">Contato</a></li><li><a href="mailto:admin@bankersacademy.com.br">admin@bankersacademy.com.br</a></li></ul>
       </div>
     </div>
     <div class="footer-bottom"><span>© 2026 Bankers Academy — Todos os direitos reservados.</span><span>Livro publicado pela Oficina do Livro</span></div>

@@ -16,8 +16,6 @@
   iguais sem repetir markup.
 */
 (() => {
-  const SITE = 'https://bankers-academy-ztu1.vercel.app';
-
   /* o que cada capítulo oferece — o mesmo recorte que a faixa de curso tinha */
   const PAGINAS = {
     // TESTE (só neste capítulo): a barra leva ao próximo capítulo, porque a
