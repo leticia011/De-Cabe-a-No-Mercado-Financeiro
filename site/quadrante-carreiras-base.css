@@ -1,0 +1,64 @@
+:root{
+  --preto:#000; --grafite:#3D3D3D; --cinza:#DBDBDB; --cinza-cl:#F4F4F4;
+  --branco:#FFF; --lima:#c4ef78; --lima-esc:#7FAD2E;
+  --fonte:"Poppins",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--branco);color:var(--preto);font-family:var(--fonte);font-size:17px;line-height:1.7}
+.wrap{max-width:1080px;margin:0 auto;padding:56px 34px 80px}
+.lo{display:inline-block;width:7px;height:7px;background:var(--lima);transform:rotate(45deg);flex:0 0 auto}
+.lo.dark{background:var(--preto)}
+
+.rot{display:flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--lima-esc);font-weight:600;margin:0 0 16px}
+h1{font-weight:300;font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.2;letter-spacing:-.025em;margin:0 0 18px;max-width:22ch}
+h1 b{font-weight:600}
+.lead{color:var(--grafite);max-width:62ch;margin:0 0 12px;font-size:1.02rem}
+.lead b{color:var(--preto);font-weight:500}
+
+/* ---------- quadrante ---------- */
+.mapa-scroll{overflow-x:auto;margin:44px 0 0;padding-bottom:8px}
+.mapa{position:relative;min-width:680px;aspect-ratio:1/.86;border:1px solid var(--cinza);background:
+  linear-gradient(180deg,var(--cinza-cl) 0%,var(--branco) 55%)}
+/* eixos */
+.eixo-v,.eixo-h{position:absolute;background:var(--preto)}
+.eixo-v{left:50%;top:9%;bottom:9%;width:1.5px;transform:translateX(-50%)}
+.eixo-h{top:50%;left:4%;right:4%;height:1.5px;transform:translateY(-50%)}
+.ponta{position:absolute;width:0;height:0}
+.ponta.cima{left:50%;top:9%;transform:translate(-50%,-100%);border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:8px solid var(--preto)}
+.ponta.baixo{left:50%;bottom:9%;transform:translate(-50%,100%);border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--preto)}
+.ponta.esq{top:50%;left:4%;transform:translate(-100%,-50%);border-top:5px solid transparent;border-bottom:5px solid transparent;border-right:8px solid var(--preto)}
+.ponta.dir{top:50%;right:4%;transform:translate(100%,-50%);border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid var(--preto)}
+/* rótulos dos eixos */
+.eixo-rot{position:absolute;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--lima-esc);white-space:nowrap}
+.eixo-rot.cima{left:50%;top:1.5%;transform:translateX(-50%)}
+.eixo-rot.baixo{left:50%;bottom:1.5%;transform:translateX(-50%)}
+.eixo-rot.esq{left:1.5%;top:50%;transform:translateY(-50%)}
+.eixo-rot.dir{right:1.5%;top:50%;transform:translateY(-50%)}
+/* carreiras */
+.c{position:absolute;transform:translate(-50%,-50%);text-align:center;font-size:12.5px;line-height:1.28;
+  letter-spacing:.02em;color:var(--grafite);white-space:nowrap;text-transform:uppercase}
+.c.br{white-space:normal;width:96px}
+.c.destaque{color:var(--preto);font-weight:600;font-size:13px}
+.c.destaque::before{content:"";display:block;width:6px;height:6px;background:var(--lima);
+  transform:rotate(45deg);margin:0 auto 5px}
+
+.fonte{display:flex;align-items:center;gap:9px;margin:18px 0 0;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9A9A9A}
+
+/* ---------- leitura ---------- */
+.leitura{margin:56px 0 0;border-top:1px solid var(--cinza);padding-top:44px}
+.leitura h2{font-weight:300;font-size:1.5rem;margin:0 0 26px;letter-spacing:-.015em;display:flex;align-items:center;gap:12px}
+.quads{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--cinza);border:1px solid var(--cinza)}
+.quad{background:var(--branco);padding:24px}
+.quad h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--lima-esc);font-weight:600;margin:0 0 10px}
+.quad p{margin:0;font-size:.94rem;color:var(--grafite);line-height:1.62}
+.quad p b{color:var(--preto);font-weight:500}
+
+.nota{margin:44px 0 0;border:1px solid var(--cinza);background:var(--cinza-cl);padding:22px 24px}
+.nota p{margin:0;font-size:.92rem;color:var(--grafite)}
+.nota p+p{margin-top:10px}
+.nota b{color:var(--preto);font-weight:500}
+
+@media (max-width:640px){
+  .wrap{padding:40px 20px 60px}
+  .quads{grid-template-columns:1fr}
+}
