@@ -16,6 +16,7 @@
 .ponte-cap .bt-ponte{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;background:#c4ef78;color:#050605;text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap}
 .ponte-cap .bt-ponte .lo{width:8px;height:8px;background:#050605;transform:rotate(45deg);flex:0 0 auto}
 .ponte-cap .bt-ponte:hover{background:#fff}
+.ponte-cap .bt-ponte:active{transform:scale(.98)}
 .ponte-cap .ponte-voltar{color:#8e938a;text-decoration:none;font-size:12px;text-align:center}
 .ponte-cap .ponte-voltar:hover{color:#c4ef78}
 

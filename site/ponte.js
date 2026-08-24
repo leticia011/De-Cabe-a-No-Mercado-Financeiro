@@ -107,7 +107,7 @@
   ponte.className = 'ponte-cap';
   ponte.setAttribute('aria-label', 'Próximo capítulo');
   ponte.innerHTML = `
-    <div class="ponte-in">
+    <div class="ponte-in" data-reveal>
       <div>
         <p class="rot"><span class="lo" aria-hidden="true"></span> ${dados.rot}</p>
         <h2>${dados.titulo}</h2>

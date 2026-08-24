@@ -531,7 +531,8 @@ footer{padding-top:58px}.footer-grid{gap:34px}
   .opinioes-cabeca,.opinioes-grade{grid-template-columns:1fr}.opinioes-cabeca{gap:24px}.opiniao{min-height:0}.opinioes-acao{align-items:flex-start;flex-direction:column}
 }
 </style>
-<link rel="stylesheet" href="redesign.css?v=10">
+<link rel="stylesheet" href="redesign.css?v=11">
+<link rel="stylesheet" href="reveal.css?v=1">
 <link rel="stylesheet" href="global-header.css?v=6">
 <link rel="stylesheet" href="autor.css?v=4">
 <link rel="stylesheet" href="rodape.css?v=1">
@@ -1000,9 +1001,27 @@ footer{padding-top:58px}.footer-grid{gap:34px}
   let current = hashIndex >= 0 ? hashIndex : 0;
   let timer;
   const goTo = index => {
+    const anterior = current;
     current = (index + slides.length) % slides.length;
-    slides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === current));
     const target = slides[current];
+    target.classList.add('is-active');
+
+    // a página que sai vira por cima da que entra — como um livro de verdade
+    if (current !== anterior) {
+      const saindo = slides[anterior];
+      if (reducedMotion) {
+        saindo.classList.remove('is-active');
+      } else {
+        const distancia = (current - anterior + slides.length) % slides.length;
+        const avancando = distancia <= slides.length / 2;
+        saindo.classList.add('is-leaving', avancando ? 'dir-next' : 'dir-prev');
+        saindo.addEventListener('transitionend', function limpar(evento) {
+          if (evento.target !== saindo) return;
+          saindo.classList.remove('is-active', 'is-leaving', 'dir-next', 'dir-prev');
+        }, { once: true });
+      }
+    }
+
     carousel.scrollTo({
       left: target.offsetLeft - carousel.offsetLeft,
       behavior: reducedMotion ? 'auto' : 'smooth'

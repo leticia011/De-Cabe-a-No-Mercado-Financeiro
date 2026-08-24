@@ -304,11 +304,24 @@ p{text-wrap:pretty}
 }
 
 /* Carrossel estável: um slide por vez, sem trilho horizontal sujeito a deslocamento. */
-.ensina-dir .carrossel{display:block;overflow:visible;scroll-snap-type:none}
+.ensina-dir .carrossel{display:block;overflow:visible;scroll-snap-type:none;position:relative}
 .ensina-dir .carrossel>.slide{display:none; width:100%; max-width:100%}
-.ensina-dir .carrossel>.slide.is-active{display:grid}
+.ensina-dir .carrossel>.slide.is-active,.ensina-dir .carrossel>.slide.is-leaving{display:grid}
 @media(max-width:760px){
- .ensina-dir .carrossel>.slide.is-active{display:flex}
+ .ensina-dir .carrossel>.slide.is-active,.ensina-dir .carrossel>.slide.is-leaving{display:flex}
+}
+
+/* efeito de folhear: a página que sai vira por cima, revelando a de baixo já no lugar */
+.ensina-dir .carrossel{perspective:2200px}
+.ensina-dir .carrossel::before{content:"";position:absolute;top:0;bottom:0;left:0;width:22px;
+  background:linear-gradient(90deg,rgba(0,0,0,.15),transparent);z-index:5;pointer-events:none}
+.ensina-dir .carrossel>.slide.is-leaving{position:absolute;inset:0;z-index:4;pointer-events:none;
+  backface-visibility:hidden;box-shadow:0 22px 50px rgba(0,0,0,.22);
+  transition:transform .62s cubic-bezier(.61,.06,.4,.94),filter .62s ease}
+.ensina-dir .carrossel>.slide.is-leaving.dir-next{transform-origin:left center;transform:rotateY(-142deg);filter:brightness(.62)}
+.ensina-dir .carrossel>.slide.is-leaving.dir-prev{transform-origin:right center;transform:rotateY(142deg);filter:brightness(.62)}
+@media(prefers-reduced-motion:reduce){
+ .ensina-dir .carrossel>.slide.is-leaving{display:none!important}
 }
 
 @media(max-width:420px){
@@ -338,7 +351,7 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
  .ensina-in{width:100%;max-width:1560px;margin-inline:auto;grid-template-columns:minmax(360px,480px) minmax(0,1fr);gap:clamp(48px,4.5vw,74px);align-items:start}
  .ensina-esq{width:100%;max-width:480px}
  .ensina-dir{width:100%;max-width:none;overflow:visible}
- .ensina-dir .carrossel>.slide.is-active{grid-template-columns:minmax(360px,.95fr) minmax(420px,1.05fr);min-height:470px}
+ .ensina-dir .carrossel>.slide.is-active,.ensina-dir .carrossel>.slide.is-leaving{grid-template-columns:minmax(360px,.95fr) minmax(420px,1.05fr);min-height:470px}
  .ensina-dir .slide>div:first-child{padding:clamp(34px,3vw,52px)}
  .ensina-dir .slide .losangos,.ensina-dir .slide .losangos span{min-height:470px;height:470px}
 }
@@ -413,7 +426,3 @@ html{scroll-padding-top:104px}
   .ensina-in{grid-template-columns:1fr!important}
   .losangos span{aspect-ratio:1.15/1!important}
 }
-
-/* entrada suave ao rolar — só ativa depois que scroll-reveal.js confirma suporte */
-.reveal-active [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
-.reveal-active [data-reveal].is-visible{opacity:1;transform:translateY(0)}

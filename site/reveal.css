@@ -1,0 +1,3 @@
+/* entrada suave ao rolar — só ativa depois que scroll-reveal.js confirma suporte */
+.reveal-active [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal-active [data-reveal].is-visible{opacity:1;transform:translateY(0)}

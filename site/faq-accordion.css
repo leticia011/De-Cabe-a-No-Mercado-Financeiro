@@ -1,7 +1,8 @@
 .qa,.faq,.leitura#perguntas .quads{width:100%;display:grid;gap:12px;border:0!important}
 .qa details,.faq details,.leitura#perguntas .quads details{width:100%;background:#fff;border:1px solid #d6d8d2!important}
 .qa details:not([open])>:not(summary),.faq details:not([open])>:not(summary),.leitura#perguntas .quads details:not([open])>:not(summary){display:none!important}
-.qa summary,.faq summary,.leitura#perguntas .quads summary{list-style:none;cursor:pointer;display:grid!important;grid-template-columns:52px minmax(0,1fr) 32px;align-items:center;gap:30px;width:100%;min-height:94px;padding:24px 28px!important;color:#080908;font:600 15px/1.45 Poppins,system-ui,sans-serif}
+.qa summary,.faq summary,.leitura#perguntas .quads summary{list-style:none;cursor:pointer;display:grid!important;grid-template-columns:52px minmax(0,1fr) 32px;align-items:center;gap:30px;width:100%;min-height:94px;padding:24px 28px!important;color:#080908;font:600 15px/1.45 Poppins,system-ui,sans-serif;transition:background .15s ease}
+.qa summary:active,.faq summary:active,.leitura#perguntas .quads summary:active{background:#f7f7f4}
 .qa summary::-webkit-details-marker,.faq summary::-webkit-details-marker,.leitura#perguntas .quads summary::-webkit-details-marker{display:none}
 .qa .num,.faq .num,.leitura#perguntas .quads .num{display:grid;place-items:center;width:38px;height:38px;background:#f3f3f1;color:#789b3e;font-size:10px;font-weight:600}
 .qa .question,.faq .question,.leitura#perguntas .quads .question{min-width:0}
