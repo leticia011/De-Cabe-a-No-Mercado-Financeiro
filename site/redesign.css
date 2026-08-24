@@ -424,3 +424,6 @@ html{scroll-padding-top:104px}
   .ensina-in{grid-template-columns:1fr!important}
   .losangos span{aspect-ratio:1.15/1!important}
 }
+/* Passo 1 mostra a capa real do livro no losango — enquadra o título "De cabeça
+   no mercado financeiro" + a ilustração, em vez do centro genérico da imagem. */
+#passo-1 .losangos span{background-position:50% 37%!important}
