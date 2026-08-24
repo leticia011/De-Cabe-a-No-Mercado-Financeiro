@@ -26,3 +26,7 @@
   .livro-nav{margin-top:30px;padding-top:18px}
   .livro-nav button span{display:none}
 }
+
+/* Quando a seção paginada já é um ".chapter" (rótulo + conteúdo em duas
+   colunas), a página ativa precisa manter esse grid — não virar bloco único. */
+.chapter.livro-pg.is-active,.chapter.livro-pg.is-leaving{display:grid}
