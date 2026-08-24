@@ -1,0 +1,28 @@
+/* Texto do capítulo dividido em páginas que o leitor vira no próprio ritmo —
+   mesma ideia do carrossel dos 6 passos na home, sem autoplay. */
+.livro-paginas{position:relative;perspective:2200px}
+.livro-pg{display:none}
+.livro-pg.is-active,.livro-pg.is-leaving{display:block}
+.livro-pg.is-leaving{position:absolute;inset:0;z-index:4;pointer-events:none;
+  background:var(--branco,#fff);backface-visibility:hidden;box-shadow:0 22px 50px rgba(0,0,0,.16);
+  transition:transform .7s cubic-bezier(.22,1,.36,1),filter .7s cubic-bezier(.22,1,.36,1)}
+.livro-pg.is-leaving.dir-next{transform-origin:left center;transform:rotateY(-140deg);filter:brightness(.68)}
+.livro-pg.is-leaving.dir-prev{transform-origin:right center;transform:rotateY(140deg);filter:brightness(.68)}
+@media(prefers-reduced-motion:reduce){.livro-pg.is-leaving{display:none!important}}
+
+.livro-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  margin-top:40px;padding-top:22px;border-top:1px solid var(--cinza,#DBDBDB)}
+.livro-nav button{display:inline-flex;align-items:center;gap:8px;background:transparent;
+  border:1px solid var(--cinza,#DBDBDB);padding:11px 18px;
+  font:600 12.5px Poppins,system-ui,sans-serif;color:var(--preto,#000);cursor:pointer;
+  transition:background .15s ease,border-color .15s ease,transform .15s ease}
+.livro-nav button:hover:not(:disabled){border-color:var(--preto,#000);background:var(--cinza-cl,#F4F4F4)}
+.livro-nav button:active:not(:disabled){transform:scale(.97)}
+.livro-nav button:disabled{opacity:.32;cursor:default}
+.livro-nav .livro-contador{font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:#9A9A9A;font-weight:600;white-space:nowrap}
+
+@media(max-width:560px){
+  .livro-nav{margin-top:30px;padding-top:18px}
+  .livro-nav button span{display:none}
+}
