@@ -10,3 +10,46 @@
 .captura-2etapas .captura-etapa-2 p{margin:0 0 10px;color:#c4ef78;font-size:12px}
 .captura-2etapas .form-status{margin:10px 0 0;color:#c4ef78;font-size:11.5px;line-height:1.5;min-height:1px}
 .captura-2etapas .form-status:empty{margin:0}
+
+/* Hero da página do livro 2 — capa ilustrativa + fila de espera, fundo escuro. */
+.livro2-hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:6px}
+.livro2-hero .eyebrow{margin:0}
+.livro2-hero h1{max-width:11ch}
+.livro2-capa{display:flex;justify-content:center}
+.capa-ilus2{width:min(100%,300px);aspect-ratio:16/23;background:#000;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:space-between;padding:26px 22px 20px;
+  box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.capa-ilus2:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,239,120,.1),transparent 55%),linear-gradient(90deg,#0a0a0a,#2c2c2c 50%,#151515 82%,#000)}
+.capa-ilus2>*{position:relative;z-index:1}
+.sym2{display:grid;grid-template-columns:1fr 1fr;gap:3px;width:26px;height:26px;align-self:flex-end}
+.sym2 i{background:var(--lima)}
+.capa-ilus2 .tit2 p{margin:0;color:#fff;letter-spacing:-.02em;line-height:1.05}
+.capa-ilus2 .t1{font-size:22px;font-weight:300;margin-bottom:3px}
+.capa-ilus2 .t2{font-size:29px;font-weight:600;color:var(--lima)}
+.capa-ilus2 .t3{font-size:20px;font-weight:400;margin-top:6px}
+.capa-ilus2 .aut2{margin:0;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9A9A9A;line-height:1.5}
+.capa-ilus2 .ed2{margin:5px 0 0;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--lima);opacity:.7}
+
+.livro2-hero .waitlist{margin-top:30px;max-width:380px}
+.livro2-hero .waitlist-abrir{width:100%;min-height:52px;border:1.5px solid #fff;background:transparent;color:#fff;font:600 13px/1 Poppins,system-ui,sans-serif;letter-spacing:.03em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .16s ease,color .16s ease}
+.livro2-hero .waitlist-abrir::after{content:"+";font-size:17px;font-weight:400;line-height:1}
+.livro2-hero .waitlist-abrir:hover{background:var(--lima);border-color:var(--lima);color:#000}
+.livro2-hero .waitlist-abrir[hidden]{display:none}
+.livro2-hero .waitlist-form{width:100%;margin-top:22px;padding-top:20px;border-top:1px solid #333}
+.livro2-hero .waitlist-topo{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:14px}
+.livro2-hero .waitlist-title{margin:0!important;flex:1 1 auto;color:#fff!important;font-size:13px!important;font-weight:600}
+.livro2-hero .waitlist-fechar{width:26px;min-width:26px;height:26px;min-height:26px;flex:0 0 auto;padding:0;border:1px solid #444;background:#161616;color:#c4ef78;border-radius:50%;display:grid;place-items:center;cursor:pointer;line-height:1;font-size:0}
+.livro2-hero .waitlist-fechar::before{content:"";width:10px;height:1.6px;background:currentColor;display:block;border-radius:1px}
+.livro2-hero .waitlist-fechar:hover{background:var(--lima);border-color:var(--lima);color:#000}
+.livro2-hero .waitlist-form label{display:block;margin-bottom:9px}
+.livro2-hero .waitlist-form label span{display:block;margin-bottom:4px;color:#9a9a9a;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.livro2-hero .waitlist-form input{width:100%;height:42px;border:1px solid #3a3a3a;background:#111;color:#fff;padding:0 12px;font:400 12px Poppins,system-ui,sans-serif}
+.livro2-hero .waitlist-form input:focus{outline:2px solid var(--lima);outline-offset:1px}
+.livro2-hero .waitlist-form button[data-waitlist-enviar]{width:100%;min-height:44px;margin-top:4px;border:0;background:var(--lima);color:#000;font:600 12px Poppins,system-ui,sans-serif;cursor:pointer}
+.livro2-hero .waitlist-form button[data-waitlist-enviar]:hover{background:#fff}
+.livro2-hero .waitlist-form .form-status{min-height:1em;margin:7px 0 0;color:#c4ef78;font-size:10.5px;line-height:1.4}
+@media(max-width:760px){
+  .livro2-hero-in{grid-template-columns:1fr;gap:34px}
+  .livro2-capa{order:-1}
+  .capa-ilus2{width:min(72%,240px)}
+}

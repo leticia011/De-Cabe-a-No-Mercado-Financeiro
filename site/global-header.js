@@ -15,8 +15,7 @@
     { nome: 'Formação e certificações', desc: 'O que estudar e o que não', href: 'formacao-certificacoes.html' },
     { nome: 'Equity Story', desc: 'Por que contratar você', href: 'equity-story.html' },
     { nome: 'CV e LinkedIn', desc: 'Currículo, perfil e samples', href: 'cv-linkedin.html' },
-    { nome: 'Processo seletivo', desc: 'Antes, durante e depois da entrevista', href: 'processo-seletivo-v2.html' },
-    { nome: 'No mercado financeiro', desc: 'Você entrou. E agora?', href: 'no-mercado-financeiro.html' }
+    { nome: 'Processo seletivo', desc: 'Antes, durante e depois da entrevista', href: 'processo-seletivo-v2.html' }
   ];
 
   let announcement = document.querySelector('.announcement');
@@ -37,11 +36,12 @@
       <nav class="main-nav" aria-label="Navegação principal">
         <button class="global-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
         <div class="nav-drop">
-          <a class="global-desktop-link nav-drop-link" href="${home('#metodo')}" aria-expanded="false" aria-haspopup="true">Os 6 passos <span class="nav-drop-seta" aria-hidden="true">▾</span></a>
+          <a class="global-desktop-link nav-drop-link" href="${home('#metodo')}" aria-expanded="false" aria-haspopup="true">Entrando no mercado financeiro <span class="nav-drop-seta" aria-hidden="true">▾</span></a>
           <div class="nav-drop-menu">${CAPITULOS.map(capitulo => `
             <a href="${capitulo.href}"><span class="nav-drop-nome">${capitulo.nome}</span><span class="nav-drop-desc">${capitulo.desc}</span></a>`).join('')}
           </div>
         </div>
+        <a class="global-desktop-link" href="no-mercado-financeiro.html">No mercado financeiro</a>
         <a class="global-desktop-link" href="perguntas-frequentes.html">Respostas do Securato</a>
         <a class="bar-buy global-mobile-keep" href="https://www.tabula.com.br/conteudista/bankers.academy"><span class="global-desktop-label">Começar minha formação</span><span class="global-mobile-label">Cursos</span></a>
         <a class="bar-cta global-mobile-keep" href="${home('#comprar')}"><span class="global-desktop-label">Comprar o livro</span><span class="global-mobile-label">Comprar</span></a>
