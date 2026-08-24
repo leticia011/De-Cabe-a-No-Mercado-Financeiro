@@ -15,7 +15,8 @@
     { nome: 'Formação e certificações', desc: 'O que estudar e o que não', href: 'formacao-certificacoes.html' },
     { nome: 'Equity Story', desc: 'Por que contratar você', href: 'equity-story.html' },
     { nome: 'CV e LinkedIn', desc: 'Currículo, perfil e samples', href: 'cv-linkedin.html' },
-    { nome: 'Processo seletivo', desc: 'Antes, durante e depois da entrevista', href: 'processo-seletivo-v2.html' }
+    { nome: 'Processo seletivo', desc: 'Antes, durante e depois da entrevista', href: 'processo-seletivo-v2.html' },
+    { nome: 'No mercado financeiro', desc: 'Você entrou. E agora?', href: 'no-mercado-financeiro.html' }
   ];
 
   let announcement = document.querySelector('.announcement');
