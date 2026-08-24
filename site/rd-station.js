@@ -21,13 +21,20 @@
       avisarUmaVez('RD_API_KEY não preenchida (topo de rd-station.js)');
       return;
     }
-    if (!lead || !lead.email) return;
+    // e-mail é o identificador de praxe do RD, mas alguns formulários (ex.: "mande sua
+    // pergunta") pedem celular como obrigatório e deixam o e-mail opcional — sem os dois
+    // não tem lead pra registrar.
+    if (!lead || (!lead.email && !lead.phone)) return;
     const payload = {
       conversion_identifier: PREFIXO + (lead.form || 'formulario'),
-      email: lead.email,
     };
+    if (lead.email) payload.email = lead.email;
     if (lead.name) payload.name = lead.name;
     if (lead.phone) payload.mobile_phone = lead.phone;
+    // cf_linkedin / cf_pergunta: nomes de campo personalizado supostos — conferir e
+    // ajustar para os nomes reais configurados no painel do RD antes de confiar neles.
+    if (lead.linkedin) payload.cf_linkedin = lead.linkedin;
+    if (lead.pergunta) payload.cf_pergunta = lead.pergunta;
     fetch(API_URL + encodeURIComponent(RD_API_KEY), {
       method: 'POST',
       keepalive: true,

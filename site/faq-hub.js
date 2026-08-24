@@ -117,16 +117,27 @@
   if (form) {
     const pergunta = form.querySelector('textarea[name="pergunta"]');
     const nome = form.querySelector('input[name="name"]');
+    const telefone = form.querySelector('input[name="phone"]');
     const email = form.querySelector('input[type="email"]');
+    const linkedin = form.querySelector('input[name="linkedin"]');
     const status = form.querySelector('.form-status');
     const aviso = m => { if (status) status.textContent = m; };
 
+    // nome e celular são obrigatórios; e-mail e LinkedIn ficam a critério de quem pergunta
     form.querySelector('[data-pergunta-enviar]')?.addEventListener('click', () => {
       if ((pergunta?.value || '').trim().length < 10) { aviso('Escreva a sua pergunta com um pouco mais de detalhe.'); pergunta?.focus(); return; }
       if (!nome?.value.trim()) { aviso('Informe o seu nome.'); nome?.focus(); return; }
-      if (!email?.value.trim() || !email.checkValidity()) { aviso('Digite um e-mail válido para receber a resposta.'); email?.focus(); return; }
-      document.dispatchEvent(new CustomEvent('rd-pergunta', {
-        detail: { pergunta: pergunta.value.trim(), name: nome.value.trim(), email: email.value.trim(), form: form.dataset.rdForm || form.id }
+      if ((telefone?.value || '').replace(/\D/g, '').length < 10) { aviso('Informe um celular válido, com DDD.'); telefone?.focus(); return; }
+      if (email?.value.trim() && !email.checkValidity()) { aviso('Esse e-mail não parece válido — corrija ou deixe em branco.'); email?.focus(); return; }
+      document.dispatchEvent(new CustomEvent('rd-lead', {
+        detail: {
+          pergunta: pergunta.value.trim(),
+          name: nome.value.trim(),
+          phone: telefone.value.trim(),
+          email: email?.value.trim() || '',
+          linkedin: linkedin?.value.trim() || '',
+          form: form.dataset.rdForm || form.id
+        }
       }));
       form.querySelectorAll('input, textarea, button').forEach(c => { c.disabled = true; });
       aviso('Pergunta enviada. Se ela se repetir, vira resposta aqui — e talvez vídeo.');

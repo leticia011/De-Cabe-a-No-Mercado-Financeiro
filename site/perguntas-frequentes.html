@@ -1,12 +1,12 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Perguntas &amp; respostas — De cabeça no mercado financeiro</title>
+<title>Respostas do Securato — De cabeça no mercado financeiro</title>
 <meta name="description" content="Todas as perguntas e respostas do livro em uma tabela única, filtrável por assunto. Envie a sua pergunta e veja os vídeos do autor.">
 <link rel="canonical" href="https://de-cabe-a-no-mercado-financeiro.vercel.app/perguntas-frequentes.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="passos.css?v=5"><link rel="stylesheet" href="global-header.css?v=6"><link rel="stylesheet" href="faq-accordion.css">
 <link rel="stylesheet" href="faq-hub.css?v=3">
-<script src="global-header.js?v=5" defer></script><script src="faq-hub.js?v=3" defer></script>
+<script src="global-header.js?v=6" defer></script><script src="faq-hub.js?v=4" defer></script>
 <link rel="stylesheet" href="rodape.css?v=1">
 <link rel="stylesheet" href="reveal.css?v=1">
 <script type="application/ld+json">
@@ -19,7 +19,7 @@
 <section class="hero">
   <div class="wrap">
     <p class="eyebrow">Todas em um só lugar</p>
-    <h1>Perguntas &amp;<br>respostas</h1>
+    <h1>Respostas do Securato</h1>
     <p class="lead">Cada capítulo do livro termina com dúvidas reais de quem está tentando entrar no mercado. Aqui elas ficam em uma tabela só — filtre por assunto, procure pela sua e, se não achar, mande a pergunta.</p>
   </div>
 </section>
@@ -32,7 +32,7 @@
     <header class="hub-head">
       <div>
         <p class="rot"><span class="lo"></span> Perguntas reais</p>
-        <h2 id="hub-title">Perguntas &amp; Respostas</h2>
+        <h2 id="hub-title">Respostas do Securato</h2>
       </div>
       <p class="abre">Todas as dúvidas respondidas pelo autor ao longo dos sete capítulos, reunidas aqui.</p>
     </header>
@@ -459,8 +459,12 @@
     <form class="enviar-form" id="form-pergunta" data-rd-form="pergunta-leitor" novalidate>
       <label><span>Sua pergunta</span><textarea name="pergunta" rows="4" placeholder="O que você quer saber sobre entrar no mercado financeiro?"></textarea></label>
       <div class="enviar-dupla">
-        <label><span>Nome</span><input type="text" name="name" autocomplete="name" placeholder="Seu nome"></label>
-        <label><span>E-mail</span><input type="email" name="email" autocomplete="email" placeholder="seu@email.com"></label>
+        <label><span>Nome</span><input type="text" name="name" autocomplete="name" placeholder="Seu nome" required></label>
+        <label><span>Celular</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Com DDD" required></label>
+      </div>
+      <div class="enviar-dupla">
+        <label><span>E-mail <em>(opcional)</em></span><input type="email" name="email" autocomplete="email" placeholder="seu@email.com"></label>
+        <label><span>LinkedIn <em>(opcional)</em></span><input type="url" name="linkedin" autocomplete="url" placeholder="linkedin.com/in/seu-perfil"></label>
       </div>
       <button type="button" data-pergunta-enviar>Enviar pergunta</button>
       <p class="form-status" role="status" aria-live="polite"></p>
@@ -485,10 +489,10 @@
   <div class="wrap article-footer-in">
     <a class="footer-brand" href="index.html" aria-label="Bankers Academy — início"><svg class="footer-mark" aria-hidden="true" viewBox="0 0 44 44"><path d="M13 2 22 11 13 20 4 11Z"/><path d="m31 2 9 9-9 9-9-9Z"/><path d="m13 22 9 9-9 9-9-9Z"/><path d="m31 22 9 9-9 9-9-9Z"/></svg><span>Bankers Academy</span></a>
     <p>De cabeça no mercado financeiro · José Roberto Securato Junior</p>
-    <div><a href="index.html#metodo">Os 6 passos</a><a href="perguntas-frequentes.html">Perguntas &amp; respostas</a><a href="index.html#academy">Academy</a></div>
+    <div><a href="index.html#metodo">Os 6 passos</a><a href="perguntas-frequentes.html">Respostas do Securato</a><a href="index.html#academy">Academy</a></div>
   </div>
 </footer>
 
-<script src="rodape.js?v=1" defer></script><script src="scroll-reveal.js?v=1" defer></script>
-<script src="rd-station.js?v=1" defer></script>
+<script src="rodape.js?v=2" defer></script><script src="scroll-reveal.js?v=1" defer></script>
+<script src="rd-station.js?v=2" defer></script>
 </body></html>
