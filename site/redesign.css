@@ -315,9 +315,9 @@ p{text-wrap:pretty}
   background:linear-gradient(90deg,rgba(0,0,0,.15),transparent);z-index:5;pointer-events:none}
 .ensina-dir .carrossel>.slide.is-leaving{position:absolute;inset:0;z-index:4;pointer-events:none;
   backface-visibility:hidden;box-shadow:0 22px 50px rgba(0,0,0,.22);
-  transition:transform .78s cubic-bezier(.22,1,.36,1),filter .78s cubic-bezier(.22,1,.36,1)}
-.ensina-dir .carrossel>.slide.is-leaving.dir-next{transform-origin:left center;transform:rotateY(-142deg) scale(.97);filter:brightness(.62)}
-.ensina-dir .carrossel>.slide.is-leaving.dir-prev{transform-origin:right center;transform:rotateY(142deg) scale(.97);filter:brightness(.62)}
+  transition:transform .72s cubic-bezier(.65,0,.35,1),filter .72s cubic-bezier(.65,0,.35,1)}
+.ensina-dir .carrossel>.slide.is-leaving.dir-next{transform-origin:left center;transform:rotateY(-100deg) scale(.97);filter:brightness(.62)}
+.ensina-dir .carrossel>.slide.is-leaving.dir-prev{transform-origin:right center;transform:rotateY(100deg) scale(.97);filter:brightness(.62)}
 @media(prefers-reduced-motion:reduce){
  .ensina-dir .carrossel>.slide.is-leaving{display:none!important}
 }
