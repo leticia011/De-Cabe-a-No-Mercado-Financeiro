@@ -427,3 +427,11 @@ html{scroll-padding-top:104px}
 /* Passo 1 mostra a capa real do livro no losango — enquadra o título "De cabeça
    no mercado financeiro" + a ilustração, em vez do centro genérico da imagem. */
 #passo-1 .losangos span{background-position:50% 37%!important}
+
+/* Página de capa antes do passo 1: mostra o livro fechado, inteiro — não o
+   recorte em losango usado pras fotos de cada passo. */
+.capa-losango:before{display:none!important}
+.capa-losango img{width:auto!important;height:100%!important;max-width:78%!important;
+  aspect-ratio:auto!important;clip-path:none!important;object-fit:contain;filter:none!important;
+  box-shadow:0 26px 58px rgba(0,0,0,.22);position:relative;z-index:1}
+@media(max-width:760px){.capa-losango img{max-width:64%!important}}
