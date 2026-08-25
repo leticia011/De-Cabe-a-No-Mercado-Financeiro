@@ -70,3 +70,18 @@
 .ponte-cap + .qa-section{padding-top:clamp(52px,5.2vw,78px)}
 /* a divisão vira escolha deliberada: uma linha da cor da Academy no encontro */
 .ponte-cap{border-bottom:2px solid #c4ef78}
+
+/* Corte de podcast — mesma faixa preta da ponte de capítulo, vídeo + contexto. */
+.podcast-corte{background:#0a0a0a;color:#fff;padding:clamp(38px,3.6vw,54px) 0;font-family:Poppins,system-ui,sans-serif;border-top:1px solid #1c1c1c}
+.podcast-in{width:min(1205px,calc(100% - 68px));max-width:1205px;margin-inline:auto;display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:center}
+.podcast-video{position:relative;width:100%;aspect-ratio:16/9;background:#000;overflow:hidden}
+.podcast-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.podcast-texto .rot{display:flex;align-items:center;gap:10px;margin:0 0 12px;color:#c4ef78;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}
+.podcast-texto .rot .lo{display:block;width:8px;height:8px;background:currentColor;transform:rotate(45deg);flex:0 0 auto}
+.podcast-texto h3{margin:0 0 10px;font-size:clamp(20px,2vw,26px);font-weight:500;line-height:1.25;letter-spacing:-.02em;color:#fff}
+.podcast-texto p{margin:0;color:#9a9c94;font-size:14px;line-height:1.6}
+.podcast-texto p a{color:#c4ef78;text-decoration:none;border-bottom:1px solid currentColor}
+.podcast-texto p a:hover{color:#fff}
+@media(max-width:760px){
+  .podcast-in{width:calc(100% - 40px);grid-template-columns:1fr;gap:22px}
+}

@@ -18,7 +18,12 @@
     const paginas = [...livro.querySelectorAll('.livro-pg')];
     if (paginas.length < 2) { paginas[0]?.classList.add('is-active'); return; }
 
-    const nav = livro.parentElement.querySelector('.livro-nav') || livro.nextElementSibling;
+    // o nav sempre vem logo depois do bloco paginado — busca ampla no
+    // parentElement quebra quando há mais de um [data-livro] na mesma página
+    // (cada instância "roubava" o primeiro .livro-nav que encontrasse).
+    const nav = livro.nextElementSibling?.classList.contains('livro-nav')
+      ? livro.nextElementSibling
+      : livro.parentElement.querySelector('.livro-nav');
     const btnPrev = nav?.querySelector('[data-livro-prev]');
     const btnNext = nav?.querySelector('[data-livro-next]');
     const contador = nav?.querySelector('[data-livro-contador]');

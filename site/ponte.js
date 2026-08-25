@@ -3,99 +3,98 @@
   logo antes da faixa verde de Perguntas & Respostas.
 */
 (() => {
+  const HUB = 'https://www.tabula.com.br/conteudista/bankers.academy';
   const PONTES = {
-    // TESTE (só neste capítulo): o fim da página oferece o curso; o próximo
-    // capítulo passou para a barra de leitura — ver marcador.js.
     'autoconhecimento.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Ainda em dúvida se é para você? Veja o mercado por dentro.',
-      texto: 'A resposta a essa pergunta melhora quando você entende o trabalho real de cada área. A <b>masterclass gratuita</b> mostra as funções, as mesas e as rotinas antes de você investir em qualquer curso.',
-      cta: 'Assistir à masterclass',
-      href: 'https://bankers-academy-ztu1.vercel.app/#programas',
+      texto: 'A resposta a essa pergunta melhora quando você entende o trabalho real de cada área. A <b>Entrada em Investment Banking</b> começa exatamente por aí, antes da parte técnica.',
+      cta: 'Conhecer o curso',
+      href: 'https://www.tabula.com.br/curso/entradaemib',
       card: {
-        selo: 'Masterclass gratuita',
-        nome: 'Mercado Financeiro na Prática: Áreas, Funções e Carreiras',
-        itens: ['Quem faz o quê, em cada mesa', 'A rotina real de cada área', 'On-line e sem custo']
+        selo: 'Formação híbrida · 44h28',
+        nome: 'Entrada em Investment Banking',
+        itens: ['Carreira em finanças e orientação para entrevistas', 'Fundamentos, valuation e M&A', 'Disponível por 1 ano após a compra']
       },
-      voltar: { href: 'https://bankers-academy-ztu1.vercel.app/programas/entrada-no-mercado-financeiro', texto: 'Entrada no Mercado Financeiro →' }
+      voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
     'quadrante-carreiras.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Viu o mapa. Agora veja as carreiras funcionando.',
-      texto: 'O mapa posiciona as carreiras; a <b>masterclass gratuita</b> mostra como cada uma trabalha no dia a dia — quem origina, quem executa, quem analisa e quem vende.',
-      cta: 'Assistir à masterclass',
-      href: 'https://bankers-academy-ztu1.vercel.app/#programas',
+      texto: 'O mapa posiciona as carreiras; a <b>Entrada em Investment Banking</b> mostra como o trabalho funciona no dia a dia — de fundamentos a M&A.',
+      cta: 'Conhecer o curso',
+      href: 'https://www.tabula.com.br/curso/entradaemib',
       card: {
-        selo: 'Masterclass gratuita',
-        nome: 'Mercado Financeiro na Prática: Áreas, Funções e Carreiras',
-        itens: ['Quem faz o quê, em cada mesa','A rotina real de cada área','On-line e sem custo']
+        selo: 'Formação híbrida · 44h28',
+        nome: 'Entrada em Investment Banking',
+        itens: ['Carreira em finanças e orientação para entrevistas', 'Fundamentos, valuation e M&A', 'Disponível por 1 ano após a compra']
       },
-      voltar: { href: 'https://bankers-academy-ztu1.vercel.app/programas/entrada-no-mercado-financeiro', texto: 'Entrada no Mercado Financeiro →' }
+      voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
     'carreira-certa.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Você nomeou uma direção. Agora sobra a lacuna.',
-      texto: 'Escolher a carreira certa não conclui nada sozinho: a escolha só vira candidatura quando você tem o repertório técnico que a vaga cobra. É isso que a <b>formação da Academy</b> fecha.',
-      cta: 'Ver a formação',
-      href: 'https://bankers-academy-ztu1.vercel.app/programas/entrada-no-mercado-financeiro',
+      texto: 'Escolher a carreira certa não conclui nada sozinho: a escolha só vira candidatura quando você tem o repertório técnico que a vaga cobra. É isso que a <b>Entrada em Investment Banking</b> fecha.',
+      cta: 'Conhecer o curso',
+      href: 'https://www.tabula.com.br/curso/entradaemib',
       card: {
-        selo: 'Formação híbrida · 43h28',
-        nome: 'Entrada no Mercado Financeiro',
-        itens: ['Fundamentos, valuation e modelagem','Doze módulos, do zero ao processo seletivo','Gravado, com encontros ao vivo']
+        selo: 'Formação híbrida · 44h28',
+        nome: 'Entrada em Investment Banking',
+        itens: ['Fundamentos, valuation e M&A', 'Estrutura de capital e mercado financeiro', 'Disponível por 1 ano após a compra']
       },
-      voltar: { href: 'https://bankers-academy-ztu1.vercel.app/#programas', texto: 'Começar pela masterclass gratuita →' }
+      voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
     'formacao-certificacoes.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Onde estudar o que este capítulo mandou estudar.',
-      texto: 'A trilha muda conforme o cargo-alvo. Comece pela <b>masterclass gratuita</b> para mapear as funções; depois escolha a formação que corresponde à sua direção.',
-      cta: 'Assistir à masterclass',
-      href: 'https://bankers-academy-ztu1.vercel.app/#programas',
+      texto: 'Estrutura de capital, crédito e modelagem financeira na prática — o que a <b>Introdução ao Crédito com Modelagem Financeira</b> ensina em 8 módulos.',
+      cta: 'Conhecer o curso',
+      href: 'https://www.tabula.com.br/curso/introducao-ao-credito-com-modelagem-financeira',
       card: {
-        selo: 'Masterclass gratuita',
-        nome: 'Mercado Financeiro na Prática: Áreas, Funções e Carreiras',
-        itens: ['Quem faz o quê, em cada mesa','A rotina real de cada área','On-line e sem custo']
+        selo: 'Curso online · 16h50',
+        nome: 'Introdução ao Crédito com Modelagem Financeira',
+        itens: ['Estrutura de capital e crédito', 'Workshop prático de modelagem em Excel', 'Cases reais do mercado financeiro']
       },
-      voltar: { href: 'https://bankers-academy-ztu1.vercel.app/programas/entrada-no-mercado-financeiro', texto: 'Entrada no Mercado Financeiro →' }
+      voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
     'equity-story.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Narrativa sem repertório técnico não se sustenta.',
-      texto: 'O Equity Story precisa ser verificável. A <b>formação da Academy</b> é onde o repertório que sustenta a sua história é construído — com prática, cases e linguagem de mercado.',
-      cta: 'Ver a formação',
-      href: 'https://bankers-academy-ztu1.vercel.app/programas/entrada-no-mercado-financeiro',
+      texto: 'O Equity Story precisa ser verificável. A <b>Entrada em Investment Banking</b> é onde o repertório que sustenta a sua história é construído — fundamentos, valuation e M&A.',
+      cta: 'Conhecer o curso',
+      href: 'https://www.tabula.com.br/curso/entradaemib',
       card: {
-        selo: 'Formação híbrida · 43h28',
-        nome: 'Entrada no Mercado Financeiro',
-        itens: ['Fundamentos, valuation e modelagem','Doze módulos, do zero ao processo seletivo','Gravado, com encontros ao vivo']
+        selo: 'Formação híbrida · 44h28',
+        nome: 'Entrada em Investment Banking',
+        itens: ['Fundamentos, valuation e M&A', 'Orientação para entrevistas', 'Disponível por 1 ano após a compra']
       },
-      voltar: { href: 'https://bankers-academy-ztu1.vercel.app/#programas', texto: 'Começar pela masterclass gratuita →' }
+      voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
     'cv-linkedin.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Currículo forte precisa de evidência para citar.',
       texto: 'Cases, projetos e formações concretas são o que dá o que escrever no currículo — e o que defender na entrevista.',
-      cta: 'Ver a formação',
-      href: 'https://bankers-academy-ztu1.vercel.app/programas/entrada-no-mercado-financeiro',
+      cta: 'Conhecer o curso',
+      href: 'https://www.tabula.com.br/curso/entradaemib',
       card: {
-        selo: 'Formação híbrida · 43h28',
-        nome: 'Entrada no Mercado Financeiro',
-        itens: ['Fundamentos, valuation e modelagem','Doze módulos, do zero ao processo seletivo','Gravado, com encontros ao vivo']
+        selo: 'Formação híbrida · 44h28',
+        nome: 'Entrada em Investment Banking',
+        itens: ['Fundamentos, valuation e M&A', 'Orientação para entrevistas', 'Disponível por 1 ano após a compra']
       },
-      voltar: { href: 'https://bankers-academy-ztu1.vercel.app/#programas', texto: 'Começar pela masterclass gratuita →' }
+      voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
     'processo-seletivo-v2.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Preparação para entrevista é treino, não sorte.',
-      texto: 'Ler sobre entrevista não é o mesmo que ter feito uma. O <b>Workshop de Entrevistas</b> coloca você na cadeira do candidato, com feedback de quem entrevista de verdade.',
-      cta: 'Garantir minha vaga',
-      href: 'https://bankers-academy-ztu1.vercel.app/#programas',
+      texto: 'Ler sobre processo seletivo não é o mesmo que ter passado por um. O <b>Investment Banking Boot Camp</b> simula o dia a dia de um analista, com pitchbook final.',
+      cta: 'Conhecer o Boot Camp',
+      href: 'https://www.tabula.com.br/curso/destaque/investmentbankingbootcamp',
       card: {
-        selo: 'Workshop ao vivo',
-        nome: 'Workshop de Entrevistas',
-        itens: ['Treino de entrevista ao vivo','Perguntas técnicas e comportamentais','Feedback de quem já entrevistou']
+        selo: 'Híbrido · 5 semanas intensas',
+        nome: 'Investment Banking Boot Camp',
+        itens: ['Simulação do dia a dia de um analista', 'Pitchbook final em 9 etapas', 'Preparação para entrevistas técnicas']
       },
-      voltar: { href: 'https://bankers-academy-ztu1.vercel.app/programas/entrada-no-mercado-financeiro', texto: 'Entrada no Mercado Financeiro →' }
+      voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
   };
 

@@ -5,9 +5,9 @@
 .livro-pg.is-active,.livro-pg.is-leaving{display:block}
 .livro-pg.is-leaving{position:absolute;inset:0;z-index:4;pointer-events:none;
   background:var(--branco,#fff);backface-visibility:hidden;box-shadow:0 22px 50px rgba(0,0,0,.16);
-  transition:transform .7s cubic-bezier(.22,1,.36,1),filter .7s cubic-bezier(.22,1,.36,1)}
-.livro-pg.is-leaving.dir-next{transform-origin:left center;transform:rotateY(-140deg);filter:brightness(.68)}
-.livro-pg.is-leaving.dir-prev{transform-origin:right center;transform:rotateY(140deg);filter:brightness(.68)}
+  transition:transform .68s cubic-bezier(.65,0,.35,1),filter .68s cubic-bezier(.65,0,.35,1)}
+.livro-pg.is-leaving.dir-next{transform-origin:left center;transform:rotateY(-100deg);filter:brightness(.68)}
+.livro-pg.is-leaving.dir-prev{transform-origin:right center;transform:rotateY(100deg);filter:brightness(.68)}
 @media(prefers-reduced-motion:reduce){.livro-pg.is-leaving{display:none!important}}
 
 .livro-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;
@@ -26,3 +26,7 @@
   .livro-nav{margin-top:30px;padding-top:18px}
   .livro-nav button span{display:none}
 }
+
+/* Quando a seção paginada já é um ".chapter" (rótulo + conteúdo em duas
+   colunas), a página ativa precisa manter esse grid — não virar bloco único. */
+.chapter.livro-pg.is-active,.chapter.livro-pg.is-leaving{display:grid}

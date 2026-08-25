@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Processo seletivo no mercado financeiro: como funciona e como se preparar | De cabeça no mercado financeiro</title>
 <meta name="description" content="Onde estão as vagas, por que a postura decide no começo de carreira, como funciona a dinâmica em grupo e como fechar uma entrevista. Capítulo 7 de «De cabeça no mercado financeiro», de José Securato Jr.">
-<link rel="canonical" href="https://bankersacademy.com.br/de-cabeca/processo-seletivo">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="canonical" href="https://bankersacademy.com.br/de-cabeca/processo-seletivo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Processo seletivo não é sorte. É trabalho.">
-<meta property="og:description" content="Onde estão as vagas, a postura que decide, a dinâmica em grupo e o discurso de fechamento — por José Securato Jr.">
+<meta property="og:description" content="Onde estão as vagas, a postura que decide, a dinâmica em grupo e o discurso de fechamento — por José Securato Jr."><meta property="og:image" content="https://de-cabe-a-no-mercado-financeiro.vercel.app/assets/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://de-cabe-a-no-mercado-financeiro.vercel.app/processo-seletivo-v2.html"><meta property="og:site_name" content="Bankers Academy"><meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Processo seletivo não é sorte. É trabalho."><meta name="twitter:description" content="Onde estão as vagas, a postura que decide, a dinâmica em grupo e o discurso de fechamento — por José Securato Jr."><meta name="twitter:image" content="https://de-cabe-a-no-mercado-financeiro.vercel.app/assets/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -65,10 +65,11 @@
 <link rel="stylesheet" href="marcador.css?v=2">
 <link rel="stylesheet" href="rodape.css?v=1">
 <link rel="stylesheet" href="reveal.css?v=1">
+<link rel="stylesheet" href="leitura-paginada.css?v=2">
 </head>
 <body class="faq-claro">
 
-<link rel="stylesheet" href="global-header.css?v=12"><link rel="stylesheet" href="faq-accordion.css"><link rel="stylesheet" href="ponte.css?v=16"><link rel="stylesheet" href="destaque.css?v=3"><link rel="stylesheet" href="faq-verde.css?v=6"><link rel="stylesheet" href="marca-pagina.css?v=9"><link rel="stylesheet" href="captura.css?v=4"><script src="global-header.js?v=9" defer></script><script src="faq-accordion.js" defer></script><script src="ponte.js?v=9" defer></script><script src="marca-pagina.js?v=4" defer></script><script src="captura.js?v=3" defer></script>
+<link rel="stylesheet" href="global-header.css?v=13"><link rel="stylesheet" href="faq-accordion.css"><link rel="stylesheet" href="ponte.css?v=17"><link rel="stylesheet" href="destaque.css?v=3"><link rel="stylesheet" href="faq-verde.css?v=6"><link rel="stylesheet" href="marca-pagina.css?v=9"><link rel="stylesheet" href="captura.css?v=5"><script src="global-header.js?v=13" defer></script><script src="faq-accordion.js" defer></script><script src="ponte.js?v=10" defer></script><script src="leitura-paginada.js?v=3" defer></script><script src="marca-pagina.js?v=4" defer></script><script src="captura.js?v=3" defer></script>
 <header class="bar"><div class="bar-in"><a class="brand" href="index.html">Bankers Academy</a></div></header>
 
 <div class="hero">
@@ -98,7 +99,8 @@
 
 <main class="wrap">
 
-  <section id="vagas">
+  <div class="livro-paginas" data-livro>
+  <section id="vagas" class="livro-pg">
     <h2><span class="lo"></span>Onde estão as vagas</h2>
 
     <div class="col">
@@ -132,7 +134,7 @@
   <div class="puxa-linha"><p>Quem faz a lição de casa chega sabendo o que quer. E isso aparece já na primeira resposta.</p></div>
   </section>
 
-  <section id="postura">
+  <section id="postura" class="livro-pg">
     <h2><span class="lo"></span>A postura</h2>
 
     <div class="tese">
@@ -165,7 +167,7 @@
     </div>
   </section>
 
-  <section id="dinamica">
+  <section id="dinamica" class="livro-pg">
     <h2><span class="lo"></span>Dinâmica em grupo</h2>
 
     <div class="col">
@@ -196,7 +198,7 @@
   <div class="puxa-cap"><p>Em dinâmica de grupo, ninguém ganha sozinho. Atropelar o time é a forma mais rápida de sair do processo.</p></div>
   </section>
 
-  <section id="entrevista">
+  <section id="entrevista" class="livro-pg">
     <h2><span class="lo"></span>Entrevista individual</h2>
 
     <div class="tese">
@@ -223,7 +225,7 @@
     </div>
   </section>
 
-  <section id="fechamento">
+  <section id="fechamento" class="livro-pg">
     <h2><span class="lo"></span>O discurso de fechamento</h2>
 
     <div class="col">
@@ -287,6 +289,13 @@
   
 
   
+  </div>
+  <div class="livro-nav">
+    <button type="button" data-livro-prev aria-label="Página anterior">← <span>Página anterior</span></button>
+    <span class="livro-contador" data-livro-contador></span>
+    <button type="button" data-livro-next aria-label="Próxima página"><span>Próxima página</span> →</button>
+  </div>
+
 </main>
 
 <section class="qa-section" id="faq">
@@ -408,7 +417,7 @@
   </div>
 </footer>
 
-<script src="marcador.js?v=4" defer></script><script src="rodape.js?v=2" defer></script><script src="scroll-reveal.js?v=1" defer></script>
+<script src="marcador.js?v=5" defer></script><script src="rodape.js?v=4" defer></script><script src="scroll-reveal.js?v=1" defer></script>
 <script src="rd-station.js?v=2" defer></script>
 </body>
 </html>
