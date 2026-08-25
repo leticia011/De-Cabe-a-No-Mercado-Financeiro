@@ -29,28 +29,32 @@
   currentHeader.className = 'bar global-bar';
   currentHeader.innerHTML = `
     <div class="bar-in">
-      <a class="mark" href="${home('#top')}" aria-label="Bankers Academy — início">
-        <svg class="brand-mark" aria-hidden="true" viewBox="0 0 44 44"><path d="M13 2 22 11 13 20 4 11Z"/><path d="m31 2 9 9-9 9-9-9Z"/><path d="m13 22 9 9-9 9-9-9Z"/><path d="m31 22 9 9-9 9-9-9Z"/></svg>
-        <span>Bankers Academy</span>
-      </a>
-      <nav class="main-nav" aria-label="Navegação principal">
+      <div class="bar-left">
         <button class="global-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
-        <div class="nav-drop">
-          <a class="global-desktop-link nav-drop-link" href="${home('#metodo')}" aria-expanded="false" aria-haspopup="true">Os 6 passos <span class="nav-drop-seta" aria-hidden="true">▾</span></a>
-          <div class="nav-drop-menu">${CAPITULOS.map(capitulo => `
-            <a href="${capitulo.href}"><span class="nav-drop-nome">${capitulo.nome}</span><span class="nav-drop-desc">${capitulo.desc}</span></a>`).join('')}
+        <a class="mark" href="${home('#top')}" aria-label="Bankers Academy — início">
+          <svg class="brand-mark" aria-hidden="true" viewBox="0 0 44 44"><path d="M13 2 22 11 13 20 4 11Z"/><path d="m31 2 9 9-9 9-9-9Z"/><path d="m13 22 9 9-9 9-9-9Z"/><path d="m31 22 9 9-9 9-9-9Z"/></svg>
+          <span>Bankers Academy</span>
+        </a>
+      </div>
+      <div class="bar-right">
+        <nav class="main-nav" aria-label="Navegação principal">
+          <div class="nav-drop">
+            <a class="global-desktop-link nav-drop-link" href="${home('#metodo')}" aria-expanded="false" aria-haspopup="true">Os 6 passos <span class="nav-drop-seta" aria-hidden="true">▾</span></a>
+            <div class="nav-drop-menu">${CAPITULOS.map(capitulo => `
+              <a href="${capitulo.href}"><span class="nav-drop-nome">${capitulo.nome}</span><span class="nav-drop-desc">${capitulo.desc}</span></a>`).join('')}
+            </div>
           </div>
-        </div>
-        <a class="global-desktop-link" href="perguntas-frequentes.html">Respostas do Securato</a>
+          <a class="global-desktop-link" href="perguntas-frequentes.html">Respostas do Securato</a>
+        </nav>
         <a class="bar-buy global-mobile-keep" href="https://bankers-academy-ztu1.vercel.app/"><span class="global-desktop-label">Começar minha formação</span><span class="global-mobile-label">Cursos</span></a>
         <a class="bar-cta global-mobile-keep" href="${home('#comprar')}"><span class="global-desktop-label">Comprar o livro</span><span class="global-mobile-label">Comprar</span></a>
-      </nav>
+      </div>
     </div>`;
 
   const nav = currentHeader.querySelector('.main-nav');
-  const toggle = nav.querySelector('.global-menu-toggle');
+  const toggle = currentHeader.querySelector('.global-menu-toggle');
   const close = () => {
-    nav.classList.remove('is-open');
+    nav.classList.remove('is-open', 'is-shown');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Abrir menu');
   };
@@ -58,7 +62,17 @@
     const open = nav.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    if (open) {
+      // duplo rAF: garante que o navegador já pintou o estado "recolhido"
+      // antes de soltar o "is-shown" — senão não há transição para animar.
+      requestAnimationFrame(() => requestAnimationFrame(() => nav.classList.add('is-shown')));
+    } else {
+      nav.classList.remove('is-shown');
+    }
   });
-  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
-  addEventListener('resize', () => { if (innerWidth > 760) close(); });
+  currentHeader.querySelectorAll('.bar-in a').forEach(link => link.addEventListener('click', close));
+  document.addEventListener('click', e => {
+    if (nav.classList.contains('is-open') && !nav.contains(e.target) && !toggle.contains(e.target)) close();
+  });
+  addEventListener('resize', () => { if (innerWidth > 1250) close(); });
 })();
