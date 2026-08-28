@@ -18,13 +18,7 @@
     { nome: 'Processo seletivo', desc: 'Antes, durante e depois da entrevista', href: 'processo-seletivo-v2.html' }
   ];
 
-  let announcement = document.querySelector('.announcement');
-  if (!announcement) {
-    announcement = document.createElement('div');
-    currentHeader.before(announcement);
-  }
-  announcement.className = 'announcement global-announcement';
-  announcement.innerHTML = `<div class="announcement-in"><span class="lo" aria-hidden="true"></span> Livro + formação prática para entrar no mercado financeiro <a href="${home('#academy')}">Conheça a jornada</a></div>`;
+  document.querySelector('.announcement')?.remove();
 
   currentHeader.className = 'bar global-bar';
   currentHeader.innerHTML = `
@@ -48,7 +42,7 @@
           <a class="global-desktop-link" href="perguntas-frequentes.html">Respostas do Securato</a>
         </nav>
         <a class="bar-buy global-mobile-keep" href="https://www.tabula.com.br/conteudista/bankers.academy"><span class="global-desktop-label">Começar minha formação</span><span class="global-mobile-label">Cursos</span></a>
-        <a class="bar-cta global-mobile-keep" href="${home('#comprar')}"><span class="global-desktop-label">Comprar o livro</span><span class="global-mobile-label">Comprar</span></a>
+        <a class="bar-cta global-mobile-keep" href="${home('#comprar')}"><span class="global-desktop-label">Comprar o livro</span><span class="global-mobile-label">Comprar o livro</span></a>
       </div>
     </div>`;
 

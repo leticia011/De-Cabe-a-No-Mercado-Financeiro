@@ -1,7 +1,3 @@
-.announcement.global-announcement{background:#c4ef78;color:#080908;font:500 11px/1.4 Poppins,system-ui,sans-serif;letter-spacing:.04em;text-align:center}
-.announcement.global-announcement .announcement-in{width:100%;max-width:none;margin:0;padding:9px clamp(22px,4vw,58px);display:flex;align-items:center;justify-content:center;gap:9px}
-.announcement.global-announcement a{color:#080908;font-weight:600;text-underline-offset:3px}
-.announcement.global-announcement .lo{width:7px;height:7px;background:#080908;transform:rotate(45deg);flex:0 0 auto}
 .bar.global-bar{position:relative!important;top:auto!important;z-index:100;background:#000;color:#fff;border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
 .bar.global-bar .bar-in{width:100%;max-width:none;margin:0;padding:16px clamp(22px,4vw,58px);min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px}
 .bar.global-bar .bar-left{position:relative;z-index:95;display:flex;align-items:center;gap:14px}
@@ -25,14 +21,13 @@
 .bar.global-bar .nav-drop-menu a:hover .nav-drop-desc{color:#a9c97a}
 .global-menu-toggle{display:none;border:1px solid #3a3a3a;background:transparent;color:#fff;width:40px;height:38px;font:500 20px/1 Poppins,sans-serif;cursor:pointer}
 .global-menu-toggle:hover,.global-menu-toggle:focus-visible{border-color:#c4ef78;color:#c4ef78;outline:none}
-.bar.global-bar .bar-buy{border:1px solid #686868;padding:0 13px;color:#fff!important}
+.bar.global-bar .bar-buy{border:1px solid #686868;padding:0 13px;color:#fff!important;text-decoration:none}
 .bar.global-bar .bar-buy:hover{border-color:#c4ef78;color:#c4ef78!important}
-.bar.global-bar .bar-cta{padding:0 14px;background:#c4ef78;color:#050605!important;font-weight:600}
-.bar.global-bar .bar-cta:hover{background:#fff;color:#000!important}
+.bar.global-bar .bar-cta{padding:0 14px;background:#c4ef78;color:#050605!important;font-weight:600;text-decoration:none}
+.bar.global-bar .bar-cta:hover{transform:scale(1.06)}
 .bar.global-bar .bar-buy:active,.bar.global-bar .bar-cta:active{transform:scale(.97)}
 .global-mobile-label{display:none}
 @media(max-width:1250px){
- .announcement.global-announcement .announcement-in{justify-content:flex-start;padding:8px 20px;white-space:nowrap;overflow:hidden}.announcement.global-announcement a{display:none}
  .bar.global-bar .bar-in{min-height:64px;padding:12px 20px}.bar.global-bar .mark span{display:none}
  .bar.global-bar .bar-right{gap:8px}
  .global-menu-toggle{display:grid;place-items:center}
