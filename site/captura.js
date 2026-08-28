@@ -24,6 +24,7 @@
     const email = form.querySelector('input[type="email"]');
     const nome = form.querySelector('input[name="name"]');
     const telefone = form.querySelector('input[name="phone"]');
+    const nascimento = form.querySelector('input[name="birthdate"]');
     const etapa1 = form.querySelector('.captura-etapa-1, .captura-primeiro-passo');
     const etapa2 = form.querySelector('.captura-etapa-2, .captura-segundo-passo');
     const avancar = form.querySelector('[data-capture-continue]');
@@ -56,7 +57,17 @@
         telefone?.focus();
         return;
       }
-      enviarLead(form, { email: email.value.trim(), name: nome.value.trim(), phone: telefone.value.trim() });
+      if (nascimento && !nascimento.value) {
+        aviso('Informe sua data de nascimento.');
+        nascimento.focus();
+        return;
+      }
+      enviarLead(form, {
+        email: email.value.trim(),
+        name: nome.value.trim(),
+        phone: telefone.value.trim(),
+        ...(nascimento ? { birthdate: nascimento.value } : {}),
+      });
       etapa2.hidden = true;
       aviso('Pronto! Em instantes o capítulo e a aula chegam no seu e-mail.');
     };

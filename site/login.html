@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fazer login — Bankers Academy</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="global-header.css?v=13">
+<link rel="stylesheet" href="rodape.css?v=1">
+<link rel="stylesheet" href="login.css?v=1">
+<script src="global-header.js?v=13" defer></script>
+</head>
+<body>
+
+<header class="bar"><div class="bar-in"><a class="brand" href="index.html">Bankers Academy</a></div></header>
+
+<section class="login-section">
+  <div class="login-card">
+    <h1>Fazer login</h1>
+    <p class="login-sub">Entre para acessar o capítulo 1 e a aula de carreira.</p>
+    <form id="form-login" data-rd-form="capitulo-1-login" novalidate>
+      <div class="login-campo">
+        <label for="login-nome">Nome completo</label>
+        <input type="text" id="login-nome" name="name" autocomplete="name" required>
+      </div>
+      <div class="login-campo">
+        <label for="login-email">E-mail</label>
+        <input type="email" id="login-email" name="email" autocomplete="email" required>
+      </div>
+      <div class="login-campo">
+        <label for="login-telefone">Telefone</label>
+        <input type="tel" id="login-telefone" name="phone" autocomplete="tel" inputmode="tel" required>
+      </div>
+      <div class="login-campo">
+        <label for="login-nascimento">Data de nascimento</label>
+        <input type="date" id="login-nascimento" name="birthdate" autocomplete="bday" required>
+      </div>
+      <button type="submit" class="login-entrar">Entrar</button>
+      <p class="login-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap">De cabeça no mercado financeiro · José Roberto Securato Junior</div></footer>
+
+<script>
+(() => {
+  const TELEFONE_MINIMO = 10;
+  const somenteDigitos = valor => valor.replace(/\D/g, '');
+  const form = document.getElementById('form-login');
+  const nome = document.getElementById('login-nome');
+  const email = document.getElementById('login-email');
+  const telefone = document.getElementById('login-telefone');
+  const nascimento = document.getElementById('login-nascimento');
+  const status = document.querySelector('.login-status');
+  const aviso = mensagem => { status.textContent = mensagem; };
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!nome.value.trim()) { aviso('Informe o seu nome.'); nome.focus(); return; }
+    if (!email.value.trim() || !email.checkValidity()) { aviso('Digite um e-mail válido.'); email.focus(); return; }
+    if (somenteDigitos(telefone.value).length < TELEFONE_MINIMO) { aviso('Informe um telefone com DDD.'); telefone.focus(); return; }
+    if (!nascimento.value) { aviso('Informe sua data de nascimento.'); nascimento.focus(); return; }
+
+    document.dispatchEvent(new CustomEvent('rd-lead', {
+      detail: {
+        name: nome.value.trim(),
+        email: email.value.trim(),
+        phone: telefone.value.trim(),
+        birthdate: nascimento.value,
+        form: form.dataset.rdForm,
+      },
+    }));
+    aviso('Pronto! Em instantes o capítulo e a aula chegam no seu e-mail.');
+    form.reset();
+  });
+})();
+</script>
+<script src="rd-station.js?v=2" defer></script>
+<script src="rodape.js?v=4" defer></script>
+</body>
+</html>
