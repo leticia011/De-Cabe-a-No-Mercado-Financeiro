@@ -37,7 +37,7 @@
 .ponte-cap:has(.ponte-card) .ponte-in{align-items:start}
 .ponte-cap:has(.ponte-card) .ponte-acoes{display:block}
 
-.ponte-cap .ponte-card{background:none;border:0;padding:0;max-width:290px;display:block}
+.ponte-cap .ponte-card{background:none;border:0;border-left:1px solid #2a2e26;padding:0 0 0 24px;max-width:290px;display:block}
 .ponte-cap .ponte-card .ponte-card-selo{display:block;margin:0 0 8px;padding:0;background:none;
   color:#c4ef78!important;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
 .ponte-card-nome{margin:0 0 8px!important;color:#fff!important;font-size:15px!important;
@@ -57,6 +57,10 @@
 
 @media(max-width:900px){
   .ponte-cap .ponte-card{max-width:none}
+}
+
+@media(max-width:820px){
+  .ponte-cap .ponte-card{border-left:0;border-top:1px solid #2a2e26;padding:20px 0 0}
 }
 
 /* ---------- passagem para a seção seguinte ---------- */

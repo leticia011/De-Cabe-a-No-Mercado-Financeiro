@@ -32,8 +32,8 @@ body{background:var(--page);font-size:17px;overflow-x:hidden}
 .temas-wrap h2:after{content:"";display:block;width:54px;height:4px;background:var(--lime);margin-top:17px}
 .temas-saiba-mais{margin:40px 0 0;text-align:center}
 .temas-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.tema{background:rgba(255,255,255,.96);border:1px solid rgba(217,220,212,.9);box-shadow:0 16px 40px rgba(14,20,8,.06);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:transform .2s ease,box-shadow .2s ease}
-.tema:hover{transform:scale(1.015);box-shadow:0 20px 46px rgba(14,20,8,.09)}
+.tema{background:rgba(255,255,255,.96);border:1px solid rgba(217,220,212,.9);box-shadow:0 16px 40px rgba(14,20,8,.06);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.tema:hover{transform:scale(1.015);box-shadow:0 20px 46px rgba(14,20,8,.09);border-color:var(--lime)}
 .tema summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;gap:18px;padding:26px 28px;-webkit-tap-highlight-color:transparent}
 .tema summary::-webkit-details-marker{display:none}
 .tema-num{flex:0 0 auto;font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--muted);padding-top:3px}
@@ -96,7 +96,9 @@ article h2:after{content:"";display:block;width:54px;height:4px;background:var(-
 .qa-foto{width:120px;height:120px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:4px solid #c4ef78;box-shadow:0 14px 32px rgba(0,0,0,.24)}
 .qa-autor .rot{margin:0 0 6px}
 .qa-autor-nome{margin:0;font-size:16px;font-weight:600;color:#080908}
-.qa{border-top:1px solid rgba(8,9,8,.25);display:grid;gap:0;counter-reset:faq}.qa .par{counter-increment:faq;position:relative;display:grid;grid-template-columns:54px minmax(260px,.78fr) minmax(360px,1.22fr);column-gap:34px;padding:34px 32px 34px 0;background:transparent;border-bottom:1px solid rgba(8,9,8,.25)}.qa .par::before{content:"0" counter(faq);font-size:15px;font-weight:600;color:#607d2c;padding-top:4px}.qa .q{grid-column:2;grid-row:1/span 4;font-size:20px;margin:0}.qa .a{grid-column:3;font-size:16px;margin:0 0 10px;color:#35401f}.qa .a:last-child{margin-bottom:0}.qa .a.seca{color:#080908}
+.qa-autor-link{display:inline-block;margin-top:4px;color:#3f5125;font-size:12.5px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(8,9,8,.35)}
+.qa-autor-link:hover{color:#080908;border-bottom-color:#080908}
+.qa{border-top:1px solid rgba(8,9,8,.25);display:grid;gap:0;counter-reset:faq}.qa .par{counter-increment:faq;position:relative;display:grid;grid-template-columns:54px minmax(260px,.78fr) minmax(360px,1.22fr);column-gap:34px;padding:34px 32px 34px 0;background:transparent;border-bottom:1px solid rgba(8,9,8,.25);transition:background .2s ease}.qa .par:hover{background:#c4ef78}.qa .par::before{content:"0" counter(faq);font-size:15px;font-weight:600;color:#607d2c;padding-top:4px}.qa .q{grid-column:2;grid-row:1/span 4;font-size:20px;margin:0}.qa .a{grid-column:3;font-size:16px;margin:0 0 10px;color:#35401f}.qa .a:last-child{margin-bottom:0}.qa .a.seca{color:#080908}
 .fim{padding-top:70px;padding-bottom:84px}.fim-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}.fim h2{font-size:clamp(30px,4vw,52px);font-weight:300;letter-spacing:-.045em;line-height:1.08;margin:0}.fim-links{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
 .article-footer{background:#080a07;color:#8f958a;padding:38px 0}.article-footer-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:30px;font-size:11px}.article-footer-in>div{display:flex;justify-content:flex-end;gap:22px}.article-footer a{color:#adb2a8;text-decoration:none}.article-footer a:hover{color:var(--lime)}.footer-brand{color:#fff!important;display:flex;align-items:center;gap:10px;font-size:15px}.footer-mark{width:28px;height:28px;fill:var(--lime)}
 
@@ -196,6 +198,8 @@ body.faq-claro .qa-section .qa-head h2,
 body.faq-claro .qa-section h2{color:#111}
 body.faq-claro .qa-section .rot{color:#5b7a2a}
 body.faq-claro .qa-section .rot .lo{background:#7FAD2E}
+body.faq-claro .qa-section .qa-autor-link{color:#5b7a2a;border-bottom-color:rgba(0,0,0,.25)}
+body.faq-claro .qa-section .qa-autor-link:hover{color:#111;border-bottom-color:#111}
 body.faq-claro .qa-section .abre,
 body.faq-claro .qa-section .qa-nota{color:#575f52}
 body.faq-claro .qa-section .grupo-rot{color:#5b7a2a}

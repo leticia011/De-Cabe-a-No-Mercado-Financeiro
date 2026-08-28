@@ -50,7 +50,7 @@ body{margin:0;background:var(--branco);color:var(--preto);font-family:var(--font
 .migalha a:hover{color:var(--preto)}
 
 .topo{padding:30px 0 46px}
-.rot{display:flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--lima-esc);font-weight:600;margin:0 0 18px}
+.rot{display:flex;align-items:center;gap:9px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--lima-esc);font-weight:600;margin:0 0 18px}
 h1{font-weight:300;font-size:clamp(2rem,4.2vw,2.9rem);line-height:1.14;letter-spacing:-.03em;margin:0 0 22px}
 .chapeu{font-size:1.16rem;color:var(--grafite);margin:0;line-height:1.6}
 .assina{display:flex;align-items:center;gap:12px;margin:30px 0 0;padding-top:22px;border-top:1px solid var(--cinza);

@@ -48,7 +48,8 @@ h1 b{font-weight:600}
 .leitura{margin:56px 0 0;border-top:1px solid var(--cinza);padding-top:44px}
 .leitura h2{font-weight:300;font-size:1.5rem;margin:0 0 26px;letter-spacing:-.015em;display:flex;align-items:center;gap:12px}
 .quads{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--cinza);border:1px solid var(--cinza)}
-.quad{background:var(--branco);padding:24px}
+.quad{background:var(--branco);padding:24px;transition:background .2s ease}
+.quad:hover{background:var(--lima)}
 .quad h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--lima-esc);font-weight:600;margin:0 0 10px}
 .quad p{margin:0;font-size:.94rem;color:var(--grafite);line-height:1.62}
 .quad p b{color:var(--preto);font-weight:500}

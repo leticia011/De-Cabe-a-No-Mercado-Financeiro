@@ -8,13 +8,13 @@
     'autoconhecimento.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Ainda em dúvida se é para você? Veja o mercado por dentro.',
-      texto: 'A resposta a essa pergunta melhora quando você entende o trabalho real de cada área. A <b>Entrada em Investment Banking</b> começa exatamente por aí, antes da parte técnica.',
+      texto: 'Na <b>Entrada em Investment Banking</b>, você entende o trabalho real de cada área, antes da parte técnica.',
       cta: 'Conhecer o curso',
       href: 'https://www.tabula.com.br/curso/entradaemib',
       card: {
         selo: 'Formação híbrida · 44h28',
         nome: 'Entrada em Investment Banking',
-        itens: ['Carreira em finanças e orientação para entrevistas', 'Fundamentos, valuation e M&A', 'Disponível por 1 ano após a compra']
+        itens: ['Carreira em finanças e orientação para entrevistas', 'Fundamentos, valuation e M&A']
       },
       voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
@@ -27,7 +27,7 @@
       card: {
         selo: 'Formação híbrida · 44h28',
         nome: 'Entrada em Investment Banking',
-        itens: ['Carreira em finanças e orientação para entrevistas', 'Fundamentos, valuation e M&A', 'Disponível por 1 ano após a compra']
+        itens: ['Carreira em finanças e orientação para entrevistas', 'Fundamentos, valuation e M&A']
       },
       voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
@@ -40,7 +40,7 @@
       card: {
         selo: 'Formação híbrida · 44h28',
         nome: 'Entrada em Investment Banking',
-        itens: ['Fundamentos, valuation e M&A', 'Estrutura de capital e mercado financeiro', 'Disponível por 1 ano após a compra']
+        itens: ['Fundamentos, valuation e M&A', 'Estrutura de capital e mercado financeiro']
       },
       voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
@@ -66,7 +66,7 @@
       card: {
         selo: 'Formação híbrida · 44h28',
         nome: 'Entrada em Investment Banking',
-        itens: ['Fundamentos, valuation e M&A', 'Orientação para entrevistas', 'Disponível por 1 ano após a compra']
+        itens: ['Fundamentos, valuation e M&A', 'Orientação para entrevistas']
       },
       voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
@@ -79,7 +79,7 @@
       card: {
         selo: 'Formação híbrida · 44h28',
         nome: 'Entrada em Investment Banking',
-        itens: ['Fundamentos, valuation e M&A', 'Orientação para entrevistas', 'Disponível por 1 ano após a compra']
+        itens: ['Fundamentos, valuation e M&A', 'Orientação para entrevistas']
       },
       voltar: { href: HUB, texto: 'Ver todos os cursos da Academy →' }
     },
