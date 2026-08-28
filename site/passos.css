@@ -20,6 +20,9 @@
 .chapter .content>p:first-of-type{padding-left:22px;border-left:3px solid var(--lima);
   font-size:17.5px;line-height:1.72;color:#262c22}
 
+.reading-flow .chapter-bridge{border:0;padding:0;margin-bottom:28px}
+.reading-flow .chapter:first-of-type{border-top:0;padding-top:0}
+
 @media(max-width:980px){
   .chapter>div:first-child{max-width:none;margin-bottom:20px}
   .chapter .content>p:first-of-type{font-size:16.5px}

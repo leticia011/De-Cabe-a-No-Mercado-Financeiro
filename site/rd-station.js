@@ -31,6 +31,7 @@
     if (lead.email) payload.email = lead.email;
     if (lead.name) payload.name = lead.name;
     if (lead.phone) payload.mobile_phone = lead.phone;
+    if (typeof lead.aviso_lancamento === 'boolean') payload.cf_aviso_lancamento = lead.aviso_lancamento;
     // cf_linkedin / cf_pergunta: nomes de campo personalizado supostos — conferir e
     // ajustar para os nomes reais configurados no painel do RD antes de confiar neles.
     if (lead.linkedin) payload.cf_linkedin = lead.linkedin;

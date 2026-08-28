@@ -15,11 +15,13 @@
 .livro2-hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:6px}
 .livro2-hero .eyebrow{margin:0}
 .livro2-hero h1{max-width:11ch}
+.livro2-hero .previa-disponivel{margin:0 0 18px;color:var(--lima);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
 .livro2-capa{display:flex;justify-content:center}
 .capa-ilus2{width:min(100%,300px);aspect-ratio:16/23;background:#000;position:relative;overflow:hidden;
   display:flex;flex-direction:column;justify-content:space-between;padding:26px 22px 20px;
   box-shadow:0 30px 70px rgba(0,0,0,.5)}
 .capa-ilus2:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,239,120,.1),transparent 55%),linear-gradient(90deg,#0a0a0a,#2c2c2c 50%,#151515 82%,#000)}
+.capa-ilus2:after{content:"?";position:absolute;inset:0;display:grid;place-items:center;color:var(--lima);font-size:clamp(150px,18vw,230px);font-weight:600;line-height:1;opacity:.12;z-index:0;pointer-events:none}
 .capa-ilus2>*{position:relative;z-index:1}
 .sym2{display:grid;grid-template-columns:1fr 1fr;gap:3px;width:26px;height:26px;align-self:flex-end}
 .sym2 i{background:var(--lima)}
@@ -45,11 +47,21 @@
 .livro2-hero .waitlist-form label span{display:block;margin-bottom:4px;color:#9a9a9a;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
 .livro2-hero .waitlist-form input{width:100%;height:42px;border:1px solid #3a3a3a;background:#111;color:#fff;padding:0 12px;font:400 12px Poppins,system-ui,sans-serif}
 .livro2-hero .waitlist-form input:focus{outline:2px solid var(--lima);outline-offset:1px}
+.livro2-hero .waitlist-form .waitlist-opcao{display:flex;align-items:flex-start;gap:9px;margin:14px 0 12px;color:#c8c8c8;font-size:11px;line-height:1.45}
+.livro2-hero .waitlist-form .waitlist-opcao input{width:16px;height:16px;min-width:16px;margin:1px 0 0;accent-color:var(--lima);outline:none}
+.livro2-hero .waitlist-form .waitlist-opcao span{margin:0;color:inherit;font-size:11px;font-weight:400;letter-spacing:0;text-transform:none}
 .livro2-hero .waitlist-form button[data-waitlist-enviar]{width:100%;min-height:44px;margin-top:4px;border:0;background:var(--lima);color:#000;font:600 12px Poppins,system-ui,sans-serif;cursor:pointer}
 .livro2-hero .waitlist-form button[data-waitlist-enviar]:hover{background:#fff}
 .livro2-hero .waitlist-form .form-status{min-height:1em;margin:7px 0 0;color:#c4ef78;font-size:10.5px;line-height:1.4}
+.livro2-enquanto{margin:28px 0 10px;color:#9a9a9a;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.livro2-acoes{display:flex;gap:12px;flex-wrap:wrap}
+.livro2-acoes a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 17px;border:1px solid #444;color:#fff;text-decoration:none;font-size:12px;font-weight:600}
+.livro2-acoes a:first-child{background:var(--lima);border-color:var(--lima);color:#000}
+.livro2-acoes a:hover{border-color:var(--lima);color:var(--lima)}
+.livro2-acoes a:first-child:hover{background:#fff;border-color:#fff;color:#000}
 @media(max-width:760px){
   .livro2-hero-in{grid-template-columns:1fr;gap:34px}
   .livro2-capa{order:-1}
   .capa-ilus2{width:min(72%,240px)}
+  .livro2-acoes a{flex:1 1 180px}
 }

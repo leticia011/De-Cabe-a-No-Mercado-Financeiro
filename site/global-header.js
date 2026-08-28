@@ -40,7 +40,8 @@
           </div>
           <a class="global-desktop-link" href="perguntas-frequentes.html">Securato responde</a>
         </nav>
-        <a class="bar-cta global-mobile-keep" href="${home('#comprar')}"><span class="global-desktop-label">Comprar o livro</span><span class="global-mobile-label">Comprar o livro</span></a>
+        <a class="bar-buy global-mobile-keep" href="https://www.tabula.com.br/conteudista/bankers.academy"><span class="global-desktop-label">Começar minha formação</span><span class="global-mobile-label">Cursos</span></a>
+        <a class="bar-cta global-mobile-keep" href="${home('#comprar-livro')}"><span class="global-desktop-label">Comprar o livro</span><span class="global-mobile-label">Comprar</span></a>
       </div>
     </div>`;
 

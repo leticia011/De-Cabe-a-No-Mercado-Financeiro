@@ -63,7 +63,7 @@
       <p class="sub">O livro de <b><a class="autor-link" href="#autor">José Roberto Securato Junior</a></b> sobre como entrar no mercado financeiro. Escrito a partir de 14 anos em investment banking e mais de duas décadas em sala de aula.</p>
 
       <div class="hero-actions">
-        <a class="hero-primary" href="#comprar"><span class="lo dark"></span> Comprar o livro</a>
+        <a class="hero-primary" href="#comprar-livro"><span class="lo dark"></span> Comprar o livro</a>
         <a class="comprar" href="#metodo">Conhecer os 6 passos →</a>
       </div>
       <p class="hero-proof"><span><i class="lo"></i> Método em 6 passos</span><span><i class="lo"></i> 264 páginas</span><span><i class="lo"></i> Casos reais de carreira</span></p>
@@ -371,7 +371,7 @@
         <p class="sub">6 passos para se tornar um Banker</p>
         <p class="ficha">Oficina do Livro · 2024 · 264 páginas<br>ISBN 978-65-89449-75-1</p>
         <p class="desc">O método em seis passos, do autoconhecimento à entrevista.</p>
-        <a class="bt cheio" href="https://tabula.com.br/curso/livro-de-cabeca-no-mercado-financeiro"><span class="lo"></span> Comprar o livro</a>
+        <a id="comprar-livro" class="bt cheio" href="https://tabula.com.br/curso/livro-de-cabeca-no-mercado-financeiro"><span class="lo"></span> Comprar o livro</a>
       </article>
 
       <div class="passagem" aria-hidden="true">
@@ -403,20 +403,7 @@
         <p class="sub">A continuação</p>
         <p class="ficha">Em breve neste site</p>
         <p class="desc">Como construir a carreira depois de entrar: evoluir, ganhar estabilidade e liderar no mercado financeiro.</p>
-        <div class="waitlist" data-waitlist>
-          <button type="button" class="waitlist-abrir" data-waitlist-abrir aria-expanded="false" aria-controls="form-lista-proximo-livro">Entre na lista de espera</button>
-          <form class="waitlist-form" id="form-lista-proximo-livro" data-rd-form="lista-proximo-livro" novalidate hidden>
-            <div class="waitlist-topo">
-              <p class="waitlist-title">Só três campos e pronto.</p>
-              <button type="button" class="waitlist-fechar" data-waitlist-fechar aria-label="Recolher o formulário"></button>
-            </div>
-          <label><span>Nome</span><input type="text" name="name" autocomplete="name" placeholder="Seu nome"></label>
-          <label><span>E-mail</span><input type="email" name="email" autocomplete="email" placeholder="seu@email.com"></label>
-          <label><span>Telefone</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999"></label>
-            <button type="button" data-waitlist-enviar>Quero ser avisado</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
+        <a class="waitlist-abrir" href="no-mercado-financeiro.html">Lançamento <span>Em breve</span></a>
       </article>
     </div>
   </div>
@@ -431,8 +418,8 @@
       </div>
       <div class="eco-txt" data-reveal>
         <h2>Conheça a Bankers Academy</h2>
-        <p>O livro organiza a rota. Na Academy, você transforma o método em repertório técnico, prática e preparação para processos seletivos — com formações on-line e experiências presenciais.</p>
-        <a class="btn-lima" href="https://www.tabula.com.br/conteudista/bankers.academy"><span class="lo"></span> Explorar a Bankers Academy</a>
+        <p>O livro organiza a rota. Na Bankers Academy, você transforma o método em repertório técnico, prática e preparação para processos seletivos — com formações on-line e experiências presenciais.</p>
+        <a class="btn-lima" href="https://bankersacademy.com.br"><span class="lo"></span> Explorar a Bankers Academy</a>
       </div>
     </div>
 
@@ -613,6 +600,39 @@
       history.replaceState(null, '', link.getAttribute('href'));
       retomar(9000);
     });
+  });
+  const livroHero = document.querySelector('.livro3d');
+  if (livroHero) {
+    livroHero.setAttribute('role', 'button');
+    livroHero.setAttribute('tabindex', '0');
+    livroHero.setAttribute('aria-label', 'Abrir o livro e conhecer os capítulos');
+    const abrirLivro = evento => {
+      if (evento.type === 'keydown' && evento.key !== 'Enter' && evento.key !== ' ') return;
+      if (evento.type === 'keydown') evento.preventDefault();
+      goTo(1);
+      document.querySelector('#metodo')?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
+      history.replaceState(null, '', '#passo-1');
+      retomar(9000);
+    };
+    livroHero.addEventListener('click', abrirLivro);
+    livroHero.addEventListener('keydown', abrirLivro);
+  }
+  slides.forEach(slide => {
+    const pagina = slide.querySelector('.losangos');
+    if (!pagina) return;
+    pagina.setAttribute('role', 'button');
+    pagina.setAttribute('tabindex', '0');
+    pagina.setAttribute('aria-label', 'Abrir a próxima página do livro');
+    const abrirPagina = evento => {
+      if (evento.type === 'keydown' && evento.key !== 'Enter' && evento.key !== ' ') return;
+      if (evento.type === 'keydown') evento.preventDefault();
+      if (slides.indexOf(slide) !== current) return;
+      goTo(current + 1);
+      history.replaceState(null, '', `#${slides[current].id}`);
+      retomar(9000);
+    };
+    pagina.addEventListener('click', abrirPagina);
+    pagina.addEventListener('keydown', abrirPagina);
   });
   goTo(current);
 })();

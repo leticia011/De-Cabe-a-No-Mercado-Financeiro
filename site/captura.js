@@ -100,6 +100,7 @@
     const nome = form.querySelector('input[name="name"]');
     const email = form.querySelector('input[type="email"]');
     const telefone = form.querySelector('input[name="phone"]');
+    const avisoLancamento = form.querySelector('input[name="aviso_lancamento"]');
     const status = form.querySelector('.form-status');
     const aviso = mensagem => { if (status) status.textContent = mensagem; };
 
@@ -128,10 +129,10 @@
       if (!email?.value.trim() || !email.checkValidity()) { aviso('Digite um e-mail válido.'); email?.focus(); return; }
       if (somenteDigitos(telefone?.value || '').length < TELEFONE_MINIMO) { aviso('Informe um telefone com DDD.'); telefone?.focus(); return; }
       document.dispatchEvent(new CustomEvent('rd-lead', {
-        detail: { email: email.value.trim(), name: nome.value.trim(), phone: telefone.value.trim(), form: form.dataset.rdForm || form.id || '' }
+        detail: { email: email.value.trim(), name: nome.value.trim(), phone: telefone.value.trim(), aviso_lancamento: Boolean(avisoLancamento?.checked), form: form.dataset.rdForm || form.id || '' }
       }));
       form.hidden = true;
-      aviso('Pronto! Você entra na lista e avisamos assim que o livro sair.');
+      aviso(avisoLancamento?.checked ? 'Pronto! Você entrou na fila e receberá o aviso do lançamento.' : 'Pronto! Você entrou na fila de espera.');
     };
 
     enviar.addEventListener('click', concluir);

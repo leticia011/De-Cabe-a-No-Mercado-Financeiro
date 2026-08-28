@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nadando de braçada no mercado financeiro | Em breve</title>
+<meta name="description" content="Nadando de braçada no mercado financeiro, o próximo livro de José Roberto Securato Junior. Em breve.">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index-base.css?v=1">
+<link rel="stylesheet" href="redesign.css?v=22">
+<link rel="stylesheet" href="global-header.css?v=13">
+<link rel="stylesheet" href="rodape.css?v=1">
+<style>
+  .lancamento{min-height:calc(100vh - 72px);display:grid;place-items:center;padding:80px 20px;background:#000;color:#fff}
+  .lancamento-in{width:100%;max-width:760px;text-align:center}
+  .lancamento-marca{width:110px;height:110px;margin:0 auto 28px;display:grid;place-items:center;border:1px solid rgba(196,239,120,.55);border-radius:50%;color:#c4ef78;font-size:72px;font-weight:300;line-height:1;box-shadow:0 0 0 14px rgba(196,239,120,.04)}
+  .lancamento-kicker{margin:0 0 15px;color:#c4ef78;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+  .lancamento h1{max-width:18ch;margin:0 auto;font-size:clamp(38px,6vw,64px);font-weight:500;line-height:1.05;letter-spacing:-.04em}
+  .lancamento-sub{max-width:56ch;margin:24px auto 0;color:#c2c7bb;font-size:15px;line-height:1.7}
+  .lancamento-status{margin:30px auto 0;padding:17px 22px;border:1px solid #30352b;color:#c4ef78;font-size:13px}
+  .lancamento-waitlist{max-width:520px;margin:24px auto 0}
+  .lancamento-waitlist .waitlist-abrir{width:100%;min-height:50px;border:1px solid #c4ef78;background:transparent;color:#c4ef78;font:600 12px/1 Poppins,system-ui,sans-serif;cursor:pointer}
+  .lancamento-waitlist .waitlist-abrir:hover{background:#c4ef78;color:#000}
+  .lancamento-waitlist .waitlist-form{margin-top:16px;padding:20px;border:1px solid #30352b;text-align:left}
+  .lancamento-waitlist .waitlist-topo{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .lancamento-waitlist .waitlist-title{margin:0;color:#fff;font-size:13px}
+  .lancamento-waitlist label{display:grid;gap:5px;margin-top:12px;color:#9da595;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+  .lancamento-waitlist input{min-height:42px;padding:0 12px;border:1px solid #41483a;background:#0c0d0b;color:#fff;font:400 13px Poppins,system-ui,sans-serif}
+  .lancamento-waitlist .waitlist-form [data-waitlist-enviar]{width:100%;min-height:44px;margin-top:16px;border:0;background:#c4ef78;color:#000;font:600 12px Poppins,system-ui,sans-serif;cursor:pointer}
+  .lancamento-waitlist .waitlist-form [data-waitlist-enviar]:hover{background:#fff}
+  .lancamento-waitlist .waitlist-fechar{width:25px;height:25px;border:1px solid #58644b;background:transparent;color:#c4ef78;cursor:pointer}
+  .lancamento-waitlist .waitlist-fechar:before{content:"×";font-size:17px}
+  .lancamento-waitlist .form-status{color:#c4ef78;font-size:12px}
+  .lancamento-acoes{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+  .lancamento-acoes-label{margin:28px 0 0;color:#9da595;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  .lancamento-acoes a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;text-decoration:none;font:600 12px/1 Poppins,system-ui,sans-serif}
+  .lancamento-acoes .principal{background:#c4ef78;color:#000}
+  .lancamento-acoes .principal:hover{background:#fff}
+  .lancamento-acoes .secundario{border:1px solid #555;color:#fff}
+  .lancamento-acoes .secundario:hover{border-color:#c4ef78;color:#c4ef78}
+  @media(max-width:600px){.lancamento{min-height:calc(100vh - 62px);padding:58px 20px}.lancamento-marca{width:88px;height:88px;font-size:58px}.lancamento-sub{font-size:14px}.lancamento-acoes a{width:100%}}
+</style>
+<script src="global-header.js?v=13" defer></script>
+</head>
+<body>
+<header class="bar"><div class="bar-in"><a class="brand" href="index.html">Bankers Academy</a></div></header>
+<main class="lancamento">
+  <div class="lancamento-in">
+    <div class="lancamento-marca" aria-hidden="true">?</div>
+    <p class="lancamento-kicker">Próximo livro · Em breve</p>
+    <h1>Nadando de braçada no mercado financeiro</h1>
+    <p class="lancamento-sub">A continuação da jornada para quem já entrou no mercado financeiro e quer evoluir, ganhar estabilidade e liderar.</p>
+    <p class="lancamento-status">O livro ainda está em desenvolvimento. Em breve, esta página terá todas as informações sobre o lançamento.</p>
+    <div class="lancamento-waitlist" data-waitlist>
+      <button type="button" class="waitlist-abrir" data-waitlist-abrir aria-expanded="false" aria-controls="form-lista-lancamento">Avise-me no lançamento</button>
+      <form class="waitlist-form" id="form-lista-lancamento" data-rd-form="lista-lancamento" novalidate hidden>
+        <div class="waitlist-topo"><p class="waitlist-title">Deixe seus dados e avisaremos quando sair.</p><button type="button" class="waitlist-fechar" data-waitlist-fechar aria-label="Recolher o formulário"></button></div>
+        <label>Nome<input type="text" name="name" autocomplete="name" placeholder="Seu nome"></label>
+        <label>E-mail<input type="email" name="email" autocomplete="email" placeholder="seu@email.com"></label>
+        <label>Telefone<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999"></label>
+        <button type="button" data-waitlist-enviar>Quero ser avisado</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <p class="lancamento-acoes-label">Enquanto isso...</p>
+    <div class="lancamento-acoes">
+      <a class="principal" href="index.html#comprar">Voltar aos livros</a>
+      <a class="secundario" href="https://bankersacademy.com.br">Conhecer os cursos</a>
+    </div>
+  </div>
+</main>
+<footer></footer>
+<script src="rodape.js?v=4" defer></script>
+<script src="captura.js?v=3" defer></script>
+<script src="scroll-reveal.js?v=1" defer></script>
+</body>
+</html>

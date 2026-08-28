@@ -214,6 +214,7 @@ h2.sec{font-weight:300;font-size:1.75rem;letter-spacing:-.015em;margin:0 0 12px;
   display:flex;flex-direction:column;justify-content:space-between;padding:14px 12px 12px}
 .capa-ilus::before{content:"";position:absolute;inset:0;
   background:linear-gradient(135deg,rgba(196,239,120,.08),transparent 55%)}
+.capa-ilus::after{content:"?";position:absolute;inset:0;display:grid;place-items:center;color:var(--lima);font-size:clamp(96px,14vw,150px);font-weight:600;line-height:1;opacity:.12;z-index:0;pointer-events:none}
 .capa-ilus>*{position:relative;z-index:1}
 .capa-ilus .sym{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;width:13px;height:13px;align-self:flex-end}
 .capa-ilus .sym i{background:var(--lima)}

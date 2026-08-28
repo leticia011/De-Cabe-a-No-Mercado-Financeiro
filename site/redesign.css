@@ -6,10 +6,10 @@ html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--text);font
 a{transition:background .18s,color .18s,border-color .18s,transform .18s}
 
 /* hero: mesma escala, grid e linguagem da Academy */
-.hero{background:#000;color:#fff;min-height:620px;position:relative;overflow:hidden}.hero:before{content:"";background-image:radial-gradient(circle at 22% 18%,rgba(196,239,120,.025),transparent 30%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cpath d='M18 4 32 18 18 32 4 18Z' fill='%23282828'/%3E%3C/svg%3E");background-size:auto,72px 72px;background-position:center,0 0;position:absolute;inset:0;opacity:.27}
+.hero{background:#000;color:#fff;min-height:620px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:#000}
 .hero-in{min-height:620px;padding-block:58px;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:54px;position:relative}
 .eyebrow{color:var(--lime);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin:0}.hero h1{max-width:720px;margin:24px 0 0;font-size:clamp(50px,4.7vw,68px);font-weight:500;line-height:1.08;letter-spacing:-.045em}.subtitulo{color:var(--lime);font-size:24px;font-weight:500;margin:18px 0 0;text-transform:none;letter-spacing:0}
-.hero .sub{color:#c6cabf;max-width:570px;margin:23px 0 0;font-size:16px;line-height:1.65}.hero .sub b{color:#fff;font-weight:500}.autor-link{color:inherit;text-decoration:none;cursor:pointer}.hero-actions{display:flex;align-items:center;gap:13px;margin-top:28px}.hero-primary,.bt,.btn-preto,.btn-lima,.ver-todas{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-family:var(--font);font-size:12px;font-weight:600;padding:13px 18px;border:1px solid transparent}.hero-primary{background:#b6432a;color:#fff}.hero-primary:after{content:" →"}.hero-primary:hover{background:#d15b3f}.hero .comprar{display:inline-flex;border:1px solid #454545;color:#fff;padding:12px 17px;margin:0;text-decoration:none;font-size:12px}.hero .comprar:hover{border-color:#fff}.hero-proof{display:flex;gap:20px;margin:24px 0 0;padding-top:18px;border-top:1px solid #282828;color:#858881;font-size:10px;letter-spacing:.07em;text-transform:uppercase}
+.hero .sub{color:#c6cabf;max-width:570px;margin:23px 0 0;font-size:16px;line-height:1.65}.hero .sub b{color:#fff;font-weight:500}.autor-link{color:inherit;text-decoration:none;cursor:pointer}.autor-link:hover{text-decoration:underline;text-underline-offset:3px}.hero-actions{display:flex;align-items:center;gap:13px;margin-top:28px}.hero-primary,.bt,.btn-preto,.btn-lima,.ver-todas{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-family:var(--font);font-size:12px;font-weight:600;padding:13px 18px;border:1px solid transparent}.hero-primary{background:#b6432a;color:#fff}.hero-primary:after{content:" →"}.hero-primary:hover{background:#d15b3f}.hero .comprar{display:inline-flex;border:1px solid var(--lime);background:var(--lime);color:#000;padding:12px 17px;margin:0;text-decoration:none;font-family:var(--font);font-size:12px;font-weight:500;letter-spacing:.01em}.hero .comprar:hover{border-color:#fff;background:#fff;color:#000}.hero-proof{display:flex;gap:20px;margin:24px 0 0;padding-top:18px;border-top:1px solid #282828;color:#858881;font-size:10px;letter-spacing:.07em;text-transform:uppercase}
 .capa-box{padding:0;align-items:center;justify-content:center}.capa-box:after{bottom:-45px}.livro3d{max-width:292px;margin:0;transform:rotateY(-16deg) rotateX(1deg);filter:drop-shadow(24px 28px 28px #000)}
 
 /* captura: CTA verde usada no site principal */
@@ -222,7 +222,7 @@ footer{background:#080a07;padding:66px 0 28px}.footer-grid{grid-template-columns
 }
 
 /* acabamento: títulos, CTAs, âncoras e acessibilidade */
-#top,#metodo,#autor,#perguntas,#comprar,#academy{scroll-margin-top:96px}
+#top,#metodo,#autor,#perguntas,#academy,#comprar{scroll-margin-top:96px}#comprar-livro{scroll-margin-top:640px}
 h1,h2,h3{text-wrap:balance}
 p{text-wrap:pretty}
 .hero-primary,.bt,.btn-preto,.btn-lima,.ver-todas,.bar-cta,.todos-cursos a{min-height:46px;line-height:1.25;letter-spacing:0;text-align:center}
@@ -275,7 +275,7 @@ p{text-wrap:pretty}
  .author-feature{background:#000}
 }
 @media(max-width:720px){
- #top,#metodo,#autor,#perguntas,#comprar,#academy{scroll-margin-top:78px}
+ #top,#metodo,#autor,#perguntas,#academy,#comprar{scroll-margin-top:78px}#comprar-livro{scroll-margin-top:540px}
  .hero-primary,.bt,.btn-preto,.btn-lima,.ver-todas,.todos-cursos a{width:100%;justify-content:space-between}
  .author-stat{min-height:92px;padding:18px 14px}.author-stat strong{font-size:25px}.author-stat span{font-size:8px;margin-top:9px}
  .slide .losangos{order:0}.slide .isca{font-size:14px;padding:16px 14px 16px 55px}.slide .isca:after{left:17px}.slide .ler{font-size:14px;margin-bottom:8px}
@@ -331,6 +331,30 @@ p{text-wrap:pretty}
  footer{padding-top:52px}.footer-grid{gap:36px;padding-bottom:36px}.footer-brand{font-size:16px}.footer-about{font-size:12px}.social a{width:42px;height:42px}.footer-bottom{padding-top:20px}
 }
 
+/* Academy: imagem em tela cheia com conteúdo sobreposto */
+.eco .eco-topo{position:relative;display:block;min-height:560px;margin-bottom:76px;overflow:hidden;background:#000}
+.eco .eco-topo .composicao{position:absolute;inset:0;min-height:0;background:#000;border:0;overflow:hidden}
+.eco .eco-topo .composicao img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.58)}
+.eco .eco-topo .composicao:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.16) 38%,rgba(0,0,0,.86) 68%,#000 100%);pointer-events:none}
+.eco .eco-topo .composicao .legenda{display:none}
+.eco .eco-topo .eco-txt{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;min-height:560px;max-width:540px;margin-left:auto;padding:58px 0 58px 42px;pointer-events:none}
+.eco .eco-topo .eco-txt h2{color:#fff}
+.eco .eco-topo .eco-txt p{color:#d0d4ca}
+.eco .eco-topo .eco-txt .btn-lima{align-self:flex-start;pointer-events:auto}
+.eco .eco-topo .composicao img{transition:transform .55s cubic-bezier(.16,1,.3,1)}
+.eco .eco-topo .composicao:hover img{transform:scale(1.045)}
+.eco .eco-topo .composicao .legenda{display:flex;position:absolute;left:24px;bottom:22px;z-index:3;margin:0;padding:9px 12px;background:rgba(0,0,0,.72);color:#fff;border-left:3px solid var(--lime);font-size:10px;line-height:1.35;letter-spacing:.04em}
+.eco .eco-topo .composicao .legenda .lo{display:none}
+#academy{scroll-margin-top:40px}
+@media(max-width:760px){
+  .eco .eco-topo{min-height:650px;margin-bottom:58px}
+  .eco .eco-topo .composicao img{object-position:center}
+  .eco .eco-topo .composicao:after{background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.56) 42%,#000 82%)}
+  .eco .eco-topo .eco-txt{min-height:650px;max-width:none;margin:0;padding:360px 0 42px}
+  .eco .eco-topo .eco-txt .btn-lima{align-self:stretch}
+  #academy{scroll-margin-top:28px}
+}
+
 /* Carrossel estável: um slide por vez, sem trilho horizontal sujeito a deslocamento. */
 .ensina-dir .carrossel{display:block;overflow:visible;scroll-snap-type:none;position:relative}
 .ensina-dir .carrossel>.slide{display:none; width:100%; max-width:100%}
@@ -346,8 +370,11 @@ p{text-wrap:pretty}
 .ensina-dir .carrossel>.slide.is-leaving{position:absolute;inset:0;z-index:4;pointer-events:none;
   backface-visibility:hidden;box-shadow:0 22px 50px rgba(0,0,0,.22);
   transition:transform .72s cubic-bezier(.65,0,.35,1),filter .72s cubic-bezier(.65,0,.35,1)}
-.ensina-dir .carrossel>.slide.is-leaving.dir-next{transform-origin:center center;transform:rotateY(-180deg) scale(.97);filter:brightness(.62)}
-.ensina-dir .carrossel>.slide.is-leaving.dir-prev{transform-origin:center center;transform:rotateY(180deg) scale(.97);filter:brightness(.62)}
+.ensina-dir .carrossel>.slide.is-leaving.dir-next{transform-origin:left center;transform:rotateY(-100deg) scale(.97);filter:brightness(.62)}
+.ensina-dir .carrossel>.slide.is-leaving.dir-prev{transform-origin:right center;transform:rotateY(100deg) scale(.97);filter:brightness(.62)}
+.livro3d{cursor:pointer;transition:filter .3s ease,transform .3s ease}
+.livro3d:hover{filter:drop-shadow(24px 28px 28px #000) brightness(1.06);transform:translateY(-5px) rotateY(-16deg) rotateX(1deg)}
+.livro3d:focus-visible{outline:3px solid var(--lime);outline-offset:8px}
 @media(prefers-reduced-motion:reduce){
  .ensina-dir .carrossel>.slide.is-leaving{display:none!important}
 }
