@@ -38,10 +38,8 @@
               <a href="${capitulo.href}"><span class="nav-drop-nome">${capitulo.nome}</span><span class="nav-drop-desc">${capitulo.desc}</span></a>`).join('')}
             </div>
           </div>
-          <a class="global-desktop-link" href="no-mercado-financeiro.html">No mercado financeiro</a>
           <a class="global-desktop-link" href="perguntas-frequentes.html">Respostas do Securato</a>
         </nav>
-        <a class="bar-buy global-mobile-keep" href="https://www.tabula.com.br/conteudista/bankers.academy"><span class="global-desktop-label">Começar minha formação</span><span class="global-mobile-label">Cursos</span></a>
         <a class="bar-cta global-mobile-keep" href="${home('#comprar')}"><span class="global-desktop-label">Comprar o livro</span><span class="global-mobile-label">Comprar o livro</span></a>
       </div>
     </div>`;

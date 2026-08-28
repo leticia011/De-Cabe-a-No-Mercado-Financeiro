@@ -4,8 +4,22 @@
 body{margin:0;background:#fff;color:#111;font-family:var(--fonte);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
 .lo{display:none}
 
-.login-section{background:var(--fundo);color:var(--texto);min-height:calc(100vh - 340px);display:flex;align-items:center;justify-content:center;padding:72px 22px}
-.login-card{width:100%;max-width:380px}
+.login-section{
+ background-color:var(--fundo);
+ background-image:
+  linear-gradient(90deg,rgba(0,0,0,.74) 0%,rgba(0,0,0,.52) 42%,rgba(0,0,0,.08) 76%),
+  url("assets/login-livros-bg.jpg");
+ background-position:center;
+ background-repeat:no-repeat;
+ background-size:cover;
+ color:var(--texto);
+ min-height:calc(100vh - 340px);
+ display:flex;
+ align-items:center;
+ justify-content:flex-start;
+ padding:72px max(22px,calc((100vw - 1240px)/2 + 44px));
+}
+.login-card{width:100%;max-width:410px;padding:38px;background:rgba(8,9,8,.78);border:1px solid rgba(255,255,255,.11);box-shadow:0 28px 70px rgba(0,0,0,.34);backdrop-filter:blur(8px)}
 .login-card h1{font-size:clamp(26px,3vw,32px);font-weight:500;letter-spacing:-.03em;margin:0 0 8px}
 .login-card .login-sub{color:var(--muted);font-size:14px;margin:0 0 32px}
 
@@ -22,3 +36,15 @@ body{margin:0;background:#fff;color:#111;font-family:var(--fonte);font-size:15px
 .login-rodape{margin-top:26px;padding-top:22px;border-top:1px solid #23261f;font-size:13px;color:var(--muted)}
 .login-rodape a{color:var(--lima);text-decoration:none;font-weight:600}
 .login-rodape a:hover{color:#fff}
+
+@media(max-width:680px){
+ .login-section{
+  min-height:calc(100vh - 220px);
+  padding:42px 20px;
+  background-position:67% center;
+  background-image:
+   linear-gradient(rgba(0,0,0,.66),rgba(0,0,0,.76)),
+   url("assets/login-livros-bg.jpg");
+ }
+ .login-card{max-width:none;padding:28px 22px;backdrop-filter:blur(6px)}
+}

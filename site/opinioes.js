@@ -96,4 +96,28 @@
   fita.addEventListener('pointermove', e => {
     if (arrastando && Math.abs(e.movementX) > 2) fita.dataset.arrastou = 'sim';
   });
+
+  /* "ver todas as avaliações" — troca a esteira por uma lista estática, sem duplicatas */
+  const grade = document.querySelector('.opinioes-grade');
+  const botaoTodas = document.querySelector('[data-opinioes-toggle]');
+  const lista = document.querySelector('[data-opinioes-lista]');
+
+  if (grade && botaoTodas && lista) {
+    let listaMontada = false;
+
+    botaoTodas.addEventListener('click', () => {
+      if (!listaMontada) {
+        fita.querySelectorAll(':scope > .opiniao:not([aria-hidden])').forEach(original => {
+          lista.append(original.cloneNode(true));
+        });
+        listaMontada = true;
+      }
+
+      const aberta = !lista.classList.contains('is-aberta');
+      lista.classList.toggle('is-aberta', aberta);
+      grade.hidden = aberta;
+      botaoTodas.setAttribute('aria-expanded', String(aberta));
+      botaoTodas.textContent = aberta ? 'Ver menos avaliações' : 'Ver todas as avaliações';
+    });
+  }
 })();

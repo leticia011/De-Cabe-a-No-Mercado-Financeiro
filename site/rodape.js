@@ -31,7 +31,7 @@
       </div>
       <div>
         <h2>O livro</h2>
-        <ul><li><a href="${INICIO}#metodo">Os 6 passos</a></li><li><a href="no-mercado-financeiro.html">No mercado financeiro</a></li><li><a href="perguntas-frequentes.html">Securato responde</a></li><li><a href="${INICIO}#comprar">Onde comprar</a></li><li><a href="${INICIO}#autor">Securato Jr.</a></li></ul>
+        <ul><li><a href="${INICIO}#metodo">Os 6 passos</a></li><li><a href="no-mercado-financeiro.html">No mercado financeiro</a></li><li><a href="${INICIO}#comprar">Onde comprar</a></li><li><a href="${INICIO}#autor">Securato Jr.</a></li></ul>
       </div>
       <div>
         <h2>Formação</h2>
