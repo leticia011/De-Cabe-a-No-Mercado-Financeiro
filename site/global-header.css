@@ -21,12 +21,9 @@
 .bar.global-bar .nav-drop-menu a:hover .nav-drop-desc{color:#a9c97a}
 .global-menu-toggle{display:none;border:1px solid #3a3a3a;background:transparent;color:#fff;width:40px;height:38px;font:500 20px/1 Poppins,sans-serif;cursor:pointer}
 .global-menu-toggle:hover,.global-menu-toggle:focus-visible{border-color:#c4ef78;color:#c4ef78;outline:none}
-.bar.global-bar .bar-buy{border:1px solid #686868;padding:0 13px;color:#fff!important;text-decoration:none}
-.bar.global-bar .bar-buy:hover{border-color:#c4ef78;color:#c4ef78!important}
 .bar.global-bar .bar-cta{padding:0 14px;background:#b6432a;color:#fff!important;font-weight:600;text-decoration:none}
 .bar.global-bar .bar-cta:hover{background:#d15b3f;color:#fff!important}
-.bar.global-bar .bar-buy:active,.bar.global-bar .bar-cta:active{transform:scale(.97)}
-.global-mobile-label{display:none}
+.bar.global-bar .bar-cta:active{transform:scale(.97)}
 @media(max-width:1250px){
  .bar.global-bar .bar-in{min-height:64px;padding:12px 20px}.bar.global-bar .mark span{display:none}
  .bar.global-bar .bar-right{gap:8px}
@@ -35,7 +32,6 @@
  .bar.global-bar .bar-right .global-mobile-keep{padding:0 10px}
  .bar.global-bar .nav-drop{display:none}
  .bar.global-bar .nav-drop-seta{display:none}
- .global-desktop-label{display:none}.global-mobile-label{display:inline}
 
  /* gaveta lateral: fica presa à esquerda, ~1/4 da tela, atrás do cabeçalho */
  .bar.global-bar .main-nav{
@@ -86,7 +82,7 @@
 .bar.global-bar .main-nav>a,.bar.global-bar .main-nav .nav-drop-link{display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500;color:#c6c6c1;white-space:nowrap}
 .bar.global-bar .main-nav a:hover{color:#c4ef78}
 .bar.global-bar .nav-drop-seta{font-size:11px}
-.bar.global-bar .bar-buy,.bar.global-bar .bar-cta{display:inline-flex;align-items:center;justify-content:center;
+.bar.global-bar .bar-cta{display:inline-flex;align-items:center;justify-content:center;
   min-height:42px;padding:0 20px;font-size:13.5px;font-weight:600;line-height:1;white-space:nowrap}
 
 /* daqui para baixo o menu vai encolhendo até virar hambúrguer em 760px */
@@ -95,7 +91,6 @@
   .bar.global-bar .mark{font-size:15px}
   .bar.global-bar .main-nav,.bar.global-bar .bar-right{gap:16px}
   .bar.global-bar .main-nav>a,.bar.global-bar .main-nav .nav-drop-link{font-size:13.5px}
-  .bar.global-bar .bar-buy{display:none}
   .bar.global-bar .bar-cta{font-size:13.5px;padding:0 18px;min-height:42px}
 }
 
@@ -103,5 +98,4 @@
   .bar.global-bar .bar-in{min-height:62px;padding-block:11px}
   .bar.global-bar .brand-mark{width:26px;height:26px}
   .bar.global-bar .mark{font-size:15px}
-  .bar.global-bar .bar-buy{display:inline-flex}
 }
