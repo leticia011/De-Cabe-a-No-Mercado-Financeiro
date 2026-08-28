@@ -1,17 +1,18 @@
-.qa,.faq,.leitura#perguntas .quads{width:100%;display:grid;gap:12px;border:0!important}
+.qa,.faq,.leitura#perguntas .quads{width:100%;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;border:0!important}
 .qa details,.faq details,.leitura#perguntas .quads details{width:100%;background:#fff;border:1px solid #d6d8d2!important}
 .qa details:not([open])>:not(summary),.faq details:not([open])>:not(summary),.leitura#perguntas .quads details:not([open])>:not(summary){display:none!important}
-.qa summary,.faq summary,.leitura#perguntas .quads summary{list-style:none;cursor:pointer;display:grid!important;grid-template-columns:52px minmax(0,1fr) 32px;align-items:center;gap:30px;width:100%;min-height:94px;padding:24px 28px!important;color:#080908;font:600 15px/1.45 Poppins,system-ui,sans-serif;transition:background .15s ease}
+.qa summary,.faq summary,.leitura#perguntas .quads summary{list-style:none;cursor:pointer;display:grid!important;grid-template-columns:minmax(0,1fr) 24px;align-items:center;gap:18px;width:100%;min-height:auto;padding:17px 18px!important;color:#080908;font:600 13.5px/1.4 Poppins,system-ui,sans-serif;transition:background .15s ease}
 .qa summary:active,.faq summary:active,.leitura#perguntas .quads summary:active{background:#f7f7f4}
 .qa summary::-webkit-details-marker,.faq summary::-webkit-details-marker,.leitura#perguntas .quads summary::-webkit-details-marker{display:none}
-.qa .num,.faq .num,.leitura#perguntas .quads .num{display:grid;place-items:center;width:38px;height:38px;background:#f3f3f1;color:#789b3e;font-size:10px;font-weight:600}
+.qa .num,.faq .num,.leitura#perguntas .quads .num{display:none}
 .qa .question,.faq .question,.leitura#perguntas .quads .question{min-width:0}
-.qa .plus,.faq .plus,.leitura#perguntas .quads .plus{justify-self:end;color:#080908;font-size:23px;font-weight:300;line-height:1;transition:transform .18s ease}
-.qa .answer,.faq .answer,.leitura#perguntas .quads .answer{display:block;width:auto!important;max-width:none!important;margin:0!important;padding:0 92px 28px 110px!important;color:#4f524d;font:400 14px/1.75 Poppins,system-ui,sans-serif}
+.qa .plus,.faq .plus,.leitura#perguntas .quads .plus{justify-self:end;color:#080908;font-size:19px;font-weight:300;line-height:1;transition:transform .18s ease}
+.qa .answer,.faq .answer,.leitura#perguntas .quads .answer{display:block;width:auto!important;max-width:none!important;margin:0!important;padding:0 20px 20px 18px!important;color:#4f524d;font:400 13px/1.7 Poppins,system-ui,sans-serif}
 .qa .answer p,.faq .answer p,.leitura#perguntas .quads .answer p{margin:0 0 10px;color:inherit}
 .qa .answer p:last-child,.faq .answer p:last-child,.leitura#perguntas .quads .answer p:last-child{margin-bottom:0}
 .qa .answer .answer-source{display:inline-flex;margin-top:16px;padding-bottom:2px;border-bottom:2px solid #c4ef78;color:#080908;text-decoration:none;font-size:12px;font-weight:600}
 .qa .answer .answer-source:hover{border-bottom-color:#080908}
 .qa details[open] .answer,.faq details[open] .answer,.leitura#perguntas .quads details[open] .answer{display:block}
 .qa details[open] .plus,.faq details[open] .plus,.leitura#perguntas .quads details[open] .plus{transform:none}
-@media(max-width:720px){.qa,.faq,.leitura#perguntas .quads{gap:9px}.qa summary,.faq summary,.leitura#perguntas .quads summary{grid-template-columns:38px minmax(0,1fr) 24px;gap:14px;min-height:78px;padding:18px 16px!important;font-size:13px}.qa .num,.faq .num,.leitura#perguntas .quads .num{width:34px;height:34px}.qa .answer,.faq .answer,.leitura#perguntas .quads .answer{padding:0 16px 22px 68px!important;font-size:13px}}
+@media(max-width:900px){.qa,.faq,.leitura#perguntas .quads{grid-template-columns:1fr}}
+@media(max-width:720px){.qa,.faq,.leitura#perguntas .quads{gap:9px}.qa summary,.faq summary,.leitura#perguntas .quads summary{grid-template-columns:minmax(0,1fr) 22px;gap:12px;padding:15px 14px!important;font-size:13px}.qa .answer,.faq .answer,.leitura#perguntas .quads .answer{padding:0 14px 18px 14px!important;font-size:13px}}

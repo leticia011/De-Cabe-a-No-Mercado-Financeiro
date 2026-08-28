@@ -18,7 +18,9 @@
 
 .marca-pagina .marca-cap{margin-top:24px;padding:22px 20px;border:1px solid #353832;background:#151715}
 .marca-pagina .marca-cap h3{margin:0 0 6px;color:#fff;font-size:16px;font-weight:500;line-height:1.3}
-.marca-pagina .marca-cap .fine{margin:12px 0 0;color:#7f847b;font-size:11px}
+.marca-pagina .marca-cap .captura-login-link{display:flex;align-items:center;justify-content:center;width:100%;min-height:46px;margin-top:14px;background:#c4ef78;color:#050605;text-decoration:none;font:600 13px/1 Poppins,system-ui,sans-serif}
+.marca-pagina .marca-cap .captura-login-link:hover{background:#fff}
+.marca-pagina .marca-cap .captura-login-link:active{transform:scale(.98)}
 
 @media(max-width:1080px){
  .marca-layout{grid-template-columns:1fr;gap:52px}

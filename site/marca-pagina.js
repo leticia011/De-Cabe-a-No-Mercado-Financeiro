@@ -45,24 +45,8 @@
       </div>
       <div class="marca-cap">
         <h3>Leia o capítulo 1</h3>
-        <p>De graça, por e-mail.</p>
         ${brinde}
-        <form class="captura-2etapas" data-rd-form="capitulo-1" novalidate>
-          <div class="captura-etapa-1 campo">
-            <input type="email" name="email" autocomplete="email" placeholder="Seu e-mail" aria-label="Seu e-mail">
-            <button type="button" data-capture-continue>Quero o capítulo</button>
-          </div>
-          <div class="captura-etapa-2" hidden>
-            <p>Ótimo. Só falta completar seus dados:</p>
-            <div class="campo">
-              <input type="text" name="name" autocomplete="name" placeholder="Nome e sobrenome" aria-label="Nome e sobrenome">
-              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Seu telefone com DDD" aria-label="Seu telefone com DDD">
-              <button type="button" data-capture-submit>Enviar</button>
-            </div>
-          </div>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
-        <p class="fine">Sem spam, cancele quando quiser.</p>
+        <a class="captura-login-link" href="login.html">Fazer login</a>
       </div>`;
     return aside;
   };

@@ -12,14 +12,17 @@
 .qa-section .qa-nota{margin:28px 0 0;color:#3f5125;font-size:13px;line-height:1.7;max-width:70ch}
 .qa-section .qa-nota a{color:#080908;font-weight:600;text-underline-offset:3px}
 
-/* uma pergunta por linha, mesmo em páginas cujo CSS usa grade de duas colunas */
-.qa-section .qa,.qa-section .faq,.qa-section .quads{display:grid!important;grid-template-columns:1fr!important;gap:12px!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important}
+/* cartões em duas colunas; os cartões brancos vêm de faq-accordion.css */
+.qa-section .qa,.qa-section .faq,.qa-section .quads{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:10px!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important}
 
-/* os cartões brancos vêm de faq-accordion.css; aqui só o espaçamento entre grupos */
 .qa-section .qa+.qa,.qa-section .faq+.faq{margin-top:12px}
 .qa-section .leitura{max-width:none;padding:0;border:0;background:transparent}
 .qa-section .leitura>h2{display:none}
 .qa-section>.pr>a,.qa-section .leitura>a{display:inline-flex;margin-top:26px;padding-bottom:3px;border-bottom:2px solid #080908;color:#080908;text-decoration:none;font-size:13px;font-weight:600}
+
+@media(max-width:900px){
+ .qa-section .qa,.qa-section .faq,.qa-section .quads{grid-template-columns:1fr!important}
+}
 
 @media(max-width:720px){
  .qa-section .pr{width:calc(100% - 40px);padding:62px 0 70px}

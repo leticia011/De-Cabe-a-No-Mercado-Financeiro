@@ -9,12 +9,12 @@
 
   // Capítulos pelo nome — o menu não usa "passo 1, passo 2".
   const CAPITULOS = [
-    { nome: 'Autoconhecimento', desc: 'O mercado financeiro é para você?', href: 'autoconhecimento.html' },
-    { nome: 'O mapa das carreiras', desc: '18 carreiras em um quadrante', href: 'quadrante-carreiras.html' },
-    { nome: 'A carreira certa', desc: 'Como escolher e testar a escolha', href: 'carreira-certa.html' },
-    { nome: 'Formação e certificações', desc: 'O que estudar e o que não', href: 'formacao-certificacoes.html' },
-    { nome: 'Equity Story', desc: 'Por que contratar você', href: 'equity-story.html' },
-    { nome: 'CV e LinkedIn', desc: 'Currículo, perfil e samples', href: 'cv-linkedin.html' },
+    { nome: '1. Autoconhecimento', desc: 'O mercado financeiro é para você?', href: 'autoconhecimento.html' },
+    { nome: '2. Opções de carreira', desc: '18 carreiras em um quadrante', href: 'quadrante-carreiras.html' },
+    { nome: '3. A carreira ideal para você', desc: 'Como escolher e testar a escolha', href: 'carreira-certa.html' },
+    { nome: '4. Lacunas de conhecimento', desc: 'O que estudar e o que não', href: 'formacao-certificacoes.html' },
+    { nome: '5. Equity Story', desc: 'Por que contratar você', href: 'equity-story.html' },
+    { nome: '6. Narrativa profissional', desc: 'Currículo, perfil e samples', href: 'cv-linkedin.html' },
     { nome: 'Processo seletivo', desc: 'Antes, durante e depois da entrevista', href: 'processo-seletivo-v2.html' }
   ];
 
