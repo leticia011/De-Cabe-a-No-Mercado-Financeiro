@@ -44,7 +44,7 @@
 </script>
 
 <link rel="stylesheet" href="index-base.css?v=1">
-<link rel="stylesheet" href="redesign.css?v=24">
+<link rel="stylesheet" href="redesign.css?v=25">
 <link rel="stylesheet" href="reveal.css?v=1">
 <link rel="stylesheet" href="global-header.css?v=13">
 <link rel="stylesheet" href="autor.css?v=5">
@@ -311,10 +311,8 @@
   <div class="wrap">
     <header class="opinioes-cabeca" data-reveal>
       <div>
-        <p class="opinioes-kicker">Uma recomendação real</p>
-        <h2 id="opinioes-titulo">Uma rota mais clara para a carreira.</h2>
+        <h2 id="opinioes-titulo">Recomendações reais.</h2>
       </div>
-      <p class="opinioes-intro">Uma recomendação assinada por um profissional do mercado — e o que escrevem os leitores que compraram o livro.</p>
     </header>
 
     <div class="opinioes-grade">
@@ -442,6 +440,7 @@
       <div><p class="academy-kicker">Programas Bankers Academy</p><h3 class="strip"><span class="lo"></span> Continue sua formação.</h3></div>
       <p class="strip-nota">Do primeiro contato com o mercado financeiro à preparação técnica para processos seletivos.</p>
     </div>
+    <div class="cursos-wrap">
     <div class="cursos">
       <a class="curso" href="https://www.tabula.com.br/curso/rota/entrada-no-mercado-financeiro">
         <div class="program-tags"><span>Formação híbrida</span><span>Formação em Banker</span></div>
@@ -470,7 +469,14 @@
         <p class="meta">Para quem vem de outra área</p>
       </a>
     </div>
-    <p class="todos-cursos"><a href="https://www.tabula.com.br/curso/rota/financas-para-nao-financeiros">Saiba mais sobre a Bankers Academy <span>→</span></a></p>
+    <button type="button" class="cursos-arrow prev" aria-label="Ver programas anteriores" disabled>
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="cursos-arrow next" aria-label="Ver próximos programas">
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    </div>
+    <p class="todos-cursos"><a href="https://www.tabula.com.br/curso/rota/financas-para-nao-financeiros">Explore mais cursos <span>→</span></a></p>
   </div>
 </section>
 
@@ -609,6 +615,27 @@
     });
   });
   goTo(current);
+})();
+
+(() => {
+  const track = document.querySelector('.cursos-wrap .cursos');
+  const prev = document.querySelector('.cursos-arrow.prev');
+  const next = document.querySelector('.cursos-arrow.next');
+  if (!track || !prev || !next) return;
+  const step = () => {
+    const card = track.querySelector('.curso');
+    return card ? card.getBoundingClientRect().width + 18 : track.clientWidth * 0.8;
+  };
+  prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  const updateArrows = () => {
+    const max = track.scrollWidth - track.clientWidth - 1;
+    prev.disabled = track.scrollLeft <= 0;
+    next.disabled = track.scrollLeft >= max;
+  };
+  track.addEventListener('scroll', updateArrows, { passive: true });
+  addEventListener('resize', updateArrows);
+  updateArrows();
 })();
 
 </script>

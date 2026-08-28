@@ -33,12 +33,12 @@
       <div class="bar-right">
         <nav class="main-nav" aria-label="Navegação principal">
           <div class="nav-drop">
-            <a class="global-desktop-link nav-drop-link" href="${home('#metodo')}" aria-expanded="false" aria-haspopup="true">Entrando no mercado financeiro <span class="nav-drop-seta" aria-hidden="true">▾</span></a>
+            <a class="global-desktop-link nav-drop-link" href="${home('#metodo')}" aria-expanded="false" aria-haspopup="true">Conteúdos <span class="nav-drop-seta" aria-hidden="true">▾</span></a>
             <div class="nav-drop-menu">${CAPITULOS.map(capitulo => `
               <a href="${capitulo.href}"><span class="nav-drop-nome">${capitulo.nome}</span><span class="nav-drop-desc">${capitulo.desc}</span></a>`).join('')}
             </div>
           </div>
-          <a class="global-desktop-link" href="perguntas-frequentes.html">Respostas do Securato</a>
+          <a class="global-desktop-link" href="perguntas-frequentes.html">Securato responde</a>
         </nav>
         <a class="bar-cta global-mobile-keep" href="${home('#comprar')}"><span class="global-desktop-label">Comprar o livro</span><span class="global-mobile-label">Comprar o livro</span></a>
       </div>
