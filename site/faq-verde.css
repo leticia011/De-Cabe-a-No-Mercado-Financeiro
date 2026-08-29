@@ -8,18 +8,29 @@
 .qa-section .qa-foto{width:120px;height:120px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:4px solid #c4ef78;box-shadow:0 14px 32px rgba(0,0,0,.24)}
 .qa-section .qa-autor .rot{margin:0 0 6px}
 .qa-section .qa-autor-nome{margin:0;font-size:16px;font-weight:600;color:#080908}
-.qa-section .qa-autor-link{display:inline-block;margin-top:4px;color:#3f5125;font-size:12.5px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(8,9,8,.35)}
-.qa-section .qa-autor-link:hover{color:#080908;border-bottom-color:#080908}
+.qa-section .qa-autor-link{display:inline-block;margin-top:4px;color:#3f5125;font-size:12.5px;font-weight:600;text-decoration:none}
+.qa-section .qa-autor-link:hover{color:#080908}
 .qa-section .rot{display:flex;align-items:center;gap:10px;margin:0 0 16px;color:#4c6520;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}
 .qa-section .rot .lo{width:8px;height:8px;background:currentColor;transform:rotate(45deg);flex:0 0 auto}
-.qa-section .abre{margin:0;color:#3f5125;font-size:17px;line-height:1.7;max-width:48ch}
+.qa-section .abre{margin:20px 0 0;color:#3f5125;font-size:17px;line-height:1.7;max-width:48ch}
 .qa-section .grupo-rot{margin:34px 0 12px;color:#4c6520;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
 .qa-section .grupo-rot:first-of-type{margin-top:0}
 .qa-section .qa-nota{margin:28px 0 0;color:#3f5125;font-size:13px;line-height:1.7;max-width:70ch}
 .qa-section .qa-nota a{color:#080908;font-weight:600;text-underline-offset:3px}
 
-/* cartões em duas colunas; os cartões brancos vêm de faq-accordion.css */
-.qa-section .qa,.qa-section .faq,.qa-section .quads{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:10px!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important}
+/* cartões em duas colunas, pretos com texto branco (a base branca vem de faq-accordion.css) */
+.qa-section .qa,.qa-section .faq,.qa-section .quads{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:10px!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;align-items:stretch!important}
+
+/* mesma caixa para todas as perguntas da linha, texto curto ou longo (padrão do Passo 1) */
+.qa-section .qa details,.qa-section .faq details,.qa-section .quads details{min-height:100%;background:#080908!important;border:1px solid #080908!important;border-radius:0!important}
+.qa-section .qa details:hover,.qa-section .faq details:hover,.qa-section .quads details:hover,
+.qa-section .qa details[open],.qa-section .faq details[open],.qa-section .quads details[open]{background:#c4ef78!important;border-color:#c4ef78!important}
+.qa-section .qa summary,.qa-section .faq summary,.qa-section .quads summary{min-height:76px;color:#fff!important;transition:color .2s ease}
+.qa-section .qa details:hover summary,.qa-section .faq details:hover summary,.qa-section .quads details:hover summary,
+.qa-section .qa details[open] summary,.qa-section .faq details[open] summary,.qa-section .quads details[open] summary{color:#080908!important}
+.qa-section .qa .plus,.qa-section .faq .plus,.qa-section .quads .plus{color:inherit!important}
+.qa-section .qa .answer,.qa-section .faq .answer,.qa-section .quads .answer{color:#d7d9d2!important}
+.qa-section .qa details[open] .answer,.qa-section .faq details[open] .answer,.qa-section .quads details[open] .answer{color:#35401f!important}
 
 .qa-section .qa+.qa,.qa-section .faq+.faq{margin-top:12px}
 .qa-section .leitura{max-width:none;padding:0;border:0;background:transparent}
@@ -68,8 +79,8 @@ body.faq-claro .qa-section{background:#f5f5f0;color:#111}
 body.faq-claro .qa-section .qa-head h2{color:#111}
 body.faq-claro .qa-section .rot{color:#5b7a2a}
 body.faq-claro .qa-section .rot .lo{background:#7FAD2E}
-body.faq-claro .qa-section .qa-autor-link{color:#5b7a2a;border-bottom-color:rgba(0,0,0,.25)}
-body.faq-claro .qa-section .qa-autor-link:hover{color:#111;border-bottom-color:#111}
+body.faq-claro .qa-section .qa-autor-link{color:#5b7a2a}
+body.faq-claro .qa-section .qa-autor-link:hover{color:#111}
 body.faq-claro .qa-section .abre,
 body.faq-claro .qa-section .qa-nota{color:#575f52}
 body.faq-claro .qa-section .grupo-rot{color:#5b7a2a}

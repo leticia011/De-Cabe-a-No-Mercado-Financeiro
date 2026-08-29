@@ -21,7 +21,7 @@
 <section class="login-section">
   <div class="login-card">
     <h1>Fazer login</h1>
-    <p class="login-sub">Entre e ganhe o capítulo 1 e a aula de carreira.</p>
+    <p class="login-sub" id="login-sub">Entre e ganhe o capítulo 1 e a aula de carreira.</p>
     <form id="form-login" data-rd-form="capitulo-1-login" novalidate>
       <div class="login-campo">
         <label for="login-nome">Nome completo</label>
@@ -59,6 +59,11 @@
   const status = document.querySelector('.login-status');
   const aviso = mensagem => { status.textContent = mensagem; };
 
+  const dest = new URLSearchParams(location.search).get('dest');
+  if (dest === 'whatsapp') {
+    document.getElementById('login-sub').textContent = 'Entre para falar com a gente no WhatsApp.';
+  }
+
   form.addEventListener('submit', event => {
     event.preventDefault();
     if (!nome.value.trim()) { aviso('Informe o seu nome.'); nome.focus(); return; }
@@ -75,8 +80,14 @@
         form: form.dataset.rdForm,
       },
     }));
-    aviso('Pronto! Em instantes o capítulo e a aula chegam no seu e-mail.');
-    form.reset();
+
+    if (dest === 'whatsapp') {
+      aviso('Pronto! Te levando para o WhatsApp…');
+      setTimeout(() => { location.href = 'https://wa.me/5511990070784'; }, 900);
+    } else {
+      aviso('Pronto! Em instantes o capítulo e a aula chegam no seu e-mail.');
+      form.reset();
+    }
   });
 })();
 </script>

@@ -519,7 +519,7 @@ html{scroll-padding-top:104px}
 .dor-grid>div{background:rgba(0,0,0,.7);padding:16px 18px;display:flex;gap:16px;align-items:flex-start;backdrop-filter:blur(2px)}
 .dor-grid .dor-marca{display:block;flex:0 0 auto;width:9px;height:9px;background:var(--lime);transform:rotate(45deg);margin-top:7px}
 .dor-grid p{margin:0;font-size:15px;line-height:1.65;color:#c7c9c1}
-.dor-ponte{margin:40px 0 0;font-size:19px;font-weight:700;color:var(--lime)}
+.dor-ponte{margin:40px 0 0;font-size:24px;font-weight:700;color:var(--lime)}
 .dor-ponte a{color:var(--lime);font-weight:600;font-size:14px;text-decoration:none}
 .dor-ponte a:hover{color:#fff}
 @media(max-width:760px){

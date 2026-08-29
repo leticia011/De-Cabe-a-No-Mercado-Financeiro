@@ -8,7 +8,7 @@
     'autoconhecimento.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Ainda em dúvida se é para você? Veja o mercado por dentro.',
-      texto: 'Na <b>Entrada em Investment Banking</b>, você entende o trabalho real de cada área, antes da parte técnica.',
+      texto: 'Na <b>Entrada em Investment Banking</b>, você entende o trabalho real da área, antes da parte técnica. Explore também cursos em outras áreas.',
       cta: 'Conhecer o curso',
       href: 'https://www.tabula.com.br/curso/entradaemib',
       card: {

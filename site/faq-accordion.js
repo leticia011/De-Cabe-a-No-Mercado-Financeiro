@@ -52,7 +52,7 @@
 
   const pageQuestions = {
     'autoconhecimento.html': '.qa-section .qa details',
-    'quadrante-carreiras.html': '.leitura#perguntas .qa details',
+    'quadrante-carreiras.html': '.qa-section .qa details',
     'carreira-certa.html': '.qa details',
     'formacao-certificacoes.html': '.qa details',
     'equity-story.html': '.faq details',
