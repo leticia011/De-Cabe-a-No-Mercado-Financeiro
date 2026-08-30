@@ -5,14 +5,26 @@
     preto  = livro / capítulo (hero, faixa do próximo passo)
     bege   = leitura (o corpo do capítulo e as perguntas)
     verde  = Bankers Academy / formação (só a oferta usa verde)
+
+  O sistema de cards de temas (.temas-wrap, .tema, .cap-nota, .fases-grid...)
+  mora em passos.css, compartilhado com os passos 4 e 6. Aqui ficam só os
+  ajustes exclusivos desta página.
 */
 
 /* ---------- foto de abertura ---------- */
 body.passo3 .hero{
   background:
     linear-gradient(180deg,rgba(5,6,5,.72),rgba(5,6,5,.6) 46%,rgba(5,6,5,.82)),
-    url('assets/passo3-securato-jaque.jpg') center 22%/cover no-repeat;
+    url('assets/passo3-securato-jaque.jpg') center 16%/cover no-repeat;
+  padding:0;
+  min-height:clamp(560px,74vh,820px);
+  display:flex;
+  align-items:center;
 }
+body.passo3 .hero .wrap{padding:clamp(60px,9vh,100px) 0}
+
+/* menos distância entre a foto de capa e "Temas abordados neste capítulo" */
+body.passo3 .temas-wrap{padding-top:32px}
 
 /* ---------- toque 1: marginália dentro do capítulo ---------- */
 .inserto{margin:34px 0 6px;padding:20px 0 20px 22px;border-left:3px solid #c4ef78;background:linear-gradient(90deg,rgba(196,239,120,.14),transparent 70%)}
@@ -34,6 +46,20 @@ body.passo3 .qa-section .rot{color:#7d8577}
 body.passo3 .qa-section .abre{color:#4b5147}
 body.passo3 .qa-section .qa-head h2{color:#111}
 
-@media(max-width:900px){
+/* subtítulo do "Securato responde" numa linha só no desktop */
+body.passo3 .qa-section .qa-head{grid-template-columns:1fr}
+body.passo3 .qa-section .abre{max-width:none;white-space:nowrap}
+
+/* link "faça sua pergunta", centralizado abaixo do grid de perguntas */
+body.passo3 .qa-section .pergunta-propria{display:flex;justify-content:center;width:100%;margin:32px 0 0;color:#111;text-decoration:none;font-size:13.5px;font-weight:600;border-bottom:0;transition:opacity .2s ease}
+body.passo3 .qa-section .pergunta-propria span{border-bottom:0}
+body.passo3 .qa-section .pergunta-propria:hover{opacity:.6}
+
+@media(max-width:720px){
+  body.passo3 .qa-section .abre{white-space:normal}
 }
 
+@media(max-width:900px){
+  body.passo3 .hero{min-height:clamp(480px,68vh,620px)}
+  body.passo3 .hero .wrap{padding:48px 0}
+}

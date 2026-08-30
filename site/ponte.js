@@ -33,7 +33,7 @@
     },
     'carreira-certa.html': {
       rot: 'Formação · Bankers Academy',
-      titulo: 'Você nomeou uma direção. Agora sobra a lacuna.',
+      titulo: 'Escolher é fácil. Chegar lá, não.',
       texto: 'Escolher a carreira certa não conclui nada sozinho: a escolha só vira candidatura quando você tem o repertório técnico que a vaga cobra. É isso que a <b>Entrada em Investment Banking</b> fecha.',
       cta: 'Conhecer o curso',
       href: 'https://www.tabula.com.br/curso/entradaemib',

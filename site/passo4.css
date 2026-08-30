@@ -1,0 +1,16 @@
+/* ---------- foto de abertura ---------- */
+body.passo4 .hero{
+  background:
+    linear-gradient(180deg,rgba(5,6,5,.72),rgba(5,6,5,.6) 46%,rgba(5,6,5,.82)),
+    url('assets/passo4-certificado-bootcamp.jpg') center 12%/cover no-repeat;
+  padding:0;
+  min-height:clamp(560px,74vh,820px);
+  display:flex;
+  align-items:center;
+}
+body.passo4 .hero .wrap{padding:clamp(60px,9vh,100px) 0}
+
+@media(max-width:900px){
+  body.passo4 .hero{min-height:clamp(480px,68vh,620px)}
+  body.passo4 .hero .wrap{padding:48px 0}
+}
