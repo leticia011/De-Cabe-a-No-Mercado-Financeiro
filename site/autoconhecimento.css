@@ -63,7 +63,6 @@ body{background:var(--page);font-size:17px;overflow-x:hidden}
 .perfil-tecnico{border-color:#6f9bd1}.perfil-tecnico .perfil-card-head span{color:#3f6ea3}
 .perfil-comercial{border-color:#e0a94a}.perfil-comercial .perfil-card-head span{color:#a8762a}
 .perfil-empreendedor{border-color:var(--lime)}.perfil-empreendedor .perfil-card-head span{color:#7FAD2E}
-.perfil-carreirista{border-color:#b48ad1}.perfil-carreirista .perfil-card-head span{color:#7d51a0}
 
 .pagina-wrap{padding-top:76px;padding-bottom:90px}
 .pagina{grid-template-columns:minmax(0,760px) minmax(250px,320px);justify-content:space-between;gap:clamp(52px,8vw,110px)}

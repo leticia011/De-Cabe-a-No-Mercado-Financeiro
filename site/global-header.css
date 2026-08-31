@@ -21,8 +21,8 @@
 .bar.global-bar .nav-drop-menu a:hover .nav-drop-desc{color:#a9c97a}
 .global-menu-toggle{display:none;border:1px solid #3a3a3a;background:transparent;color:#fff;width:40px;height:38px;font:500 20px/1 Poppins,sans-serif;cursor:pointer}
 .global-menu-toggle:hover,.global-menu-toggle:focus-visible{border-color:#c4ef78;color:#c4ef78;outline:none}
-.bar.global-bar .bar-cta{padding:0 14px;background:#b6432a;color:#fff!important;font-weight:600;text-decoration:none}
-.bar.global-bar .bar-cta:hover{background:#d15b3f;color:#fff!important}
+.bar.global-bar .bar-cta{padding:0 14px;background:#c4ef78;color:#000!important;font-weight:600;text-decoration:none}
+.bar.global-bar .bar-cta:hover{background:#aedb5d;color:#000!important}
 .bar.global-bar .bar-cta:active{transform:scale(.97)}
 @media(max-width:1250px){
  .bar.global-bar .bar-in{min-height:64px;padding:12px 20px}.bar.global-bar .mark span{display:none}

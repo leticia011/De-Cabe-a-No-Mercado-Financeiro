@@ -34,26 +34,20 @@ body{
 .bar nav a:hover{color:var(--preto)}
 
 /* ---------- hero ---------- */
-.hero{background:var(--preto);color:var(--branco);position:relative;overflow:hidden;padding:76px 0 68px}
-.hero::before{
-  content:"";position:absolute;inset:0;
-  background-image:
-    linear-gradient(45deg,var(--lima) 25%,transparent 25%,transparent 75%,var(--lima) 75%),
-    linear-gradient(45deg,var(--lima) 25%,transparent 25%,transparent 75%,var(--lima) 75%);
-  background-size:56px 56px;background-position:0 0,28px 28px;
-  opacity:.05;pointer-events:none;
-}
-.hero .wrap{position:relative}
-.trilha{display:flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--lima);margin:0 0 26px;font-weight:500}
+.hero{
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.86),rgba(0,0,0,.8) 45%,rgba(0,0,0,.94)),
+    url('assets/equity-story-equipe-bg.jpg') center 30%/cover no-repeat;
+  color:var(--branco);position:relative;overflow:hidden;padding:76px 0 68px}
+.hero .wrap{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center}
+.trilha{display:flex;align-items:center;justify-content:center;gap:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--lima);margin:0 0 26px;font-weight:500}
 .hero h1{
   font-weight:600;font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.1;
   letter-spacing:-.02em;margin:0 0 30px;max-width:19ch;
 }
 .hero h1 b{font-weight:600;color:var(--lima)}
-.resposta{font-size:1.16rem;font-weight:300;line-height:1.6;max-width:60ch;color:#EDEDED;margin:0}
+.resposta{font-size:1.16rem;font-weight:300;line-height:1.6;max-width:60ch;color:#EDEDED;margin:0 auto}
 .resposta strong{font-weight:500;color:var(--branco)}
-.hero-meta{display:flex;flex-wrap:wrap;gap:0 30px;margin-top:38px;padding-top:22px;border-top:1px solid #2A2A2A;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#8A8A8A}
-.hero-meta b{color:var(--branco);font-weight:400}
 
 /* ---------- índice ---------- */
 .indice{background:var(--cinza-cl);padding:26px 0;border-bottom:1px solid var(--cinza)}
@@ -209,3 +203,5 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--lima);outline-offs
   .bar nav{display:none}
   section:not(.temas-wrap){padding:48px 0}.chapter-transition{margin-top:34px;font-size:15px}
 }
+
+.pergunta-propria{text-decoration:none}

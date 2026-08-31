@@ -60,7 +60,7 @@
     'equity-story.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Narrativa sem repertório técnico não se sustenta.',
-      texto: 'O Equity Story precisa ser verificável. A <b>Entrada em Investment Banking</b> é onde o repertório que sustenta a sua história é construído — fundamentos, valuation e M&A.',
+      texto: 'O Equity Story precisa ser verificável. A <b>Entrada em Investment Banking</b> é onde o repertório que sustenta a sua história é construído.',
       cta: 'Conhecer o curso',
       href: 'https://www.tabula.com.br/curso/entradaemib',
       card: {

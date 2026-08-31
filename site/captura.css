@@ -65,3 +65,24 @@
   .capa-ilus2{width:min(72%,240px)}
   .livro2-acoes a{flex:1 1 180px}
 }
+
+/* ---------- faixa de captura (capítulo 1) ---------- */
+.lead-strip{background-color:#c4ef78;background-image:url('assets/faixa-login-textura.jpg');background-position:center;background-repeat:no-repeat;background-size:cover}
+.lead-strip .captura{max-width:1320px;margin-inline:auto;padding:24px clamp(22px,4vw,58px);min-height:118px;display:grid;grid-template-columns:1fr 1.08fr;gap:70px;align-items:stretch;background:transparent;border:0}
+.lead-strip .captura-copy{display:flex;flex-direction:column;justify-content:center}
+.lead-strip .captura h2{margin:0;color:#000;font-size:16px;font-weight:500}
+.lead-strip .captura .brinde{margin:8px 0 0;color:#3c521c;font-size:12.5px;line-height:1.5}
+.lead-strip .captura .brinde b{font-weight:600;border-bottom:2px solid rgba(0,0,0,.25)}
+.lead-strip .captura .captura-campos{min-width:0;display:flex;flex-direction:column;justify-content:center}
+.lead-strip .captura .campo{display:flex}
+.lead-strip .captura .captura-primeiro-passo{max-width:460px;justify-content:flex-end}
+.lead-strip .captura button,.lead-strip .captura .captura-login-link{height:50px;border:0;background:#000;color:#fff;padding:0 24px;font:600 12px Poppins,system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+.lead-strip .captura button:hover,.lead-strip .captura .captura-login-link:hover{background:#222}
+.lead-strip .captura .form-status{margin:6px 0 0;color:#40551f;font-size:10px;min-height:1em}
+.lead-strip .captura .form-status:empty{margin:0;min-height:0}
+@media(max-width:680px){
+  .lead-strip .captura{grid-template-columns:1fr;gap:18px;padding-top:24px;padding-bottom:26px}
+  .lead-strip .captura .captura-primeiro-passo{max-width:none}
+  .lead-strip .captura .campo{flex-direction:column}
+  .lead-strip .captura button,.lead-strip .captura .captura-login-link{width:100%}
+}
