@@ -1,0 +1,24 @@
+.hero-glossario .wrap{width:min(760px,100%)}
+
+.glossario-main{padding-top:12px}
+.glossario-corpo{max-width:780px;margin:0 auto}
+
+.glossario-alfabeto{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 56px;padding:22px 0;border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
+.glossario-alfabeto a{width:34px;height:34px;display:grid;place-items:center;color:var(--texto);text-decoration:none;font-size:13px;font-weight:600;border-radius:50%}
+.glossario-alfabeto a:hover{background:var(--lima);color:#000}
+
+.termo-grupo{scroll-margin-top:96px;padding-top:14px}
+.termo-grupo+.termo-grupo{margin-top:8px}
+.termo-letra{margin:0 0 6px;color:var(--verde);font-size:13px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}
+
+.termo-lista{margin:0;border-top:1px solid var(--borda)}
+.termo-lista>div{padding:22px 0;border-bottom:1px solid var(--borda)}
+.termo-lista dt{margin:0 0 6px;font-size:19px;font-weight:600;font-style:italic}
+.termo-lista dd{margin:0;color:var(--texto);line-height:1.85}
+.termo-lista dd i{font-style:italic}
+
+.glossario-nota{max-width:780px;margin:0 auto 44px;padding:20px 24px;border-left:5px solid var(--lima);background:#fff;color:#383c35;font-size:14px;line-height:1.7}
+
+@media(max-width:720px){
+  .glossario-alfabeto{margin-bottom:38px}
+}

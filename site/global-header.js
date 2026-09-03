@@ -15,7 +15,8 @@
     { nome: '4. Lacunas de conhecimento', desc: 'O que estudar e o que não', href: 'formacao-certificacoes.html' },
     { nome: '5. Equity Story', desc: 'Por que contratar você', href: 'equity-story.html' },
     { nome: '6. Narrativa profissional', desc: 'Currículo, perfil e samples', href: 'cv-linkedin.html' },
-    { nome: 'Processo seletivo', desc: 'Antes, durante e depois da entrevista', href: 'processo-seletivo-v2.html' }
+    { nome: 'Processo seletivo', desc: 'Antes, durante e depois da entrevista', href: 'processo-seletivo-v2.html' },
+    { nome: 'Glossário', desc: 'Os termos do livro, explicados', href: 'glossario.html' }
   ];
 
   document.querySelector('.announcement')?.remove();

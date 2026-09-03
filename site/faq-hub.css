@@ -13,6 +13,8 @@
 .hub-head .rot .lo{width:22px;height:2px;background:#7FAD2E}
 .hub-head h2{margin:0;font-size:clamp(28px,3.4vw,44px);font-weight:300;line-height:1.08;letter-spacing:-.035em;color:#0a0b0a}
 .hub-head .abre{margin:0;font-size:14.5px;line-height:1.7;color:#5a6152;max-width:46ch}
+.hub-head .glossario-link{display:inline-flex;align-items:center;margin-top:14px;padding-bottom:2px;border-bottom:2px solid #c4ef78;color:#0a0b0a;text-decoration:none;font-size:12px;font-weight:600}
+.hub-head .glossario-link:hover{border-bottom-color:#0a0b0a}
 
 /* --- controles --- */
 .hub-controles{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}
