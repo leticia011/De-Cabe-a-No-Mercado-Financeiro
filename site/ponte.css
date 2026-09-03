@@ -1,4 +1,4 @@
-/* Ponte entre capítulos — mesma faixa preta em todas as páginas. */
+/* Ponte entre capítulos: mesma faixa preta em todas as páginas. */
 .ponte-cap{background:#050605;color:#fff;padding:clamp(38px,3.6vw,54px) 0;font-family:Poppins,system-ui,sans-serif}
 .ponte-cap .ponte-in{width:min(1205px,calc(100% - 68px));max-width:1205px;margin-inline:auto;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
 /* com cartão, as duas colunas começam e terminam juntas */
@@ -65,17 +65,17 @@
 
 /* ---------- passagem para a seção seguinte ---------- */
 /*
-  O corte entre o preto e o verde continua seco — misturar as duas cores
+  O corte entre o verde e o preto continua seco: misturar as duas cores
   passa por tons de oliva e suja a transição. O que suaviza aqui é espaço:
-  mais respiro depois da faixa e antes do título de baixo, e um leve
+  mais respiro entre a faixa verde e o título de baixo, e um leve
   gradiente DENTRO do próprio preto, que dá profundidade sem tocar no verde.
 */
 .ponte-cap{background:linear-gradient(180deg,#0e110c 0%,#050605 78%)}
-.ponte-cap + .qa-section{padding-top:clamp(52px,5.2vw,78px)}
+.qa-section + .ponte-cap{padding-top:clamp(52px,5.2vw,78px)}
 /* a divisão vira escolha deliberada: uma linha da cor da Academy no encontro */
-.ponte-cap{border-bottom:2px solid #c4ef78}
+.ponte-cap{border-top:2px solid #c4ef78}
 
-/* Corte de podcast — mesma faixa preta da ponte de capítulo, vídeo + contexto. */
+/* Corte de podcast: mesma faixa preta da ponte de capítulo, vídeo + contexto. */
 .podcast-corte{background:#0a0a0a;color:#fff;padding:clamp(38px,3.6vw,54px) 0;font-family:Poppins,system-ui,sans-serif;border-top:1px solid #1c1c1c}
 .podcast-in{width:min(1205px,calc(100% - 68px));max-width:1205px;margin-inline:auto;display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:center}
 .podcast-video{position:relative;width:100%;aspect-ratio:16/9;background:#000;overflow:hidden}

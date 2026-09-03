@@ -21,7 +21,7 @@
     'quadrante-carreiras.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Viu o mapa. Agora veja as carreiras funcionando.',
-      texto: 'O mapa posiciona as carreiras; a <b>Entrada em Investment Banking</b> mostra como o trabalho funciona no dia a dia — de fundamentos a M&A.',
+      texto: 'O mapa posiciona as carreiras; a <b>Entrada em Investment Banking</b> mostra como o trabalho funciona no dia a dia, de fundamentos a M&A.',
       cta: 'Conhecer o curso',
       href: 'https://www.tabula.com.br/curso/entradaemib',
       card: {
@@ -47,7 +47,7 @@
     'formacao-certificacoes.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Onde estudar o que este capítulo mandou estudar.',
-      texto: 'Estrutura de capital, crédito e modelagem financeira na prática — o que a <b>Introdução ao Crédito com Modelagem Financeira</b> ensina em 8 módulos.',
+      texto: 'Estrutura de capital, crédito e modelagem financeira na prática: o que a <b>Introdução ao Crédito com Modelagem Financeira</b> ensina em 8 módulos.',
       cta: 'Conhecer o curso',
       href: 'https://www.tabula.com.br/curso/introducao-ao-credito-com-modelagem-financeira',
       card: {
@@ -73,7 +73,7 @@
     'cv-linkedin.html': {
       rot: 'Formação · Bankers Academy',
       titulo: 'Currículo forte precisa de evidência para citar.',
-      texto: 'Cases, projetos e formações concretas são o que dá o que escrever no currículo — e o que defender na entrevista.',
+      texto: 'Cases, projetos e formações concretas são o que dá o que escrever no currículo, e o que defender na entrevista.',
       cta: 'Conhecer o curso',
       href: 'https://www.tabula.com.br/curso/entradaemib',
       card: {
@@ -127,6 +127,6 @@
     </div>`;
 
   const faixaVerde = document.querySelector('.qa-section');
-  if (faixaVerde) faixaVerde.before(ponte);
+  if (faixaVerde) faixaVerde.after(ponte);
   else document.querySelector('footer')?.before(ponte);
 })();

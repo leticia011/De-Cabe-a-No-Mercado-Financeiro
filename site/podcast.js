@@ -2,7 +2,7 @@
   Corte do podcast "Trabalhe & Aprenda" (canal youtube.com/@securato), injetado
   nas páginas de capítulo cujo assunto tem uma correspondência real e clara com
   algum corte já publicado no canal. Páginas sem correspondência boa ficam de
-  fora — melhor não ter do que forçar um vídeo que não tem a ver.
+  fora: melhor não ter do que forçar um vídeo que não tem a ver.
 */
 (() => {
   const PODCASTS = {
@@ -17,7 +17,7 @@
       vid: 'DclDX41mI6I',
     },
     'cv-linkedin.html': {
-      titulo: 'Faculdade não é só sobre diploma — é sobre networking',
+      titulo: 'Faculdade não é só sobre diploma: é sobre networking',
       convidado: 'Corte do podcast, com Camila Securato',
       vid: '8PMbjkc9o_M',
     },
