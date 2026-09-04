@@ -43,6 +43,9 @@
           <a class="global-desktop-link" href="sobre-o-autor.html">Sobre o autor</a>
         </nav>
         <a class="bar-cta global-mobile-keep" href="${home('#comprar-livro')}">Comprar o livro</a>
+        <a class="bar-login global-mobile-keep" href="login.html" aria-label="Fazer login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.5 20c.8-4.2 4.4-6.3 7.5-6.3s6.7 2.1 7.5 6.3"/></svg>
+        </a>
       </div>
     </div>`;
 

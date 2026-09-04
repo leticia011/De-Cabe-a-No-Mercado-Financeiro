@@ -24,12 +24,19 @@
 .bar.global-bar .bar-cta{padding:0 14px;background:#c4ef78;color:#000!important;font-weight:600;text-decoration:none}
 .bar.global-bar .bar-cta:hover{background:#aedb5d;color:#000!important}
 .bar.global-bar .bar-cta:active{transform:scale(.97)}
+.bar.global-bar .bar-login{display:flex;align-items:center;justify-content:center;flex:0 0 auto;
+  width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);color:#fff}
+.bar.global-bar .bar-login svg{width:18px;height:18px}
+.bar.global-bar .bar-login:hover{border-color:#c4ef78;color:#c4ef78}
+.bar.global-bar .bar-login:active{transform:scale(.94)}
 @media(max-width:1250px){
  .bar.global-bar .bar-in{min-height:64px;padding:12px 20px}.bar.global-bar .mark span{display:none}
  .bar.global-bar .bar-right{gap:8px}
  .global-menu-toggle{display:grid;place-items:center}
  .bar.global-bar .main-nav a{display:none!important}
  .bar.global-bar .bar-right .global-mobile-keep{padding:0 10px}
+ .bar.global-bar .bar-login{width:36px;height:36px;padding:0}
+ .bar.global-bar .bar-login svg{width:16px;height:16px}
  .bar.global-bar .nav-drop{display:none}
  .bar.global-bar .nav-drop-seta{display:none}
 
@@ -65,8 +72,9 @@
  .bar.global-bar .main-nav.is-open .nav-drop-menu a:nth-child(5){transition-delay:.27s}
  .bar.global-bar .main-nav.is-open .nav-drop-menu a:nth-child(6){transition-delay:.31s}
  .bar.global-bar .main-nav.is-open .nav-drop-menu a:nth-child(7){transition-delay:.35s}
- .bar.global-bar .main-nav.is-open>.global-desktop-link:nth-of-type(1){transition-delay:.39s}
- .bar.global-bar .main-nav.is-open>.global-desktop-link:nth-of-type(2){transition-delay:.43s}
+ .bar.global-bar .main-nav.is-open .nav-drop-menu a:nth-child(8){transition-delay:.39s}
+ .bar.global-bar .main-nav.is-open>.global-desktop-link:nth-of-type(1){transition-delay:.43s}
+ .bar.global-bar .main-nav.is-open>.global-desktop-link:nth-of-type(2){transition-delay:.47s}
  @media(prefers-reduced-motion:reduce){
   .bar.global-bar .main-nav{transition:none}
   .bar.global-bar .main-nav.is-open a{transition:none;opacity:1;transform:none}
