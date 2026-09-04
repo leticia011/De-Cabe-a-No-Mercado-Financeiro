@@ -1,11 +1,40 @@
-.hero-glossario .wrap{width:min(760px,100%)}
+.hero-glossario{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background-color:#080908;
+  background-image:linear-gradient(90deg,rgba(8,9,8,.6),rgba(8,9,8,.25) 50%,rgba(8,9,8,.6)),url('assets/glossario-estantes-bg.png');
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat
+}
+.hero-glossario::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.3));pointer-events:none}
+.hero-glossario .wrap{width:min(760px,100%);position:relative;z-index:1}
 
 .glossario-main{padding-top:12px}
 .glossario-corpo{max-width:780px;margin:0 auto}
 
+.glossario-topo{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.glossario-busca{display:flex;align-items:center}
+.glossario-busca-toggle{display:flex;align-items:center;justify-content:center;width:38px;height:38px;flex:0 0 auto;border:1.5px solid var(--borda);border-radius:50%;background:#fff;color:var(--texto);cursor:pointer;padding:0;transition:border-color .2s ease,color .2s ease}
+.glossario-busca-toggle svg{width:16px;height:16px}
+.glossario-busca-toggle:hover{border-color:var(--verde);color:var(--verde)}
+.glossario-busca.is-aberta .glossario-busca-toggle{border-color:var(--verde);color:var(--verde)}
+.glossario-busca input{width:0;min-width:0;min-height:38px;padding:0;margin-left:0;border:1.5px solid transparent;background:#fff;font:400 14px/1 Poppins,system-ui,sans-serif;color:var(--preto);opacity:0;transition:width .25s ease,opacity .2s ease,padding .25s ease,margin .25s ease,border-color .2s ease}
+.glossario-busca.is-aberta input{width:220px;padding:0 14px;margin-left:8px;opacity:1;border-color:var(--borda)}
+.glossario-busca input::placeholder{color:#8d947f}
+.glossario-busca input:focus-visible{outline:none;border-color:var(--verde)}
+.glossario-contagem{margin:0;font-size:12.5px;color:#68705c;white-space:nowrap}
+.glossario-contagem b{color:var(--preto);font-weight:600}
+.glossario-vazio{margin:34px 0;font-size:15.5px;color:#40453b}
+
 .glossario-alfabeto{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 56px;padding:22px 0;border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
 .glossario-alfabeto a{width:34px;height:34px;display:grid;place-items:center;color:var(--texto);text-decoration:none;font-size:13px;font-weight:600;border-radius:50%}
 .glossario-alfabeto a:hover{background:var(--lima);color:#000}
+.glossario-alfabeto[hidden]{display:none}
+
+.termo-grupo[hidden]{display:none}
+.termo-lista>div[hidden]{display:none}
 
 .termo-grupo{scroll-margin-top:96px;padding-top:14px}
 .termo-grupo+.termo-grupo{margin-top:8px}
@@ -20,5 +49,7 @@
 .glossario-nota{max-width:780px;margin:0 auto 44px;padding:20px 24px;border-left:5px solid var(--lima);background:#fff;color:#383c35;font-size:14px;line-height:1.7}
 
 @media(max-width:720px){
+  .hero-glossario{background-position:center;background-image:linear-gradient(rgba(8,9,8,.54),rgba(8,9,8,.7)),url('assets/glossario-estantes-bg.png')}
   .glossario-alfabeto{margin-bottom:38px}
+  .glossario-busca.is-aberta input{width:min(220px,50vw)}
 }
