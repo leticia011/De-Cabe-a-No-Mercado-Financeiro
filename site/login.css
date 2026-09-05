@@ -18,8 +18,11 @@ body{margin:0;background:#fff;color:#111;font-family:var(--fonte);font-size:15px
  align-items:center;
  justify-content:center;
  padding:40px max(22px,calc((100vw - 1240px)/2 + 44px));
+ position:relative;
+ overflow:hidden;
 }
-.login-card{width:100%;max-width:480px;padding:26px;background:rgba(8,9,8,.64);border:1px solid rgba(255,255,255,.14);box-shadow:0 28px 70px rgba(0,0,0,.34);backdrop-filter:blur(10px)}
+.login-section:before{content:"";position:absolute;right:clamp(26px,8vw,150px);bottom:-42px;width:clamp(170px,19vw,290px);aspect-ratio:2/3;background:url("assets/capa-livro-hero-v2.png") center/contain no-repeat;filter:drop-shadow(0 24px 28px rgba(0,0,0,.56));pointer-events:none}
+.login-card{width:100%;max-width:480px;padding:26px;background:rgba(8,9,8,.64);border:1px solid rgba(255,255,255,.14);box-shadow:0 28px 70px rgba(0,0,0,.34);backdrop-filter:blur(10px);position:relative;z-index:1}
 .login-card h1{font-size:clamp(22px,2.6vw,28px);font-weight:500;letter-spacing:-.03em;margin:0 0 6px}
 .login-card .login-sub{color:var(--muted);font-size:13.5px;margin:0 0 18px}
 
@@ -50,5 +53,6 @@ body{margin:0;background:#fff;color:#111;font-family:var(--fonte);font-size:15px
    linear-gradient(rgba(0,0,0,.52),rgba(0,0,0,.68)),
    url("assets/hero-mercado-bg.jpg");
  }
+ .login-section:before{right:-34px;bottom:-30px;width:154px;opacity:.48}
  .login-card{max-width:none;padding:22px;backdrop-filter:blur(6px)}
 }
