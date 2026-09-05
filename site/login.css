@@ -8,7 +8,7 @@ body{margin:0;background:#fff;color:#111;font-family:var(--fonte);font-size:15px
  background-color:var(--fundo);
  background-image:
   linear-gradient(rgba(0,0,0,.34),rgba(0,0,0,.48)),
-  url("assets/login-livros-bg.jpg");
+  url("assets/hero-mercado-bg.jpg");
  background-position:center;
  background-repeat:no-repeat;
  background-size:cover;
@@ -48,7 +48,7 @@ body{margin:0;background:#fff;color:#111;font-family:var(--fonte);font-size:15px
   background-position:67% center;
   background-image:
    linear-gradient(rgba(0,0,0,.52),rgba(0,0,0,.68)),
-   url("assets/login-livros-bg.jpg");
+   url("assets/hero-mercado-bg.jpg");
  }
  .login-card{max-width:none;padding:22px;backdrop-filter:blur(6px)}
 }
