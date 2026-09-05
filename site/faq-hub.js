@@ -115,6 +115,16 @@
   /* ---------- pergunta do leitor ---------- */
   const form = document.querySelector('#form-pergunta');
   if (form) {
+    // Sem backend: quem já mandou uma pergunta (localStorage, marcado pelo
+    // rd-station.js) não vê o formulário de novo nas próximas visitas.
+    let perguntaEnviada = false;
+    try { perguntaEnviada = localStorage.getItem('perguntaEnviada') === '1'; } catch { /* sem memória disponível, mantém o formulário */ }
+    const enviarOk = document.querySelector('#enviar-ok');
+    if (perguntaEnviada) {
+      form.hidden = true;
+      if (enviarOk) enviarOk.hidden = false;
+    }
+
     const pergunta = form.querySelector('textarea[name="pergunta"]');
     const nome = form.querySelector('input[name="name"]');
     const telefone = form.querySelector('input[name="phone"]');

@@ -21,6 +21,7 @@
 .marca-pagina .marca-cap .captura-login-link{display:flex;align-items:center;justify-content:center;width:100%;min-height:46px;margin-top:14px;background:#c4ef78;color:#050605;text-decoration:none;font:600 13px/1 Poppins,system-ui,sans-serif}
 .marca-pagina .marca-cap .captura-login-link:hover{background:#fff}
 .marca-pagina .marca-cap .captura-login-link:active{transform:scale(.98)}
+.marca-pagina .marca-cap .captura-resgatado{display:flex;align-items:center;justify-content:center;width:100%;min-height:46px;margin-top:14px;color:#c4ef78;text-align:center;font:600 13px/1.4 Poppins,system-ui,sans-serif}
 
 @media(max-width:1080px){
  .marca-layout{grid-template-columns:1fr;gap:52px}

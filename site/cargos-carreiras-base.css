@@ -22,22 +22,16 @@ body{margin:0;background:var(--branco);color:var(--preto);font-family:var(--font
 
 .hero{
   background:
-    linear-gradient(180deg,rgba(0,0,0,.62),rgba(0,0,0,.5) 45%,rgba(0,0,0,.72)),
-    url('assets/processo-seletivo-bg.jpg') center 65%/cover no-repeat;
+    linear-gradient(180deg,rgba(0,0,0,.68),rgba(0,0,0,.56) 45%,rgba(0,0,0,.8)),
+    url('assets/cargos-carreiras-securato.jpg') center 30%/cover no-repeat;
   color:var(--branco);position:relative;overflow:hidden;
   min-height:clamp(560px,74vh,780px);display:flex;align-items:center;padding:0}
 .hero .wrap{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center;padding-top:clamp(60px,9vh,100px);padding-bottom:clamp(60px,9vh,100px)}
 .trilha{display:flex;align-items:center;justify-content:center;gap:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--lima);margin:0 0 26px;font-weight:500}
-.hero h1{font-weight:300;font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 30px;max-width:20ch}
+.hero h1{font-weight:300;font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 30px;max-width:22ch}
 .hero h1 b{font-weight:500;color:var(--lima)}
 .resposta{font-size:1.16rem;font-weight:300;line-height:1.62;max-width:64ch;color:#EDEDED;margin:0 auto}
 .resposta strong{font-weight:500;color:var(--branco)}
-
-.indice{background:var(--cinza-cl);padding:26px 0;border-bottom:1px solid var(--cinza)}
-.indice ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 26px;counter-reset:i}
-.indice a{font-size:13.5px;color:var(--grafite);text-decoration:none;display:flex;align-items:center;gap:9px}
-.indice a::before{counter-increment:i;content:counter(i,decimal-leading-zero);font-size:10.5px;color:var(--lima-esc);font-weight:500}
-.indice a:hover{color:var(--preto)}
 
 section{padding:72px 0;border-bottom:1px solid var(--cinza)}
 h2{font-weight:300;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2;letter-spacing:-.015em;margin:0 0 30px}
@@ -56,9 +50,7 @@ em{font-style:italic}
 .tese{background:var(--preto);color:var(--branco);padding:44px 40px;margin:40px 0;position:relative;overflow:hidden}
 .tese::before{content:"";position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:var(--lima);opacity:.07;transform:rotate(45deg)}
 .tese .rot{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--lima);font-weight:500;margin:0 0 16px;position:relative}
-/* medida de ~34ch: a frase ocupa a maior parte da caixa sem virar parágrafo —
-   24ch deixava metade do bloco preto vazio à direita */
-.tese p.frase{font-size:clamp(1.5rem,2.4vw,1.95rem);font-weight:300;line-height:1.26;margin:0;max-width:34ch;letter-spacing:-.02em;position:relative}
+.tese p.frase{font-size:clamp(1.5rem,2.4vw,1.95rem);font-weight:300;line-height:1.26;margin:0;max-width:36ch;letter-spacing:-.02em;position:relative}
 
 /* canais: lista de verdade */
 .canais{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--cinza);border:1px solid var(--cinza);margin:34px 0}
@@ -146,7 +138,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--lima);outline-offs
 .tema-corpo p{font-size:15.5px;line-height:1.75;color:#454943;margin:0 0 18px}
 .tema-corpo p:last-child{margin-bottom:0}
 .tema-corpo b{color:var(--preto);font-weight:600}
-.tema-corpo .tese,.tema-corpo .canais,.tema-corpo .take,.tema-corpo .corredor,.tema-corpo .usos,.tema-corpo .puxa-linha,.tema-corpo .puxa-cap,.tema-corpo .veredito{margin-top:0;margin-bottom:18px}
+.tema-corpo .tese,.tema-corpo .canais,.tema-corpo .take,.tema-corpo .corredor,.tema-corpo .usos,.tema-corpo .puxa-linha,.tema-corpo .puxa-cap,.tema-corpo .veredito,.tema-corpo .escada,.tema-corpo .diario,.tema-corpo .cargos-lista,.tema-corpo .nota{margin-top:0;margin-bottom:18px}
 .tema-corpo .col:last-child,.tema-corpo>*:last-child{margin-bottom:0}
 
 .temas-gancho{max-width:920px;margin:44px auto 0;text-align:center;font-size:.98rem;line-height:1.7;color:var(--grafite)}
@@ -154,6 +146,40 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--lima);outline-offs
 .temas-saiba-mais{margin:16px 0 0;text-align:center}
 .temas-saiba-mais .volta{display:inline-flex;align-items:center;gap:9px;color:var(--preto);text-decoration:none;font-size:.9rem;font-weight:500;border-bottom:2px solid var(--lima);padding-bottom:2px}
 .temas-saiba-mais .volta:hover{border-bottom-color:var(--preto)}
+
+/* ---------- escada de cargos (8.1) ---------- */
+.escada{list-style:none;margin:34px 0;padding:0;border:1px solid var(--cinza)}
+.escada li{display:grid;grid-template-columns:34px 1fr;gap:16px;padding:18px 22px;border-bottom:1px solid var(--cinza)}
+.escada li:last-child{border-bottom:0}
+.escada li:last-child .degrau{background:var(--preto);color:var(--lima)}
+.escada .degrau{width:34px;height:34px;border-radius:50%;background:#f0f1ec;color:var(--grafite);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600}
+.escada .cargo-nome{margin:0 0 3px;font-weight:600;font-size:1rem;color:var(--preto)}
+.escada .cargo-faixa{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--lima-esc);font-weight:500;margin:0 0 6px}
+.escada .cargo-desc{font-size:.92rem;color:var(--grafite);line-height:1.65;margin:0}
+
+/* ---------- nota destacada (equivalente ao cap-nota, mas próprio desta página) ---------- */
+.nota{margin:8px 0 24px;padding:22px 24px;background:var(--cinza-cl);border-left:3px solid var(--lima-esc)}
+.nota-rot{margin:0 0 8px;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lima-esc)}
+.nota p{margin:0 0 12px;font-size:15px;line-height:1.72;color:var(--grafite)}
+.nota p:last-child{margin-bottom:0}
+
+/* ---------- diário hora a hora (8.4) ---------- */
+.diario{list-style:none;margin:30px 0;padding:0;border-left:2px solid var(--cinza)}
+.diario li{position:relative;padding:0 0 22px 24px}
+.diario li:last-child{padding-bottom:0}
+.diario li::before{content:"";position:absolute;left:-5px;top:5px;width:8px;height:8px;background:var(--lima-esc);transform:rotate(45deg)}
+.diario .hora{display:block;font-size:.76rem;font-weight:700;letter-spacing:.08em;color:var(--lima-esc);text-transform:uppercase;margin:0 0 4px}
+.diario .fato{margin:0;font-size:.94rem;color:var(--grafite);line-height:1.65}
+.diario .fato b{color:var(--preto);font-weight:600}
+
+/* ---------- lista de cargos com pré-requisitos (8.3) ---------- */
+.cargos-lista{list-style:none;margin:30px 0;padding:0;display:grid;gap:1px;background:var(--cinza);border:1px solid var(--cinza)}
+.cargos-lista li{background:var(--branco);padding:20px 24px}
+.cargos-lista .cargo-tit{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 8px}
+.cargos-lista .cargo-tit b{font-size:1rem;color:var(--preto)}
+.cargos-lista .cargo-tag{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--lima-esc);font-weight:600}
+.cargos-lista p{margin:0;font-size:.9rem;color:var(--grafite);line-height:1.65}
+.cargos-lista .fonte-vaga{display:block;margin-top:8px;font-size:.78rem;color:#8A8A8A;font-style:italic}
 
 @media (max-width:980px){
   .temas-grid{grid-template-columns:1fr}
@@ -171,7 +197,14 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--lima);outline-offs
   .beats{grid-template-columns:1fr;gap:28px}
   .beats::before{display:none}
 }
-@media (max-width:560px){.wrap{padding:0 20px}.bar nav{display:none}section:not(.temas-wrap){padding:52px 0}.tese{padding:32px 26px}}
+@media (max-width:560px){
+  .wrap{padding:0 20px}
+  .bar nav{display:none}
+  section:not(.temas-wrap){padding:52px 0}
+  .tese{padding:32px 26px}
+  .escada li{grid-template-columns:28px 1fr;gap:12px;padding:14px 16px}
+  .escada .degrau{width:28px;height:28px;font-size:11px}
+}
 
 .pergunta-propria{text-decoration:none}
 

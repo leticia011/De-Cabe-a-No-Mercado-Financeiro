@@ -1,4 +1,22 @@
 /*
+  Quem já resgatou o capítulo 1 (localStorage, marcado pelo rd-station.js
+  quando o login.html dispara o rd-lead) não precisa ver o link "Fazer login"
+  de novo, nem no bloco do topo da página nem na barra lateral do
+  marca-página. Troca por uma confirmação em vez do link.
+*/
+(() => {
+  let jaResgatou = false;
+  try { jaResgatou = localStorage.getItem('cp1Resgatado') === '1'; } catch { /* sem memória disponível, mantém o link */ }
+  if (!jaResgatou) return;
+  document.querySelectorAll('.captura-login-link').forEach(link => {
+    const aviso = document.createElement('p');
+    aviso.className = 'captura-resgatado';
+    aviso.textContent = 'Capítulo 1 e aula já garantidos. Confira seu e-mail.';
+    link.replaceWith(aviso);
+  });
+})();
+
+/*
   Captura em duas etapas: primeiro o e-mail, depois nome e telefone.
   Usado tanto pelo formulário da home (#form-capitulo-1, dentro da .lead-strip)
   quanto pelo marca-página das páginas de capítulo (.captura-2etapas).

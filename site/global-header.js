@@ -9,6 +9,7 @@
 
   // Capítulos pelo nome — o menu não usa "passo 1, passo 2".
   const CAPITULOS = [
+    { nome: 'Cargos e carreiras', desc: 'A estrutura do mercado, antes dos 6 passos', href: 'cargos-carreiras.html' },
     { nome: '1. Autoconhecimento', desc: 'O mercado financeiro é para você?', href: 'autoconhecimento.html' },
     { nome: '2. Opções de carreira', desc: '18 carreiras em um quadrante', href: 'quadrante-carreiras.html' },
     { nome: '3. A carreira ideal para você', desc: 'Como escolher e testar a escolha', href: 'carreira-certa.html' },
@@ -43,9 +44,6 @@
           <a class="global-desktop-link" href="sobre-o-autor.html">Sobre o autor</a>
         </nav>
         <a class="bar-cta global-mobile-keep" href="${home('#comprar-livro')}">Comprar o livro</a>
-        <a class="bar-login global-mobile-keep" href="login.html" aria-label="Fazer login">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.5 20c.8-4.2 4.4-6.3 7.5-6.3s6.7 2.1 7.5 6.3"/></svg>
-        </a>
       </div>
     </div>`;
 

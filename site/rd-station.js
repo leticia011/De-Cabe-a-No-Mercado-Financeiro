@@ -16,6 +16,20 @@
     avisou = true;
     console.warn(`[rd-station] ${motivo} — leads não estão sendo enviados ao CRM.`);
   };
+  // Sem backend: guardamos no navegador que a pessoa já converteu num desses
+  // formulários, para as páginas trocarem o CTA por uma confirmação e não
+  // deixar resgatar/perguntar de novo à toa. Cada página lê essas mesmas
+  // chaves (captura.js, faq-hub.js, login.html).
+  const CHAVES_LEMBRAR = {
+    'capitulo-1': 'cp1Resgatado',
+    'capitulo-1-login': 'cp1Resgatado',
+    'pergunta-leitor': 'perguntaEnviada',
+  };
+  const lembrarConversao = form => {
+    const chave = CHAVES_LEMBRAR[form];
+    if (!chave) return;
+    try { localStorage.setItem(chave, '1'); } catch { /* modo privado etc.; sem memória, tudo bem */ }
+  };
   const enviarConversao = lead => {
     if (!RD_API_KEY) {
       avisarUmaVez('RD_API_KEY não preenchida (topo de rd-station.js)');
@@ -60,5 +74,6 @@
       evento
     ).detail;
     enviarConversao(detalhe);
+    lembrarConversao(detalhe?.form);
   });
 })();

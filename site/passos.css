@@ -61,7 +61,10 @@
 .tema-lista{margin:0 0 18px;padding-left:20px;color:#454943;font-size:15.5px;line-height:1.7}
 .tema-lista li+li{margin-top:8px}
 
-.temas-saiba-mais{margin:40px 0 0;text-align:center}
+.temas-gancho{max-width:920px;margin:44px auto 0;text-align:center;font-size:.98rem;line-height:1.7;color:var(--texto)}
+.temas-gancho b{color:var(--preto)}
+
+.temas-saiba-mais{margin:16px 0 0;text-align:center}
 .temas-saiba-mais .volta{display:inline-flex;align-items:center;gap:9px;color:var(--preto);text-decoration:none;font-size:.9rem;font-weight:500;border-bottom:2px solid var(--lima);padding-bottom:2px}
 .temas-saiba-mais .volta:hover{border-bottom-color:var(--preto)}
 
@@ -94,3 +97,13 @@
   .fases-grid{grid-template-columns:1fr}
   .grade3{grid-template-columns:1fr}
 }
+
+.wrap.fim{width:min(1320px,calc(100% - 44px));margin:auto;padding-top:64px;padding-bottom:78px}
+.fim-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+.fim .rot{display:flex;align-items:center;gap:10px;margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--verde)}
+.fim .rot .lo{width:8px;height:8px;background:var(--lima);transform:rotate(45deg);flex:0 0 auto}
+.fim-grid h2{font-size:clamp(28px,4vw,48px);font-weight:300;letter-spacing:-.045em;line-height:1.1;margin:0}
+.fim-links{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.fim-links .volta{display:inline-flex;align-items:center;gap:9px;color:var(--preto);text-decoration:none;font-size:.9rem;font-weight:500;border-bottom:2px solid var(--lima);padding-bottom:2px}
+.fim-links .volta:hover{border-bottom-color:var(--preto)}
+@media(max-width:700px){.fim-grid{grid-template-columns:1fr;gap:30px}}

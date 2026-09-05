@@ -295,7 +295,9 @@ body.faq-claro .qa-section>.pr>a,body.faq-claro .qa-section .leitura>a{border-bo
 .tema-corpo b{color:var(--ink);font-weight:600}
 .tema-corpo .cap-resposta{margin:0 0 18px}
 .tema-corpo .puxa-linha,.tema-corpo .cap-nota,.tema-corpo .cantos{margin-top:0;margin-bottom:18px}
-.temas-saiba-mais{margin:40px 0 0;text-align:center}
+.temas-gancho{max-width:920px;margin:44px auto 0;text-align:center;font-size:.98rem;line-height:1.7;color:var(--muted)}
+.temas-gancho b{color:var(--ink)}
+.temas-saiba-mais{margin:16px 0 0;text-align:center}
 .temas-saiba-mais .volta{display:inline-flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500;border-bottom:2px solid var(--lime);padding-bottom:2px}
 
 @media(max-width:760px){

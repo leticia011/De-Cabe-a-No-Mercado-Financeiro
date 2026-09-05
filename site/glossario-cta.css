@@ -1,0 +1,31 @@
+/*
+  Chamada para o glossário: faixa branca no fim da leitura, logo antes da
+  faixa verde de captura. Fica clara e discreta de propósito, porque é
+  serviço ao leitor, não oferta: quem precisa dela já parou no meio do texto.
+*/
+.glossario-cta{background:#fff;border-top:1px solid var(--borda,#d8d9d2);border-bottom:1px solid var(--borda,#d8d9d2);padding:clamp(30px,3vw,44px) 0;font-family:Poppins,system-ui,sans-serif}
+/* mesma caixa da faixa de captura (captura.css), para as duas faixas
+   empilhadas começarem e terminarem na mesma linha vertical */
+.glossario-cta-in{width:100%;max-width:1320px;margin-inline:auto;padding:0 clamp(22px,4vw,58px);display:grid;grid-template-columns:1fr auto;gap:clamp(28px,4vw,70px);align-items:center}
+
+.glossario-cta .rot{display:flex;align-items:center;gap:9px;margin:0 0 12px;color:var(--verde,#728b43);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}
+.glossario-cta .rot .lo{width:8px;height:8px;background:var(--lima,#c4ef78);transform:rotate(45deg);flex:0 0 auto}
+.glossario-cta h2{margin:0 0 10px;font-size:clamp(23px,2.3vw,30px);font-weight:300;line-height:1.15;letter-spacing:-.035em;color:#111}
+.glossario-cta h2:after{content:none}
+.glossario-cta p{margin:0;max-width:66ch;color:#5c6157;font-size:14.5px;line-height:1.7}
+
+.glossario-cta-termos{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0}
+.glossario-cta-termos a{display:inline-block;padding:6px 13px;border:1px solid var(--borda,#d8d9d2);color:#3f413d;text-decoration:none;font-size:12.5px;line-height:1.5;transition:border-color .2s ease,background .2s ease,color .2s ease}
+.glossario-cta-termos a:hover{border-color:var(--lima,#c4ef78);background:#f6fbec;color:#111}
+
+.glossario-cta-bt{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:50px;min-width:var(--bt-faixa,190px);padding:0 24px;background:#000;color:#fff;text-decoration:none;font-size:12px;font-weight:600;white-space:nowrap;transition:background .25s ease}
+.glossario-cta-bt .seta{transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.glossario-cta-bt:hover{background:#222}
+.glossario-cta-bt:hover .seta{transform:translateX(5px)}
+.glossario-cta-bt:active{transform:scale(.98)}
+
+/* mesma quebra da faixa de captura: as duas empilham juntas */
+@media(max-width:680px){
+  .glossario-cta-in{grid-template-columns:1fr;gap:24px}
+  .glossario-cta-bt{width:100%}
+}

@@ -82,7 +82,7 @@
 .bloco-lista details[hidden]{display:none}
 .bloco-lista summary{grid-template-columns:42px minmax(0,1fr) 24px!important;gap:18px!important;min-height:0!important;padding:19px 0!important;font-size:15px!important;font-weight:500!important}
 .bloco-lista summary:hover .question{color:#667b41}
-.bloco-lista .num{width:32px!important;height:32px!important;background:#f1f4ea!important;font-size:10px!important}
+.bloco-lista .num{display:flex!important;align-items:center;justify-content:center;width:32px!important;height:32px!important;background:#f1f4ea!important;font-size:10px!important;border-radius:50%;flex:0 0 auto}
 .bloco-lista details[open] .num{background:#0a0b0a!important;color:#c4ef78!important}
 .bloco-lista .answer{padding:0 0 24px 60px!important}
 .bloco-lista .answer p{max-width:72ch}
@@ -109,6 +109,8 @@
 .enviar-form .form-status{margin:12px 0 0;color:#c4ef78;font-size:12.5px;line-height:1.5}
 .enviar-form .form-status:empty{margin:0}
 .enviar-fine{margin:10px 0 0;font-size:11px;color:#7f847b}
+.enviar-ok{margin:0;padding:22px;border:1px solid #2b2e29;background:#131513;color:#c4ef78;font-size:14px;line-height:1.6}
+.enviar-ok a{color:#c4ef78}
 
 /* --- vídeos --- */
 .videos{margin-top:80px;padding-top:38px;border-top:1px solid #c3ccb2}

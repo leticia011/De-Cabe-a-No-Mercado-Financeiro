@@ -45,6 +45,16 @@
   const toggle = document.getElementById('glossario-busca-toggle');
   if (!caixa || !toggle) return;
 
+  // Quem chega de um capítulo por um termo específico já encontra a busca
+  // preenchida com ele, em vez de ter que procurar na lista inteira.
+  const termoDaUrl = new URLSearchParams(location.search).get('termo');
+  if (termoDaUrl) {
+    input.value = termoDaUrl;
+    caixa.classList.add('is-aberta');
+    toggle.setAttribute('aria-expanded', 'true');
+    input.dispatchEvent(new Event('input'));
+  }
+
   const abrir = () => {
     caixa.classList.add('is-aberta');
     toggle.setAttribute('aria-expanded', 'true');
