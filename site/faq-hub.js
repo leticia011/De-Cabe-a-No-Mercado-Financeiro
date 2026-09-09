@@ -154,6 +154,30 @@
     });
   }
 
+  /* ---------- Talk to Securato ---------- */
+  const STORIES = [
+    { imagem: 'talk-to-securato-09.jpg', titulo: 'Dica pra quem tá começando em uma boutique', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=2796860049226527374&stkn=MXE5MnFnb3lkdjI3OQ==' },
+    { imagem: 'talk-to-securato-06.jpg', titulo: 'Estou em dúvida entre Corporate Banking e IB, poderia falar um pouco sobre prós e contras das 2?', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=2796864023967243264&stkn=MXE5MnFnb3lkdjI3OQ==' },
+    { imagem: 'talk-to-securato-01.jpg', titulo: 'Dica de ouro sobre o que falar em uma reunião e causar impacto', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=3130119612325331740&stkn=MXE5MnFnb3lkdjI3OQ==' },
+    { imagem: 'talk-to-securato-11.jpg', titulo: 'Ações em tesouraria entram na conta de Equity Value?', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=2767771576281227519&stkn=MXE5MnFnb3lkdjI3OQ==' },
+    { imagem: 'talk-to-securato-08.jpg', titulo: '3 dicas para lidar com uma sequência de semanais com poucas horas de sono', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=2796858967231023162&stkn=MXE5MnFnb3lkdjI3OQ==' },
+    { imagem: 'talk-to-securato-03.jpg', titulo: 'Principais atividades de um estagiário e como ser destaque. Definição de estagiário bom..', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=2796864722973653605&stkn=MXE5MnFnb3lkdjI3OQ==' },
+    { imagem: 'talk-to-securato-12.jpg', titulo: 'Como faço o dinheiro trabalhar para mim? Economizar é o primeiro passo….', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=2820156578561812809&stkn=MXE5MnFnb3lkdjI3OQ==' },
+    { imagem: 'talk-to-securato-07.jpg', titulo: 'Quem trabalha com IB não pode investir em ações? Em geral não, entenda porque…', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=2820159906834523729&stkn=MXE5MnFnb3lkdjI3OQ==' },
+    { imagem: 'talk-to-securato-10.jpg', titulo: 'Onde começar a investir? Nunca investi, mas pretendo.', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=2820161228165436370&stkn=MXE5MnFnb3lkdjI3OQ==' },
+    { imagem: 'talk-to-securato-05.jpg', titulo: 'Estagiando há 6 meses mas não tenho certeza se é o que quero. O que posso fazer? 6 meses e está em dúvida…', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=2820162893539052415&stkn=MXE5MnFnb3lkdjI3OQ==' },
+    { imagem: 'talk-to-securato-04.jpg', titulo: 'A primeira impressão é mesmo a que fica?!', url: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTE0MzU4MTg2MTEyNzI5?story_media_id=3022795963689011499&stkn=MXE5MnFnb3lkdjI3OQ==' }
+  ];
+  const storiesLista = document.querySelector('#stories-lista');
+  if (storiesLista) {
+    storiesLista.innerHTML = STORIES.map(story => {
+      const card = `<span class="story-visual"><img src="assets/${story.imagem}" alt="${story.titulo}" loading="lazy"><i class="story-mascara story-mascara-top" aria-hidden="true"></i><i class="story-mascara story-mascara-bottom" aria-hidden="true"></i></span><span class="story-titulo">${story.titulo}</span>`;
+      return story.url
+        ? `<a class="story-card" href="${story.url}" target="_blank" rel="noreferrer">${card}</a>`
+        : `<div class="story-card">${card}</div>`;
+    }).join('');
+  }
+
   /* ---------- vídeos ---------- */
   const grade = document.querySelector('#videos-grade');
   if (grade) {
