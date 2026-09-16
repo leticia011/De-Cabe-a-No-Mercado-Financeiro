@@ -80,7 +80,7 @@
 .bar.global-bar .bar-in{min-height:72px;padding-block:14px;gap:26px}
 .bar.global-bar .brand-mark{width:29px;height:29px}
 .bar.global-bar .mark{white-space:nowrap;font-size:16px;font-weight:600;letter-spacing:-.01em;text-transform:none}
-.bar.global-bar .main-nav,.bar.global-bar .bar-right{gap:26px}
+.bar.global-bar .main-nav,.bar.global-bar .bar-right{gap:32px}
 .bar.global-bar .main-nav>a,.bar.global-bar .main-nav .nav-drop-link{display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:500;color:#c6c6c1;white-space:nowrap}
 .bar.global-bar .main-nav a:hover{color:#c4ef78}
 .bar.global-bar .nav-drop-seta{font-size:11px}
@@ -91,7 +91,7 @@
 @media(max-width:1450px){
   .bar.global-bar .bar-in{min-height:68px;gap:20px}
   .bar.global-bar .mark{font-size:15px}
-  .bar.global-bar .main-nav,.bar.global-bar .bar-right{gap:16px}
+  .bar.global-bar .main-nav,.bar.global-bar .bar-right{gap:22px}
   .bar.global-bar .main-nav>a,.bar.global-bar .main-nav .nav-drop-link{font-size:13.5px}
   .bar.global-bar .bar-cta{font-size:13.5px;padding:0 18px;min-height:42px}
 }
