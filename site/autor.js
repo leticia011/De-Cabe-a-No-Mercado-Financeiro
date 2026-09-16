@@ -63,3 +63,24 @@
 
   olho.observe(grade);
 })();
+
+(() => {
+  const secao = document.querySelector('.author-feature');
+  const foto = secao?.querySelector('.foto-hover');
+  const stats = [...document.querySelectorAll('.author-stat[data-foto]')];
+  if (!secao || !foto || !stats.length) return;
+
+  const trocar = stat => {
+    foto.src = stat.dataset.foto;
+    foto.classList.add('is-visible');
+  };
+  const restaurar = () => foto.classList.remove('is-visible');
+
+  stats.forEach(stat => {
+    stat.setAttribute('tabindex', '0');
+    stat.addEventListener('mouseenter', () => trocar(stat));
+    stat.addEventListener('mouseleave', restaurar);
+    stat.addEventListener('focus', () => trocar(stat));
+    stat.addEventListener('blur', restaurar);
+  });
+})();
