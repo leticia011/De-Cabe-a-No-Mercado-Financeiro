@@ -27,8 +27,8 @@
 .hub .hero-inner{display:flex;align-items:center;justify-content:center;min-height:300px}
 .hub .hero-copy{position:relative;z-index:1;max-width:700px;padding-top:0;text-align:center;transform:translate(-184px,-19px)}
 .hub .hero .eyebrow{color:#c4ef78}
-.hub .hero h1{margin:18px 0 0;color:#fff;font-size:clamp(42px,4vw,68px);font-weight:500;line-height:1.04;letter-spacing:-.05em;text-shadow:0 3px 14px rgba(0,0,0,.72)}
-.hub .hero .lead{max-width:420px;margin:12px auto 0;color:rgba(255,255,255,.82);font-size:15px;line-height:1.7;text-shadow:0 2px 10px rgba(0,0,0,.72)}
+.hub .hero h1{margin:18px 0 0;color:#fff;font-size:clamp(46px,4.4vw,74px);font-weight:500;line-height:1.04;letter-spacing:-.05em;text-shadow:0 3px 14px rgba(0,0,0,.72)}
+.hub .hero .lead{max-width:460px;margin:14px auto 0;color:rgba(255,255,255,.86);font-size:16px;line-height:1.65;text-shadow:0 2px 10px rgba(0,0,0,.72)}
 .hub .hero .eyebrow{text-shadow:0 2px 9px rgba(0,0,0,.72)}
 
 @media(max-width:760px){
@@ -45,6 +45,8 @@
 .hub-head .abre{margin:0;font-size:14.5px;line-height:1.7;color:#5a6152;max-width:46ch}
 .hub-head .glossario-link{display:inline-flex;align-items:center;justify-self:start;margin-top:12px;padding-bottom:2px;border-bottom:2px solid #c4ef78;color:#0a0b0a;text-decoration:none;font-size:12.5px;font-weight:600}
 .hub-head .glossario-link:hover{border-bottom-color:#0a0b0a}
+.hub-head .abre{grid-column:2;grid-row:1 / span 2;align-self:center}
+.hub-head .glossario-link{grid-column:1;grid-row:2;justify-self:start;margin-top:18px}
 .hub-head .glossario-link{display:inline-flex;align-items:center;margin-top:14px;padding-bottom:2px;border-bottom:2px solid #c4ef78;color:#0a0b0a;text-decoration:none;font-size:12px;font-weight:600}
 .hub-head .glossario-link:hover{border-bottom-color:#0a0b0a}
 
@@ -182,6 +184,8 @@
 
 @media(max-width:900px){
   .hub-head{grid-template-columns:1fr;align-items:start;gap:16px}
+  .hub-head .abre{grid-column:1;grid-row:auto;align-self:auto}
+  .hub-head .glossario-link{grid-column:1;grid-row:auto;margin-top:0}
   .enviar{grid-template-columns:1fr;padding:34px 26px}
 
   .videos-cabeca{grid-template-columns:1fr;align-items:start;gap:18px}
