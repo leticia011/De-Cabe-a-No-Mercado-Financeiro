@@ -214,3 +214,25 @@
   .story-card{flex-basis:138px}
   .story-visual{width:138px}
 }
+
+/* Introducao coesa: todos os elementos ficam centralizados e empilhados. */
+.hub .hub-head{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+  text-align:center;
+}
+.hub .hub-head>div{width:100%}
+.hub .hub-head .rot{justify-content:center;margin-bottom:10px}
+.hub .hub-head h2{margin:0}
+.hub .hub-head .abre{
+  order:2;
+  max-width:58ch;
+  margin:18px auto 0;
+}
+.hub .hub-head .glossario-link{
+  order:3;
+  align-self:center;
+  margin-top:18px;
+}
