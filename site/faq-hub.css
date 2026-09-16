@@ -2,8 +2,38 @@
    Estrutura: 4 blocos por momento do leitor > lista de perguntas em cada bloco.
    Busca e temas filtram dentro dos blocos e abrem automaticamente os que casam. */
 
-.hub{background:#f4f6ef}
-.hub .hero{padding-bottom:56px}
+.hub{background:linear-gradient(180deg,#f4f6ef 0%,#eff2ea 100%);color:#111}
+.hub .hero{
+  position:relative;
+  min-height:420px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg, rgba(10,12,10,.78) 0%, rgba(10,12,10,.56) 34%, rgba(10,12,10,.28) 100%),
+    url('assets/Foto securato dando aula.jpeg') center 58%/cover no-repeat;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
+  transition:filter .22s ease;
+}
+.hub .hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.06);
+  transition:background .22s ease;
+}
+.hub .hero:hover::after{background:rgba(0,0,0,.14)}
+.hub .hero .wrap{max-width:1240px;position:relative;z-index:1;padding-top:54px;padding-bottom:54px}
+.hub .hero-inner{display:flex;align-items:center;justify-content:center;min-height:300px}
+.hub .hero-copy{position:relative;z-index:1;max-width:700px;padding-top:0;text-align:center;transform:translate(-184px,-19px)}
+.hub .hero .eyebrow{color:#c4ef78}
+.hub .hero h1{margin:18px 0 0;color:#fff;font-size:clamp(42px,4vw,68px);font-weight:500;line-height:1.04;letter-spacing:-.05em;text-shadow:0 3px 14px rgba(0,0,0,.72)}
+.hub .hero .lead{max-width:420px;margin:12px auto 0;color:rgba(255,255,255,.82);font-size:15px;line-height:1.7;text-shadow:0 2px 10px rgba(0,0,0,.72)}
+.hub .hero .eyebrow{text-shadow:0 2px 9px rgba(0,0,0,.72)}
+
+@media(max-width:760px){
+  .hub .hero-copy{transform:translate(-24px,-19px)}
+}
 .hub-main{padding:0 0 96px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
@@ -13,6 +43,8 @@
 .hub-head .rot .lo{width:22px;height:2px;background:#7FAD2E}
 .hub-head h2{margin:0;font-size:clamp(28px,3.4vw,44px);font-weight:300;line-height:1.08;letter-spacing:-.035em;color:#0a0b0a}
 .hub-head .abre{margin:0;font-size:14.5px;line-height:1.7;color:#5a6152;max-width:46ch}
+.hub-head .glossario-link{display:inline-flex;align-items:center;justify-self:start;margin-top:12px;padding-bottom:2px;border-bottom:2px solid #c4ef78;color:#0a0b0a;text-decoration:none;font-size:12.5px;font-weight:600}
+.hub-head .glossario-link:hover{border-bottom-color:#0a0b0a}
 .hub-head .glossario-link{display:inline-flex;align-items:center;margin-top:14px;padding-bottom:2px;border-bottom:2px solid #c4ef78;color:#0a0b0a;text-decoration:none;font-size:12px;font-weight:600}
 .hub-head .glossario-link:hover{border-bottom-color:#0a0b0a}
 
