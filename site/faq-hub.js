@@ -4,17 +4,9 @@
   - busca livre e filtro por tema escondem as perguntas que não casam e abrem
     automaticamente os blocos que ainda têm resultado;
   - recebe a pergunta do leitor (evento `rd-pergunta` no document, mesmo
-    mecanismo da captura de e-mail — é só escutar para ligar ao RD Station);
-  - monta a grade de vídeos a partir da lista VIDEOS abaixo.
-
-  PARA ADICIONAR UM VÍDEO: cole um objeto na lista VIDEOS com o link do post
-  e uma pergunta que ele responde. Nada mais precisa ser mexido.
+    mecanismo da captura de e-mail — é só escutar para ligar ao RD Station).
 */
 (() => {
-  const VIDEOS = [
-    // { url: 'https://www.instagram.com/p/XXXXXXXXX/', titulo: 'Como saber se o mercado financeiro é para mim?', duracao: '1 min' },
-  ];
-
   const blocos = [...document.querySelectorAll('.bloco')];
   const perguntas = [...document.querySelectorAll('.bloco-lista details')];
   const busca = document.querySelector('#hub-busca');
@@ -176,22 +168,5 @@
         ? `<a class="story-card" href="${story.url}" target="_blank" rel="noreferrer">${card}</a>`
         : `<div class="story-card">${card}</div>`;
     }).join('');
-  }
-
-  /* ---------- vídeos ---------- */
-  const grade = document.querySelector('#videos-grade');
-  if (grade) {
-    if (!VIDEOS.length) {
-      grade.innerHTML = `<div class="videos-vazio">
-        <p>Ainda não há vídeo publicado aqui. Enquanto isso, as caixinhas de pergunta acontecem no Instagram.</p>
-        <a class="videos-cta" href="https://www.instagram.com/investmentbankingbr/">Ver no @investmentbankingbr →</a>
-      </div>`;
-    } else {
-      grade.innerHTML = VIDEOS.map(v => `<a class="video-card" href="${v.url}">
-        <span class="video-play" aria-hidden="true"></span>
-        <span class="video-titulo">${v.titulo}</span>
-        <span class="video-meta">${v.duracao || 'Instagram'} · @investmentbankingbr</span>
-      </a>`).join('');
-    }
   }
 })();

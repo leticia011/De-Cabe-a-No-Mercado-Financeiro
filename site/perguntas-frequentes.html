@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="passos.css?v=8"><link rel="stylesheet" href="global-header.css?v=16"><link rel="stylesheet" href="faq-accordion.css">
-<link rel="stylesheet" href="faq-hub.css?v=4">
+<link rel="stylesheet" href="faq-hub.css?v=8">
 <script src="global-header.js?v=17" defer></script><script src="faq-hub.js?v=5" defer></script>
 <link rel="stylesheet" href="rodape.css?v=1">
 <link rel="stylesheet" href="reveal.css?v=1">
@@ -27,28 +27,27 @@
   </div>
 </section>
 
-<main class="wrap hub-main">
+<main class="hub-main">
 
 
-  <section class="qa-hub" id="perguntas" aria-labelledby="hub-title">
+  <section class="qa-hub wrap" id="perguntas" aria-labelledby="hub-title">
   <div class="hub-in">
     <header class="hub-head">
       <div>
         <h2 id="hub-title" class="sr">Securato responde</h2>
       </div>
-      <a class="glossario-link" href="glossario.html">Não conhece um termo? Veja o glossário do livro →</a>
     </header>
 
     <div class="hub-controles">
       <div class="hub-busca">
         <input type="search" id="hub-busca" placeholder="Buscar por palavra: inglês, currículo, entrevista…" aria-label="Buscar nas perguntas">
       </div>
+      <button type="button" class="temas-abrir" data-temas-abrir aria-expanded="false">Navegar por tema</button>
       <p class="hub-contagem" role="status" aria-live="polite"><b id="hub-visiveis">48</b> perguntas</p>
       <button type="button" class="hub-limpar" data-limpar hidden>Limpar filtro</button>
     </div>
 
     <div class="hub-temas">
-      <button type="button" class="temas-abrir" data-temas-abrir aria-expanded="false">Navegar por tema</button>
       <div class="temas-lista" hidden>
         <button type="button" class="tema" data-tema="buy-side">#buy-side</button>
         <button type="button" class="tema" data-tema="carreira">#carreira</button>
@@ -527,21 +526,24 @@
         </div>
       </section>
     </div>
+    <a class="glossario-link" href="glossario.html">Não conhece um termo? Veja o glossário do livro →</a>
   </div>
 </section>
 
-<section class="stories" aria-labelledby="stories-title">
+<section class="stories" id="talk-to-securato" aria-labelledby="stories-title">
+  <div class="stories-in">
   <div class="stories-cabeca">
     <div>
       <p class="stories-kicker">Conteúdo rápido</p>
-      <h2 id="stories-title">Talk to Securato</h2>
+      <h2 id="stories-title"><span>Talk to</span> Securato</h2>
     </div>
     <p>Respostas rápidas e ideias compartilhadas nos Stories.</p>
+  </div>
   </div>
   <div class="stories-lista" id="stories-lista"></div>
 </section>
 
-<section class="enviar" id="enviar-pergunta">
+<section class="enviar wrap" id="enviar-pergunta">
     <div class="enviar-copy">
       <p class="rot">Não achou a sua?</p>
       <h2>Mande a sua pergunta.</h2>
@@ -559,21 +561,10 @@
       </div>
       <button type="button" data-pergunta-enviar>Enviar pergunta</button>
       <p class="form-status" role="status" aria-live="polite"></p>
-      <p class="enviar-fine">Usamos o seu e-mail só para responder. Sem spam.</p>
     </form>
     <p class="enviar-ok" id="enviar-ok" hidden>Você já mandou sua pergunta por aqui. Se surgir outra, chama no <a href="https://www.instagram.com/investmentbankingbr/">@investmentbankingbr</a>.</p>
   </section>
 
-  <section class="videos" id="videos" aria-labelledby="videos-titulo">
-    <div class="videos-cabeca">
-      <div>
-        <p class="rot">Em vídeo</p>
-        <h2 id="videos-titulo">As mesmas perguntas, respondidas em vídeo.</h2>
-      </div>
-      <p class="videos-sub">O autor responde às caixinhas de pergunta no <a href="https://www.instagram.com/investmentbankingbr/">@investmentbankingbr</a>. Os vídeos entram aqui conforme forem publicados.</p>
-    </div>
-    <div class="videos-grade" id="videos-grade"></div>
-  </section>
 
 </main>
 
