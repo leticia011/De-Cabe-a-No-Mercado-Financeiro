@@ -97,6 +97,23 @@
 .faq .qa-meta .answer-source{margin:0 0 0 auto!important;display:inline-flex;align-items:center;padding-bottom:2px;border-bottom:2px solid #c4ef78;color:#0a0b0a;text-decoration:none;font-size:12px;font-weight:600;white-space:nowrap}
 .faq .qa-meta .answer-source:hover{border-bottom-color:#0a0b0a}
 
+/* --- Talk to Securato --- */
+.stories{margin:0 0 46px;padding:28px 0 0;border-top:1px solid #d9d9d4}
+.stories-cabeca{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:clamp(28px,6vw,80px);align-items:end;margin-bottom:22px}
+.stories-kicker{margin:0 0 9px;color:#667b41;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}
+.stories h2{margin:0;color:#0a0b0a;font-size:clamp(25px,3vw,36px);font-weight:400;line-height:1.1;letter-spacing:-.035em}
+.stories-cabeca>p{margin:0;color:#5a6152;font-size:13.5px;line-height:1.7;max-width:46ch}
+.stories-lista{display:flex;gap:14px;overflow-x:auto;padding:2px 2px 14px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#c4ef78 transparent}
+.story-card{display:flex;flex:0 0 164px;flex-direction:column;gap:9px;color:#111;text-decoration:none;scroll-snap-align:start}
+.story-visual{display:block;position:relative;width:164px;aspect-ratio:739/1600;background:#000;border:1px solid #d9ddd2;overflow:hidden;transition:border-color .18s ease,transform .18s ease}
+.story-card img{display:block;width:100%;height:100%;object-fit:contain;background:#000}
+.story-mascara{position:absolute;left:0;right:0;z-index:1;display:block;background:#000;pointer-events:none}
+.story-mascara-top{top:0;height:13%}
+.story-mascara-bottom{bottom:0;height:16%}
+.story-card .story-titulo{font-size:10px;line-height:1.35;color:#68705c}
+.story-card:hover .story-visual,.story-card:focus-visible .story-visual{border-color:#7FAD2E;transform:translateY(-2px)}
+.story-card:focus-visible{outline:2px solid #7FAD2E;outline-offset:4px}
+
 /* --- enviar pergunta --- */
 .enviar{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(36px,6vw,88px);margin-top:80px;padding:52px;background:#0a0b0a;color:#fff}
 .enviar .rot{margin:0 0 12px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#c4ef78;font-weight:600}
@@ -141,6 +158,10 @@
   .enviar{grid-template-columns:1fr;padding:34px 26px}
 
   .videos-cabeca{grid-template-columns:1fr;align-items:start;gap:18px}
+  .stories-cabeca{grid-template-columns:1fr;align-items:start;gap:12px}
+  .stories{margin-bottom:36px;padding-top:24px}
+  .story-card{flex-basis:138px}
+  .story-visual{width:138px}
   .bloco-cabeca{grid-template-columns:48px minmax(0,1fr) 18px;gap:16px;padding:20px 18px;row-gap:12px}
   .bloco-num{width:40px;height:40px;font-size:12px}
   .bloco-conta{grid-column:2;font-size:11.5px}
