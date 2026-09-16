@@ -45,6 +45,11 @@
 .hub-head .abre{margin:0;font-size:14.5px;line-height:1.7;color:#5a6152;max-width:46ch}
 .hub-head .glossario-link{display:inline-flex;align-items:center;justify-self:start;margin-top:12px;padding-bottom:2px;border-bottom:2px solid #c4ef78;color:#0a0b0a;text-decoration:none;font-size:12.5px;font-weight:600}
 .hub-head .glossario-link:hover{border-bottom-color:#0a0b0a}
+.hub-head{text-align:center;grid-template-columns:1fr;gap:0;align-items:center}
+.hub-head>div{width:100%}
+.hub-head .rot{justify-content:center}
+.hub-head .abre{grid-column:auto;grid-row:auto;max-width:58ch;margin:18px auto 0}
+.hub-head .glossario-link{grid-column:auto;grid-row:auto;justify-self:center;margin-top:20px}
 .hub-head .abre{grid-column:2;grid-row:1 / span 2;align-self:center}
 .hub-head .glossario-link{grid-column:1;grid-row:2;justify-self:start;margin-top:18px}
 .hub-head .glossario-link{display:inline-flex;align-items:center;margin-top:14px;padding-bottom:2px;border-bottom:2px solid #c4ef78;color:#0a0b0a;text-decoration:none;font-size:12px;font-weight:600}
@@ -184,8 +189,10 @@
 
 @media(max-width:900px){
   .hub-head{grid-template-columns:1fr;align-items:start;gap:16px}
-  .hub-head .abre{grid-column:1;grid-row:auto;align-self:auto}
-  .hub-head .glossario-link{grid-column:1;grid-row:auto;margin-top:0}
+  .hub-head{text-align:center;align-items:center;gap:0}
+  .hub-head .rot{justify-content:center}
+  .hub-head .abre{grid-column:auto;grid-row:auto;align-self:auto;margin-top:16px}
+  .hub-head .glossario-link{grid-column:auto;grid-row:auto;margin-top:18px;justify-self:center}
   .enviar{grid-template-columns:1fr;padding:34px 26px}
 
   .videos-cabeca{grid-template-columns:1fr;align-items:start;gap:18px}
