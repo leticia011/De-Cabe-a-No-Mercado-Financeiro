@@ -1190,9 +1190,9 @@ html{scroll-padding-top:104px}
  background-image:
   linear-gradient(90deg,rgba(3,7,12,.68) 0%,rgba(3,7,12,.5) 48%,rgba(3,7,12,.08) 78%),
   linear-gradient(0deg,rgba(2,5,8,.78) 0%,transparent 42%),
-  url("assets/autor-bnp-paribas-noite.png");
- background-size:120%;
- background-position:80% center;
+  url("assets/autor-bnp-paribas-direita.jpg");
+ background-size:cover;
+ background-position:center,center,calc(100% + max(0px, 1360px - 100vw)) center;
  overflow:hidden;
 }
 .author-feature .wrap{position:relative;z-index:1}
@@ -1259,12 +1259,12 @@ html{scroll-padding-top:104px}
  #autor .author-copy{min-height:500px;padding:40px 34px}
 }
 
-@media(max-width:900px){
+@media(max-width:1200px){
  .author-feature{
   min-height:0;
-  background-size:auto 360px;
+  background-size:100% 100%,100% 100%,max(100%,675px) auto;
   background-repeat:no-repeat;
-  background-position:60% top;
+  background-position:right top;
   background-color:#05080b;
  }
  #autor .bio-in{
@@ -1280,9 +1280,7 @@ html{scroll-padding-top:104px}
   border:1px solid rgba(255,255,255,.14);
   box-shadow:0 24px 55px rgba(0,0,0,.38);
  }
- /* a foto fica centralizada no ceu vazio, a esquerda do predio do BNP Paribas.
-    A borda esquerda do predio cai em 0.6vw - 54px, entao o centro do vao livre
-    e 0.3vw - 27px; o calc abaixo desconta metade da largura da foto. */
+ /* O retrato ocupa o céu livre à esquerda; a marca fica na torre à direita. */
  #autor .foto-box{
   position:absolute;
   top:60px;
@@ -1295,7 +1293,7 @@ html{scroll-padding-top:104px}
 }
 
 @media(max-width:560px){
- .author-feature{background-size:auto 300px;background-position:60% top}
+ .author-feature{background-size:100% 100%,100% 100%,auto 300px;background-position:right top}
  #autor .bio-in{padding:250px 14px 28px}
  #autor .foto-box{top:50px;left:max(10px,calc(30vw - 92px));width:138px;height:176px!important}
  #autor .author-copy{padding:80px 20px 26px}
