@@ -43,7 +43,7 @@
           <a class="global-desktop-link" href="perguntas-frequentes.html">Securato responde</a>
           <a class="global-desktop-link" href="sobre-o-autor.html">Sobre o autor</a>
         </nav>
-        <a class="bar-cta global-mobile-keep" href="${home('#comprar-livro')}">Comprar o livro</a>
+        <a class="bar-cta global-mobile-keep" href="https://tabula.com.br/curso/livro-de-cabeca-no-mercado-financeiro">Comprar o livro</a>
       </div>
     </div>`;
 
