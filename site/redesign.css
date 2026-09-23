@@ -1191,8 +1191,8 @@ html{scroll-padding-top:104px}
   linear-gradient(90deg,rgba(3,7,12,.68) 0%,rgba(3,7,12,.5) 48%,rgba(3,7,12,.08) 78%),
   linear-gradient(0deg,rgba(2,5,8,.78) 0%,transparent 42%),
   url("assets/autor-bnp-paribas-noite.png");
- background-size:cover;
- background-position:center;
+ background-size:120%;
+ background-position:80% center;
  overflow:hidden;
 }
 .author-feature .wrap{position:relative;z-index:1}
