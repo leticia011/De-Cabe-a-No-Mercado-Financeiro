@@ -341,7 +341,10 @@ p{text-wrap:pretty}
 
 /* capítulos em formato editorial, sem a metáfora de livro */
 .capitulos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.capitulos-grid .slide{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,.72fr);min-height:0;gap:0;background:var(--paper);border:1px solid #dedede;align-items:stretch;overflow:hidden}
+.capitulos-grid .slide{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,.72fr);min-height:0;gap:0;background:var(--paper);border:1px solid #dedede;align-items:stretch;overflow:hidden;box-shadow:0 18px 45px rgba(28,36,18,.03);transition:box-shadow .25s ease}
+.capitulos-grid .slide:hover{box-shadow:0 18px 45px rgba(28,36,18,.07)}
+.ensina-dir .capitulos-grid.carrossel>.slide{box-shadow:0 18px 45px rgba(28,36,18,.03)!important;transition:box-shadow .25s ease}
+.ensina-dir .capitulos-grid.carrossel>.slide:hover{box-shadow:0 18px 45px rgba(28,36,18,.07)!important}
 .capitulos-grid .slide>div:first-child{padding:28px 26px;align-self:center}
 .capitulos-grid .slide .num{display:inline-flex;min-width:42px;height:30px;padding:0 10px;align-items:center;background:#000;color:var(--lime);font-size:11px;font-weight:600;letter-spacing:.08em;margin:0 0 18px}
 .capitulos-grid .slide h3{font-size:clamp(21px,2vw,28px);margin-bottom:14px}
