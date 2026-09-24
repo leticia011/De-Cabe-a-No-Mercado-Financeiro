@@ -23,14 +23,12 @@
 .capa-ilus2:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,239,120,.1),transparent 55%),linear-gradient(90deg,#0a0a0a,#2c2c2c 50%,#151515 82%,#000)}
 .capa-ilus2:after{content:"?";position:absolute;inset:0;display:grid;place-items:center;color:var(--lima);font-size:clamp(150px,18vw,230px);font-weight:600;line-height:1;opacity:.12;z-index:0;pointer-events:none}
 .capa-ilus2>*{position:relative;z-index:1}
-.sym2{display:grid;grid-template-columns:1fr 1fr;gap:3px;width:26px;height:26px;align-self:flex-end}
-.sym2 i{background:var(--lima)}
+.sym2{display:block;width:26px;height:26px;flex-shrink:0;align-self:flex-end;fill:var(--lima)}
 .capa-ilus2 .tit2 p{margin:0;color:#fff;letter-spacing:-.02em;line-height:1.05}
 .capa-ilus2 .t1{font-size:22px;font-weight:300;margin-bottom:3px}
 .capa-ilus2 .t2{font-size:29px;font-weight:600;color:var(--lima)}
 .capa-ilus2 .t3{font-size:20px;font-weight:400;margin-top:6px}
 .capa-ilus2 .aut2{margin:0;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9A9A9A;line-height:1.5}
-.capa-ilus2 .ed2{margin:5px 0 0;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--lima);opacity:.7}
 
 .livro2-hero .waitlist{margin-top:30px;max-width:380px}
 .livro2-hero .waitlist-abrir{width:100%;min-height:52px;border:1.5px solid #fff;background:transparent;color:#fff;font:600 13px/1 Poppins,system-ui,sans-serif;letter-spacing:.03em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .16s ease,color .16s ease}
