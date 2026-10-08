@@ -175,9 +175,10 @@
   // (a parte depois de "v=" na URL do vídeo). Troque os placeholders pelos
   // cortes reais e duplique o bloco para adicionar mais cards.
   const PODCAST_CORTES = [
-    { titulo: 'TÍTULO/PERGUNTA DO CORTE', descricao: 'BREVE DESCRIÇÃO DO CONTEÚDO', vid: 'URL OU ID DO VÍDEO DO YOUTUBE' },
-    { titulo: 'TÍTULO/PERGUNTA DO CORTE', descricao: 'BREVE DESCRIÇÃO DO CONTEÚDO', vid: 'URL OU ID DO VÍDEO DO YOUTUBE' },
-    { titulo: 'TÍTULO/PERGUNTA DO CORTE', descricao: 'BREVE DESCRIÇÃO DO CONTEÚDO', vid: 'URL OU ID DO VÍDEO DO YOUTUBE' }
+    { titulo: 'Como começar uma carreira no mercado financeiro?', descricao: 'Descubra como um profissional pode evoluir de analista para banker, explorando experiências, desafios e oportunidades de crescimento no mercado financeiro.', vid: 'nLoy1ZQX6fw' },
+    { titulo: 'O que é necessário para se destacar como analista no mercado financeiro?', descricao: 'Entenda quais características e competências são valorizadas na contratação de analistas e como desenvolver um perfil profissional competitivo no mercado financeiro.', vid: 'Fko8VXCAYjc' },
+    { titulo: 'Qual é a importância do networking para se destacar no mercado financeiro?', descricao: 'Descubra como a construção de relacionamentos profissionais pode abrir oportunidades, fortalecer sua reputação e contribuir para o desenvolvimento de uma carreira de sucesso.', vid: 'w0M2IZXnBTM' },
+    { titulo: 'Como funciona a carreira em Investment Banking?', descricao: 'Explore o universo do Investment Banking, conhecendo as possibilidades de atuação, os desafios da profissão e as oportunidades para quem deseja construir uma carreira nessa área.', vid: '_o0qluWubiw' }
   ];
   const podcastGrid = document.querySelector('#podcast-responde-grid');
   if (podcastGrid) {
