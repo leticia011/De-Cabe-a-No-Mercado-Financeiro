@@ -416,8 +416,6 @@ p{text-wrap:pretty}
 
 /* efeito de folhear: dividido ao meio, como um livro — só a metade da direita vira e cai sobre a da esquerda */
 .ensina-dir .carrossel{perspective:2200px}
-.ensina-dir .carrossel::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:28px;margin-left:-14px;
-  background:linear-gradient(90deg,transparent,rgba(0,0,0,.2) 50%,transparent);z-index:5;pointer-events:none}
 .ensina-dir .carrossel>.slide.is-leaving{position:absolute;inset:0;z-index:4;pointer-events:none;
   backface-visibility:hidden;box-shadow:0 22px 50px rgba(0,0,0,.22);
   transition:transform .72s cubic-bezier(.65,0,.35,1),filter .72s cubic-bezier(.65,0,.35,1)}
@@ -1445,4 +1443,20 @@ a.opiniao:focus-visible{outline:2px solid #7FAD2E;outline-offset:3px}
  .hero .livro3d{width:min(72vw,280px);max-width:none}
  .hero h1{font-size:clamp(48px,13vw,60px)}
  .hero .subtitulo{font-size:clamp(21px,6vw,26px)}
+}
+
+/* Contorno dos cards dos seis passos. */
+.ensina-dir .capitulos-grid.carrossel>.slide,
+.ensina-dir .capitulos-grid.carrossel>.slide.is-active,
+.ensina-dir .capitulos-grid.carrossel>#passo-1.is-active{
+  border:1px solid #d6dacd!important;
+  border-radius:14px!important;
+  box-shadow:0 10px 26px rgba(20,28,12,.08)!important;
+  transition:border-color .22s ease,box-shadow .22s ease,transform .22s ease;
+}
+.ensina-dir .capitulos-grid.carrossel>.slide:hover,
+.ensina-dir .capitulos-grid.carrossel>.slide:focus-within{
+  border-color:var(--lime)!important;
+  box-shadow:0 18px 40px rgba(20,28,12,.16)!important;
+  transform:translateY(-3px)!important;
 }

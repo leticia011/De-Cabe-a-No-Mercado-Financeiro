@@ -169,4 +169,29 @@
         : `<div class="story-card">${card}</div>`;
     }).join('');
   }
+
+  /* ---------- Securato Responde: em podcast ---------- */
+  // Cada corte: título/pergunta, breve descrição e o ID do vídeo no YouTube
+  // (a parte depois de "v=" na URL do vídeo). Troque os placeholders pelos
+  // cortes reais e duplique o bloco para adicionar mais cards.
+  const PODCAST_CORTES = [
+    { titulo: 'TÍTULO/PERGUNTA DO CORTE', descricao: 'BREVE DESCRIÇÃO DO CONTEÚDO', vid: 'URL OU ID DO VÍDEO DO YOUTUBE' },
+    { titulo: 'TÍTULO/PERGUNTA DO CORTE', descricao: 'BREVE DESCRIÇÃO DO CONTEÚDO', vid: 'URL OU ID DO VÍDEO DO YOUTUBE' },
+    { titulo: 'TÍTULO/PERGUNTA DO CORTE', descricao: 'BREVE DESCRIÇÃO DO CONTEÚDO', vid: 'URL OU ID DO VÍDEO DO YOUTUBE' }
+  ];
+  const podcastGrid = document.querySelector('#podcast-responde-grid');
+  if (podcastGrid) {
+    podcastGrid.innerHTML = PODCAST_CORTES.map(corte => `
+      <article class="podcast-card">
+        <div class="podcast-card-video">
+          <iframe src="https://www.youtube.com/embed/${corte.vid}" title="${corte.titulo}"
+            loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="podcast-card-texto">
+          <h3>${corte.titulo}</h3>
+          <p>${corte.descricao}</p>
+        </div>
+      </article>`).join('');
+  }
 })();
